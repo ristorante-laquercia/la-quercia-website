@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { barlow, gabarito } from "@/lib/fonts";
 
 import { Footer } from "@/components/(footer)/footer";
+import { Header } from "@/components/(header)/header";
 
 export const metadata: Metadata = {
   title: "Create Next App", //TODO add right metadata
@@ -17,8 +18,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="it">
-      <body className={`${barlow.variable} ${gabarito.variable} antialiased`}>
+    <html lang="it" className="overflow-y-auto no-scrollbar">
+      <body className={`${barlow.variable} ${gabarito.variable} antialiased `}>
+        <Header />
         {children}
         <Footer />
       </body>
