@@ -2,19 +2,25 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+@import "./utilities.css";
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --breakpoint-mdp: 900px;
+
   --font-gabarito: var(--font-gabarito);
   --font-barlow: var(--font-barlow);
+
   --color-background: var(--lq-dark);
   --color-foreground: var(--foreground);
+  --color-lq-dark: var(--lq-dark);
   --color-lq-orange: var(--lq-orange);
   --color-lq-dark-orange: var(--lq-dark-orange);
   --color-lq-yellow: var(--lq-yellow);
   --color-lq-green: var(--lq-green);
   --color-lq-senape: var(--lq-senape);
-
+  
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -67,6 +73,8 @@
   --lq-yellow: oklch(0.844 0.1714 86.12);
   --lq-green: oklch(0.6827 0.1105 117.26);
   --lq-senape: oklch(0.8559 0.1143 85.04);
+
+  --navbar-height: 4.25rem;
 }
 
 @layer base {
@@ -75,6 +83,14 @@
   }
   body {
     @apply bg-background text-foreground font-barlow;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold;
   }
   a {
     @apply hover:underline;
