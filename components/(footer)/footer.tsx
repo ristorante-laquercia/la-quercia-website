@@ -83,6 +83,7 @@ export function Footer() {
                 <a
                   href="https://wa.me/+393791269699?text=Vorrei%20ricevere%20maggiori%20informazioni"
                   target="_blank"
+                  rel="noopener"
                 >
                   <Lineicons
                     icon={WhatsappOutlined}
