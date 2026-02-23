@@ -25,6 +25,9 @@ const buttonVariants = cva(
         green: "bg-lq-green hover:bg-lq-green/90 text-white",
         darkOrange:
           "bg-lq-dark-orange hover:bg-lq-lq-dark-orange/90 text-white",
+        white: "bg-white text-background",
+        senape: "bg-lq-senape hover:bg-lq-senape/90 text-lq-dark",
+        dark: "bg-lq-dark hover:bg-lq-dark/90 text-white",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

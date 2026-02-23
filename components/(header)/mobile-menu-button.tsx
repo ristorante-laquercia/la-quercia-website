@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 import { Drawer } from "@/components/(header)/drawer";
 
 export function MobileMenuButton() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
   const scrollPositionRef = useRef(0);
 
   useEffect(() => {

@@ -17,7 +17,10 @@ const mobileLinks = [
   { label: "Cucina", href: "/cucina" },
   { label: "Birreria", href: "/birreria" },
   { label: "Eventi", href: "/eventi" },
-  { label: "Menu", href: "/" }, //TODO: change this with the real menu link
+  {
+    label: "Menu",
+    href: "https://drive.google.com/file/d/12mDiZ6AjIgRar0naHPXMmmPkAGePialF/view?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnigNlTn22eE4AIkAuzvWpbCRGcio96qzVjJJw1qYYqH-OfXD8EeIF5DSmZ7c_aem_BQ4t7XxEtM_tg5WwmWc1xA",
+  },
   { label: "Contatti", href: "/contatti" },
 ];
 

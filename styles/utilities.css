@@ -19,4 +19,8 @@
   section.diagonal-section:has(.photo-offset) .photo-offset {
     @apply relative z-20;
   }
+
+  section.diagonal-section:has(.photo-offset) .photo-card {
+    @apply relative z-30;
+  }
 }
