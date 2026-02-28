@@ -19,16 +19,15 @@ export function Footer() {
 		{ label: "Contatti", href: "/contatti" },
 	];
 
-	// TODO: sostituire con gli orari reali di apertura.
 	const openingHours = [
-		"Lun - Gio: 19:00 - 00:00",
+		"Lun: 19:00 - 00:00",
 		"Martedì: Chiuso",
 		"Mer - Dom: 19:00 - 00:00",
 	];
 
 	return (
 		<footer id="site-footer" className="grid grid-cols-12">
-			<div className="bg-lq-green col-span-12 py-10">
+			<div className="bg-lq-dark col-span-12 py-10">
 				<Container className="text-center grid grid-cols-1 gap-10 md:max-mdp:grid-cols-2 mdp:grid-cols-3">
 					<div className="grid grid-cols-1">
 						<h4 className="text-[32px] mdp:text-left font-gabarito">
@@ -58,7 +57,7 @@ export function Footer() {
 									href="https://www.facebook.com/laquerciatermoli"
 									target="_blank"
 									rel="noopener"
-									className="mdp:has-[svg]:p-0"
+									className="mdp:has-[svg]:p-0 bg-transparent hover:bg-transparent"
 								>
 									<Lineicons
 										icon={FacebookOutlined}
@@ -73,7 +72,7 @@ export function Footer() {
 									href="https://www.instagram.com/laquerciatermoli/"
 									target="_blank"
 									rel="noopener"
-									className="mdp:has-[svg]:p-0"
+									className="mdp:has-[svg]:p-0 bg-transparent hover:bg-transparent"
 								>
 									<Lineicons
 										icon={InstagramOutlined}
@@ -88,7 +87,7 @@ export function Footer() {
 									href="https://wa.me/+393791269699?text=Vorrei%20ricevere%20maggiori%20informazioni"
 									target="_blank"
 									rel="noopener"
-									className="mdp:has-[svg]:p-0"
+									className="mdp:has-[svg]:p-0 bg-transparent hover:bg-transparent"
 								>
 									<Lineicons
 										icon={WhatsappOutlined}

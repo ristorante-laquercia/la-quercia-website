@@ -1,7 +1,7 @@
 {
-  "editor.formatOnSave": true,
-  "biome.enabled": true,
-  "biome.requireConfiguration": true,
-  "biome.configurationPath": "./biome.json",
-  "biome.lsp.bin": "./node_modules/.bin/biome"
+	"editor.formatOnSave": true,
+	"biome.enabled": true,
+	"biome.requireConfiguration": true,
+	"biome.configurationPath": "./biome.json",
+	"biome.lsp.bin": "./node_modules/.bin/biome"
 }
