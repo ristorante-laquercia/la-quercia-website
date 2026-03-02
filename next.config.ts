@@ -1,7 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+	env: {
+		BASE_URL: process.env.BASE_URL,
+	},
+	async redirects() {
+		return [
+			{
+				source: "/storia-e-valori/",
+				destination: "/chi-siamo",
+				permanent: true,
+			},
+		];
+	},
 };
 
 export default nextConfig;

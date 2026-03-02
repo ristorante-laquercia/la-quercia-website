@@ -1,0 +1,33 @@
+@layer utilities {
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE/Edge legacy */
+		scrollbar-width: none; /* Firefox */
+	}
+
+	.no-scrollbar::-webkit-scrollbar {
+		display: none; /* Chrome/Safari/Opera */
+	}
+
+	section.bg-white h2 {
+		@apply text-lq-green;
+	}
+
+	section.bg-white p {
+		@apply text-lq-dark;
+	}
+
+	section.bg-lq-senape h2 {
+		@apply text-lq-dark;
+	}
+	section.bg-lq-senape p {
+		@apply text-lq-dark;
+	}
+
+	section.diagonal-section:has(.photo-offset) .photo-offset {
+		@apply relative z-20;
+	}
+
+	section.diagonal-section:has(.photo-offset) .photo-card {
+		@apply relative z-30;
+	}
+}
