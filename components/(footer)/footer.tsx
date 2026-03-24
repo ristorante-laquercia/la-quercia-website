@@ -15,7 +15,7 @@ export function Footer() {
 	const infoLinks = [
 		{ label: "Chi siamo", href: "/chi-siamo" },
 		{ label: "Menu", href: "/menu" },
-		{ label: "Eventi", href: "/eventi" },
+		{ label: "Esperienze", href: "/esperienze" },
 		{ label: "Contatti", href: "/contatti" },
 	];
 
