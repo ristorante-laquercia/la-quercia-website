@@ -52,8 +52,8 @@ export const homeContent = {
 		description:
 			"<p>Aperibirra, corsi, giochi di società e spazi gratuiti per il tuo lavoro.</p><p>La Quercia è casa tua, dal pomeriggio al dopocena.</p>",
 		link: {
-			text: "Eventi",
-			href: "/eventi",
+			text: "Esperienze",
+			href: "/esperienze",
 		},
 
 		images: [
