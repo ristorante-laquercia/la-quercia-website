@@ -12,8 +12,7 @@ export const esperienzeContent = {
 	},
 	experiences: {
 		eyebrow: "Esperienze",
-		title:
-			"Modi diversi di stare insieme, con la stessa atmosfera di casa.",
+		title: "Modi diversi di stare insieme, con la stessa atmosfera di casa.",
 		description:
 			"Dall'aperitivo pensato bene al dopocena da condividere, ogni momento ha il suo ritmo, il suo gusto e il suo spazio.",
 		cards: [
