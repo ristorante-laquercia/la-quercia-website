@@ -8,13 +8,7 @@ export const cucinaContent = {
 		paragraphs: [
 			"La nostra cucina nasce dall'incontro tra intuizione brassicola, gesti antichi e ingredienti che raccontano il Molise.",
 			"Non usiamo la birra come semplice nota aromatica: la trattiamo come una materia prima nobile, capace di dare struttura, profumo e profondita ai piatti.",
-		],
-		highlights: [
-			"Cucina alla Birra",
-			"Cavatelli Live",
-			"Ingredienti molisani",
-			"Pizza d'autore",
-		],
+		]
 	},
 	innovation: {
 		eyebrow: "L'Innovazione",
@@ -63,13 +57,13 @@ export const cucinaContent = {
 		],
 	},
 	glutenFree: {
-		eyebrow: "Senza Glutine",
+		eyebrow: "Cucina senza glutine",
 		title: "L'attenzione è la nostra prima forma di ospitalità.",
 		description:
 			"Seguiamo protocolli rigorosi per la sicurezza e dal 2013 siamo certificati AIC, tra i riferimenti in Molise per la cucina senza glutine.",
 	},
 	gallery: {
-		eyebrow: "Atmosfera",
+		eyebrow: "LA CUCINA",
 		title:
 			"Una cucina da vivere con gli occhi, prima ancora che con il palato.",
 		description:
