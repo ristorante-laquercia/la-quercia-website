@@ -8,7 +8,7 @@ export const cucinaContent = {
 		paragraphs: [
 			"La nostra cucina nasce dall'incontro tra intuizione brassicola, gesti antichi e ingredienti che raccontano il Molise.",
 			"Non usiamo la birra come semplice nota aromatica: la trattiamo come una materia prima nobile, capace di dare struttura, profumo e profondita ai piatti.",
-		]
+		],
 	},
 	innovation: {
 		eyebrow: "L'Innovazione",
