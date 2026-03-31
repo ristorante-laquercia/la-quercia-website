@@ -20,8 +20,13 @@ export function PurposeContactList() {
 		>
 			<Container className="relative z-10">
 				<RevealGroup className="text-center md:text-left" stagger={0.12}>
+					<RevealItem preset="fade-up" distance={16} duration={0.85}>
+						<span className="text-sm font-black uppercase tracking-[0.22em] text-lq-dark/55">
+							Contattaci
+						</span>
+					</RevealItem>
 					<RevealItem preset="fade-up" distance={20} duration={0.9}>
-						<h2 id={sectionTitleId} className="text-lq-dark">
+						<h2 id={sectionTitleId} className="mt-2 text-lq-dark">
 							{contattiContent.needs.sectionTitle}
 						</h2>
 					</RevealItem>
@@ -49,7 +54,7 @@ export function PurposeContactList() {
 							duration={1.15}
 						>
 							<article
-								className="flex h-full flex-col rounded-2xl bg-white/55 p-6"
+								className="flex h-full flex-col rounded-[1.5rem] bg-white/60 p-6 transition-colors duration-300 hover:bg-white/75"
 								aria-labelledby={`contact-need-title-${index}`}
 								aria-describedby={`contact-need-description-${index}`}
 							>
