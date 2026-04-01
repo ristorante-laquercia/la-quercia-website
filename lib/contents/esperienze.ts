@@ -78,12 +78,12 @@ export const esperienzeContent = {
   },
   coworking: {
     eyebrow: 'Coworking & Meeting',
-    title: 'Lo spazio e tuo.',
+    title: 'Lo spazio...',
+    subTitle: 'è tuo.',
     paragraphs: [
       'Gruppi, aziende, associazioni: cercate un luogo dove riunirvi? Mettiamo a disposizione la nostra sala gratuitamente per riunioni, incontri di lavoro o studio, senza obbligo di consumazione.',
-      'Crediamo nel valore della comunita e vogliamo sostenere i tuoi progetti con Wi-Fi, tranquillita e spazi ampi. Basta una telefonata per prenotare il tuo spazio.',
+      'Crediamo nel valore della comunità e vogliamo sostenere i tuoi progetti con Wi-Fi, tranquillita e spazi ampi. Basta una telefonata per prenotare il tuo spazio.',
     ],
-    highlights: ['Wi-Fi', 'Sala gratuita', 'Tranquillita', 'Spazi ampi'],
     ctaText: 'Prenota il tuo spazio',
     ctaHref: '/contatti',
   },
