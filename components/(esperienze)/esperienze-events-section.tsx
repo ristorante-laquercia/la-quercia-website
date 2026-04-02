@@ -1,28 +1,28 @@
-import Image from "next/image";
-import Link from "next/link";
-import Lineicons from "@lineiconshq/react-lineicons";
-import { HatChef3Duotone, InstagramOutlined } from "@lineiconshq/free-icons";
+import Image from 'next/image'
+import Link from 'next/link'
+import Lineicons from '@lineiconshq/react-lineicons'
+import { HatChef3Duotone, InstagramOutlined } from '@lineiconshq/free-icons'
 
-import { esperienzeContent } from "@/lib/contents/esperienze";
+import { esperienzeContent } from '@/lib/contents/esperienze'
 
-import { Container } from "@/components/ui/container";
-import { Button } from "@/components/ui/button";
-import { RevealGroup, RevealItem } from "@/components/ui/reveal";
-import { DiagonalElement } from "@/components/diagonal-element";
+import { Container } from '@/components/ui/container'
+import { Button } from '@/components/ui/button'
+import { RevealGroup, RevealItem } from '@/components/ui/reveal'
+import { DiagonalElement } from '@/components/diagonal-element'
 
-import degustazioneImage from "@/public/assets/demo/italian-lasagne-served-with-rocket-salad.jpg";
-import birraImage from "@/public/assets/demo/2151639899.jpg";
+import degustazioneImage from '@/public/assets/demo/italian-lasagne-served-with-rocket-salad.jpg'
+import birraImage from '@/public/assets/demo/2151639899.jpg'
 
-const eventImages = [degustazioneImage, birraImage] as const;
-const eventIcons = [HatChef3Duotone, InstagramOutlined] as const;
+const eventImages = [degustazioneImage, birraImage] as const
+const eventIcons = [HatChef3Duotone, InstagramOutlined] as const
 
 function isExternalHref(href: string) {
-  return href.startsWith("http://") || href.startsWith("https://");
+  return href.startsWith('http://') || href.startsWith('https://')
 }
 
 export function EsperienzeEventsSection() {
-  const titleId = "esperienze-events-title";
-  const descriptionId = "esperienze-events-description";
+  const titleId = 'esperienze-events-title'
+  const descriptionId = 'esperienze-events-description'
 
   return (
     <section
@@ -39,8 +39,8 @@ export function EsperienzeEventsSection() {
         style={{
           backgroundImage:
             "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
-          backgroundRepeat: "repeat",
-          backgroundSize: "256px 256px",
+          backgroundRepeat: 'repeat',
+          backgroundSize: '256px 256px',
         }}
       />
 
@@ -49,8 +49,8 @@ export function EsperienzeEventsSection() {
         aria-hidden
         className="pointer-events-none absolute bottom-0 left-[-0.03em] z-0 select-none font-gabarito font-black leading-none text-lq-dark/6"
         style={{
-          fontSize: "clamp(7rem, 13vw, 17rem)",
-          letterSpacing: "-0.04em",
+          fontSize: 'clamp(7rem, 13vw, 17rem)',
+          letterSpacing: '-0.04em',
         }}
       >
         EVENTI
@@ -71,11 +71,7 @@ export function EsperienzeEventsSection() {
               </span>
             </RevealItem>
             <RevealItem preset="fade-up" distance={22} duration={1.05}>
-              <h2
-                id={titleId}
-                className="font-gabarito text-lq-dark"
-                style={{ letterSpacing: "-0.025em" }}
-              >
+              <h2 id={titleId} className="font-gabarito text-lq-dark" style={{ letterSpacing: '-0.025em' }}>
                 {esperienzeContent.events.title}
               </h2>
             </RevealItem>
@@ -100,8 +96,8 @@ export function EsperienzeEventsSection() {
             delayChildren={0.18}
           >
             {esperienzeContent.events.items.map((item, index) => {
-              const hrefIsExternal = isExternalHref(item.ctaHref);
-              const icon = eventIcons[index];
+              const hrefIsExternal = isExternalHref(item.ctaHref)
+              const icon = eventIcons[index]
 
               return (
                 <RevealItem
@@ -136,43 +132,25 @@ export function EsperienzeEventsSection() {
                     {/* Row 2 — title */}
                     <h3
                       className="px-6 pt-5 pb-1 font-gabarito text-3xl leading-tight text-lq-dark"
-                      style={{ letterSpacing: "-0.02em" }}
+                      style={{ letterSpacing: '-0.02em' }}
                     >
                       {item.title}
                     </h3>
 
                     {/* Row 3 — description (1fr, stretches to align CTA across cards) */}
-                    <p className="px-6 pt-3 pb-2 text-sm leading-relaxed text-lq-dark/72">
-                      {item.description}
-                    </p>
+                    <p className="px-6 pt-3 pb-2 text-sm leading-relaxed text-lq-dark/72">{item.description}</p>
 
                     {/* Row 4 — CTA, pinned to the same baseline on every card */}
                     <div className="px-6 pb-6 pt-2">
                       <Button asChild variant="custom" color="dark">
                         {hrefIsExternal ? (
-                          <a
-                            href={item.ctaHref}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Lineicons
-                              icon={icon}
-                              size={48}
-                              color="white"
-                              className="size-6"
-                              aria-hidden="true"
-                            />
+                          <a href={item.ctaHref} target="_blank" rel="noopener noreferrer">
+                            <Lineicons icon={icon} size={48} color="white" className="size-6" aria-hidden="true" />
                             {item.ctaText}
                           </a>
                         ) : (
                           <Link href={item.ctaHref}>
-                            <Lineicons
-                              icon={icon}
-                              size={48}
-                              color="white"
-                              className="size-6"
-                              aria-hidden="true"
-                            />
+                            <Lineicons icon={icon} size={48} color="white" className="size-6" aria-hidden="true" />
                             {item.ctaText}
                           </Link>
                         )}
@@ -180,11 +158,11 @@ export function EsperienzeEventsSection() {
                     </div>
                   </article>
                 </RevealItem>
-              );
+              )
             })}
           </RevealGroup>
         </RevealGroup>
       </Container>
     </section>
-  );
+  )
 }

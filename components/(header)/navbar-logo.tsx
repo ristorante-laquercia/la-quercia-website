@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 import { motion, useReducedMotion } from 'motion/react'
 import { useWindowScroll } from '@uidotdev/usehooks'
 
-import logo from '@/public/assets/svg/logo.svg'
+import logo from '@/public/assets/svg/logo-la-quercia.svg'
 
 export function NavbarLogo() {
   const pathname = usePathname()

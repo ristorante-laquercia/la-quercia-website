@@ -1,19 +1,19 @@
-import Link from "next/link";
-import Image from "next/image";
-import Lineicons from "@lineiconshq/react-lineicons";
-import { Telephone3Duotone } from "@lineiconshq/free-icons";
+import Link from 'next/link'
+import Image from 'next/image'
+import Lineicons from '@lineiconshq/react-lineicons'
+import { Telephone3Duotone } from '@lineiconshq/free-icons'
 
-import { esperienzeContent } from "@/lib/contents/esperienze";
+import { esperienzeContent } from '@/lib/contents/esperienze'
 
-import { Container } from "@/components/ui/container";
-import { Button } from "@/components/ui/button";
-import { RevealGroup, RevealItem } from "@/components/ui/reveal";
+import { Container } from '@/components/ui/container'
+import { Button } from '@/components/ui/button'
+import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 
-import coworkingImage from "@/public/assets/demo/restaurant-interior-2.jpg";
+import coworkingImage from '@/public/assets/demo/restaurant-interior-2.jpg'
 
 export function CoworkingBanner() {
-  const titleId = "esperienze-coworking-title";
-  const descriptionId = "esperienze-coworking-description";
+  const titleId = 'esperienze-coworking-title'
+  const descriptionId = 'esperienze-coworking-description'
 
   return (
     <section
@@ -39,8 +39,7 @@ export function CoworkingBanner() {
         aria-hidden
         className="absolute inset-0"
         style={{
-          background:
-            "radial-gradient(ellipse 90% 90% at 100% 100%, rgba(0,0,0,0.78) 0%, transparent 100%)",
+          background: 'radial-gradient(ellipse 90% 90% at 100% 100%, rgba(0,0,0,0.78) 0%, transparent 100%)',
         }}
       />
 
@@ -57,52 +56,31 @@ export function CoworkingBanner() {
               </RevealItem>
 
               <RevealItem preset="fade-up" distance={28} duration={1.1}>
-                <h2
-                  id={titleId}
-                  className="mt-4 font-gabarito text-4xl text-white md:text-6xl lg:text-7xl xl:text-8xl"
-                >
+                <h2 id={titleId} className="mt-4 font-gabarito text-4xl text-white md:text-6xl lg:text-7xl xl:text-8xl">
                   {esperienzeContent.coworking.title}
-                  <span className="block">
-                    {esperienzeContent.coworking.subTitle}
-                  </span>
+                  <span className="block">{esperienzeContent.coworking.subTitle}</span>
                 </h2>
               </RevealItem>
             </div>
 
             {/* Vertical rule — lg+ only */}
-            <div
-              aria-hidden
-              className="hidden self-stretch bg-white/18 lg:block"
-            />
+            <div aria-hidden className="hidden self-stretch bg-white/18 lg:block" />
 
             {/* Right: body copy + CTA */}
             <div id={descriptionId} className="lg:pl-14 xl:pl-20">
               <div className="space-y-4 text-base leading-relaxed text-white">
-                {esperienzeContent.coworking.paragraphs.map(
-                  (paragraph, index) => (
-                    <RevealItem
-                      key={paragraph}
-                      preset="fade-up"
-                      distance={20 + index * 3}
-                      duration={1 + index * 0.07}
-                    >
-                      <p>{paragraph}</p>
-                    </RevealItem>
-                  ),
-                )}
+                {esperienzeContent.coworking.paragraphs.map((paragraph, index) => (
+                  <RevealItem key={paragraph} preset="fade-up" distance={20 + index * 3} duration={1 + index * 0.07}>
+                    <p>{paragraph}</p>
+                  </RevealItem>
+                ))}
               </div>
 
               <RevealItem preset="fade-up" distance={18} duration={1.06}>
                 <div className="mt-9">
                   <Button asChild variant="custom" color="green">
                     <Link href={esperienzeContent.coworking.ctaHref}>
-                      <Lineicons
-                        icon={Telephone3Duotone}
-                        size={48}
-                        color="white"
-                        className="size-7"
-                        aria-hidden="true"
-                      />
+                      <Lineicons icon={Telephone3Duotone} size={48} color="white" className="size-7" aria-hidden="true" />
 
                       {esperienzeContent.coworking.ctaText}
                     </Link>
@@ -114,5 +92,5 @@ export function CoworkingBanner() {
         </RevealGroup>
       </Container>
     </section>
-  );
+  )
 }
