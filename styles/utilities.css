@@ -22,6 +22,9 @@
 	section.bg-lq-senape p {
 		@apply text-lq-dark;
 	}
+	section.bg-lq-senape:has(.bg-lq-dark) .bg-lq-dark p {
+		@apply text-white;
+	}
 
 	section.diagonal-section:has(.photo-offset) .photo-offset {
 		@apply relative z-20;

@@ -1,100 +1,96 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link'
+import Image from 'next/image'
+import Lineicons from '@lineiconshq/react-lineicons'
+import { Telephone3Duotone } from '@lineiconshq/free-icons'
 
-import { esperienzeContent } from "@/lib/contents/esperienze";
+import { esperienzeContent } from '@/lib/contents/esperienze'
 
-import { Container } from "@/components/ui/container";
-import { Button } from "@/components/ui/button";
-import { RevealGroup, RevealItem } from "@/components/ui/reveal";
+import { Container } from '@/components/ui/container'
+import { Button } from '@/components/ui/button'
+import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 
-import coworkingImage from "@/public/assets/demo/restaurant-interior-2.jpg";
+import coworkingImage from '@/public/assets/demo/restaurant-interior-2.jpg'
 
 export function CoworkingBanner() {
-	const titleId = "esperienze-coworking-title";
-	const descriptionId = "esperienze-coworking-description";
+  const titleId = 'esperienze-coworking-title'
+  const descriptionId = 'esperienze-coworking-description'
 
-	return (
-		<section
-			aria-labelledby={titleId}
-			aria-describedby={descriptionId}
-			className="relative isolate min-h-[34rem] overflow-hidden lg:min-h-[42rem]"
-		>
-			<Image
-				src={coworkingImage}
-				alt="Sala del locale pronta per incontri, riunioni e coworking"
-				placeholder="blur"
-				blurDataURL={coworkingImage.blurDataURL}
-				sizes="100vw"
-				className="absolute inset-0 h-full w-full object-cover"
-			/>
-			<div className="absolute inset-0 bg-black/60" />
+  return (
+    <section
+      aria-labelledby={titleId}
+      aria-describedby={descriptionId}
+      className="relative isolate min-h-152 overflow-hidden lg:min-h-216"
+    >
+      <Image
+        src={coworkingImage}
+        alt="Sala del locale pronta per incontri, riunioni e coworking"
+        placeholder="blur"
+        blurDataURL={coworkingImage.blurDataURL}
+        sizes="100vw"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
 
-			<Container className="relative z-10 flex min-h-[34rem] items-center py-20 lg:min-h-[42rem]">
-				<RevealGroup
-					className="w-full max-w-3xl"
-					stagger={0.12}
-					delayChildren={0.12}
-					amount={0.2}
-				>
-					<div className="rounded-[2rem] border border-white/15 bg-white/12 p-8 text-white backdrop-blur-md md:p-10 lg:p-12">
-						<RevealItem preset="fade-up" distance={18} duration={1}>
-							<span className="text-sm font-black uppercase tracking-[0.22em] text-lq-senape">
-								{esperienzeContent.coworking.eyebrow}
-							</span>
-						</RevealItem>
+      {/* Bottom-to-top gradient for legibility */}
+      <div className="absolute inset-0 bg-linear-to-t from-black/92 via-black/52 to-black/8" />
+      {/* Subtle left edge vignette */}
+      <div className="absolute inset-0 bg-linear-to-r from-black/25 to-transparent" />
+      {/* Soft radial mask behind the right-column text */}
+      <div
+        aria-hidden
+        className="absolute inset-0"
+        style={{
+          background: 'radial-gradient(ellipse 90% 90% at 100% 100%, rgba(0,0,0,0.78) 0%, transparent 100%)',
+        }}
+      />
 
-						<RevealItem preset="fade-up" distance={22} duration={1.05}>
-							<h2 id={titleId} className="mt-4 text-white">
-								{esperienzeContent.coworking.title}
-							</h2>
-						</RevealItem>
+      <Container className="relative z-10 flex min-h-152 flex-col justify-end pb-16 pt-32 lg:min-h-216 lg:pb-20">
+        <RevealGroup stagger={0.1} delayChildren={0.1} amount={0.15}>
+          {/* Two-column editorial split */}
+          <div className="grid grid-cols-1 items-end gap-y-10 lg:grid-cols-[1fr_1px_1fr]">
+            {/* Left: eyebrow + display title */}
+            <div className="lg:pr-14 xl:pr-16">
+              <RevealItem preset="fade-up" distance={14} duration={0.85}>
+                <span className="text-xs font-black uppercase tracking-[0.28em] text-lq-senape">
+                  {esperienzeContent.coworking.eyebrow}
+                </span>
+              </RevealItem>
 
-						<div id={descriptionId} className="mt-6 space-y-4 text-white/86">
-							{esperienzeContent.coworking.paragraphs.map(
-								(paragraph, index) => (
-									<RevealItem
-										key={paragraph}
-										preset="fade-up"
-										distance={24 + index * 2}
-										duration={1.08 + index * 0.08}
-									>
-										<p>{paragraph}</p>
-									</RevealItem>
-								),
-							)}
-						</div>
+              <RevealItem preset="fade-up" distance={28} duration={1.1}>
+                <h2 id={titleId} className="mt-4 font-gabarito text-4xl text-white md:text-6xl lg:text-7xl xl:text-8xl">
+                  {esperienzeContent.coworking.title}
+                  <span className="block">{esperienzeContent.coworking.subTitle}</span>
+                </h2>
+              </RevealItem>
+            </div>
 
-						<RevealGroup
-							className="mt-8 flex flex-wrap gap-3"
-							stagger={0.08}
-							delayChildren={0.18}
-						>
-							{esperienzeContent.coworking.highlights.map((highlight) => (
-								<RevealItem
-									key={highlight}
-									preset="fade-up"
-									distance={18}
-									duration={0.9}
-								>
-									<span className="inline-flex rounded-full border border-white/18 bg-white/8 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-white">
-										{highlight}
-									</span>
-								</RevealItem>
-							))}
-						</RevealGroup>
+            {/* Vertical rule — lg+ only */}
+            <div aria-hidden className="hidden self-stretch bg-white/18 lg:block" />
 
-						<RevealItem preset="fade-up" distance={22} duration={1.1}>
-							<div className="mt-8">
-								<Button asChild variant="custom" color="white">
-									<Link href={esperienzeContent.coworking.ctaHref}>
-										{esperienzeContent.coworking.ctaText}
-									</Link>
-								</Button>
-							</div>
-						</RevealItem>
-					</div>
-				</RevealGroup>
-			</Container>
-		</section>
-	);
+            {/* Right: body copy + CTA */}
+            <div id={descriptionId} className="lg:pl-14 xl:pl-20">
+              <div className="space-y-4 text-base leading-relaxed text-white">
+                {esperienzeContent.coworking.paragraphs.map((paragraph, index) => (
+                  <RevealItem key={paragraph} preset="fade-up" distance={20 + index * 3} duration={1 + index * 0.07}>
+                    <p>{paragraph}</p>
+                  </RevealItem>
+                ))}
+              </div>
+
+              <RevealItem preset="fade-up" distance={18} duration={1.06}>
+                <div className="mt-9">
+                  <Button asChild variant="custom" color="green">
+                    <Link href={esperienzeContent.coworking.ctaHref}>
+                      <Lineicons icon={Telephone3Duotone} size={48} color="white" className="size-7" aria-hidden="true" />
+
+                      {esperienzeContent.coworking.ctaText}
+                    </Link>
+                  </Button>
+                </div>
+              </RevealItem>
+            </div>
+          </div>
+        </RevealGroup>
+      </Container>
+    </section>
+  )
 }

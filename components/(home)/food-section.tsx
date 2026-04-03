@@ -1,98 +1,94 @@
-import Link from "next/link";
-import Image from "next/image";
-import Lineicons from "@lineiconshq/react-lineicons";
-import { Pizza2Duotone } from "@lineiconshq/free-icons";
+import Link from 'next/link'
+import Image from 'next/image'
+import Lineicons from '@lineiconshq/react-lineicons'
+import { Pizza2Duotone } from '@lineiconshq/free-icons'
 
-import { homeContent } from "@/lib/contents/home";
+import { homeContent } from '@/lib/contents/home'
 
-import { Button } from "@/components/ui/button";
-import { Container } from "@/components/ui/container";
-import { RevealGroup, RevealItem } from "@/components/ui/reveal";
-import { DiagonalElement } from "@/components/diagonal-element";
+import { Button } from '@/components/ui/button'
+import { Container } from '@/components/ui/container'
+import { RevealGroup, RevealItem } from '@/components/ui/reveal'
+import { DiagonalElement } from '@/components/diagonal-element'
 
-import demoImage1 from "@/public/assets/demo/friends-playing-cards-bar.jpg";
-import demoImage2 from "@/public/assets/demo/restaurant-interior.jpg";
+import bgImage from '@/public/assets/demo/restaurant-interior.jpg'
+import chefImage from '@/public/assets/demo/chef-cooking-food-restaurant-kitchen.jpg'
 
 export function FoodSection() {
-	const sectionTitleId = "home-food-title";
-	const sectionDescriptionId = "home-food-description";
+  const sectionTitleId = 'home-food-title'
+  const sectionDescriptionId = 'home-food-description'
 
-	return (
-		<section
-			className="relative z-30 overflow-visible"
-			aria-labelledby={sectionTitleId}
-			aria-describedby={sectionDescriptionId}
-		>
-			<Image
-				src={demoImage2.src}
-				alt=""
-				fill
-				className="size-full object-cover"
-			/>
-			<div
-				aria-hidden
-				className="pointer-events-none absolute inset-0 z-0 bg-black/70"
-			/>
+  return (
+    <section
+      className="relative z-30 overflow-hidden"
+      aria-labelledby={sectionTitleId}
+      aria-describedby={sectionDescriptionId}
+    >
+      <Image src={bgImage} alt="" fill placeholder="blur" className="object-cover" aria-hidden />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-0 bg-linear-to-r from-black/90 via-black/65 to-black/25"
+      />
 
-			<Container className="relative z-10 overflow-visible py-40 md:pt-20">
-				<RevealGroup
-					className="grid grid-cols-1 gap-x-4 gap-y-12 md:grid-cols-2 md:gap-x-10"
-					stagger={0.24}
-					delayChildren={0.32}
-					amount={0.25}
-				>
-					<div className="flex flex-col space-y-4 text-white md:py-20 lg:py-40">
-						<RevealItem preset="fade-up" duration={1.1} distance={22}>
-							<h2 id={sectionTitleId}>{homeContent.food.title}</h2>
-						</RevealItem>
-						<RevealItem preset="fade-up" duration={1.2} distance={24}>
-							<div
-								id={sectionDescriptionId}
-								// biome-ignore lint/security/noDangerouslySetInnerHtml: secure content
-								dangerouslySetInnerHTML={{
-									__html: homeContent.food.description,
-								}}
-								className="space-y-4"
-							/>
-						</RevealItem>
-						<RevealItem preset="fade-up" duration={1.2} distance={26}>
-							<Button asChild variant={"custom"} color="green" className="mt-4">
-								<Link
-									href={homeContent.food.link.href}
-									aria-label={`${homeContent.food.link.text} - ${homeContent.food.title}`}
-								>
-									<Lineicons
-										icon={Pizza2Duotone}
-										size={48}
-										color="white"
-										className="size-7"
-										aria-hidden="true"
-									/>
+      <Container className="relative z-10 py-32 lg:py-48">
+        <RevealGroup className="flex flex-col gap-6 lg:gap-8" stagger={0.22} delayChildren={0.3} amount={0.2}>
+          {/* Giant title */}
+          <RevealItem preset="fade-up" duration={1.1} distance={24}>
+            <h2
+              id={sectionTitleId}
+              className="text-[clamp(4.5rem,11vw,10.5rem)] leading-none font-gabarito font-black text-white"
+            >
+              {homeContent.food.title}
+            </h2>
+          </RevealItem>
 
-									{homeContent.food.link.text}
-								</Link>
-							</Button>
-						</RevealItem>
-					</div>
+          {/* Bottom row: description + image */}
+          <div className="grid grid-cols-1 gap-x-14 gap-y-8 md:grid-cols-2">
+            <div className="flex flex-col gap-5 text-white">
+              {/* Eyebrow */}
+              <RevealItem preset="fade-up" duration={1.0} distance={18}>
+                <span className="text-sm font-black uppercase tracking-[0.22em] text-lq-orange">La nostra cucina</span>
+              </RevealItem>
 
-					<div className="photo-offset relative z-20 grid">
-						<div className="photo-card relative z-30 -translate-y-20 md:-translate-y-28 lg:-translate-y-40">
-							<RevealItem preset="fade-up" duration={1.8} distance={40}>
-								<Image
-									src={demoImage1}
-									alt={homeContent.food.images[0].alt}
-									placeholder="blur"
-									blurDataURL={demoImage1.blurDataURL}
-									sizes="(max-width: 768px) 45vw, 22vw"
-									className="size-full max-w-lg mx-auto object-cover rounded shadow-lg"
-								/>
-							</RevealItem>
-						</div>
-					</div>
-				</RevealGroup>
-			</Container>
+              <RevealItem preset="fade-up" duration={1.2} distance={22}>
+                <div
+                  id={sectionDescriptionId}
+                  // biome-ignore lint/security/noDangerouslySetInnerHtml: secure content
+                  dangerouslySetInnerHTML={{
+                    __html: homeContent.food.description,
+                  }}
+                  className="space-y-4"
+                />
+              </RevealItem>
+              <RevealItem preset="fade-up" duration={1.3} distance={24}>
+                <Button asChild variant="custom" color="green" className="mt-2">
+                  <Link
+                    href={homeContent.food.link.href}
+                    aria-label={`${homeContent.food.link.text} - ${homeContent.food.title}`}
+                  >
+                    <Lineicons icon={Pizza2Duotone} size={48} color="white" className="size-7" aria-hidden="true" />
+                    {homeContent.food.link.text}
+                  </Link>
+                </Button>
+              </RevealItem>
+            </div>
 
-			<DiagonalElement position="bottom" className="text-lq-senape md:h-20" />
-		</section>
-	);
+            <RevealItem preset="fade-up" duration={1.5} distance={36} className="self-end">
+              <div className="relative mx-auto aspect-3/4 w-full max-w-xs overflow-hidden rounded-2xl shadow-2xl lg:max-w-sm">
+                <Image
+                  src={chefImage}
+                  alt={homeContent.food.images[0].alt}
+                  fill
+                  placeholder="blur"
+                  sizes="(max-width: 768px) 80vw, 40vw"
+                  className="object-cover"
+                />
+              </div>
+            </RevealItem>
+          </div>
+        </RevealGroup>
+      </Container>
+
+      <DiagonalElement position="bottom" className="text-lq-senape md:h-20" />
+    </section>
+  )
 }
