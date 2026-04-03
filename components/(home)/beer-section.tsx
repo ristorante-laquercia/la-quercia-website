@@ -1,17 +1,17 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image'
+import Link from 'next/link'
 
-import { BeerSteinDuotoneIcon } from "@/components/icons";
-import { Button } from "@/components/ui/button";
-import { Container } from "@/components/ui/container";
-import { RevealGroup, RevealItem } from "@/components/ui/reveal";
-import { homeContent } from "@/lib/contents/home";
-import bgImage from "@/public/assets/demo/restaurant-interior-2.jpg";
-import friendsImage from "@/public/assets/demo/three-friends-cheer-wine-glasses-with-red-white-wine-dinner.jpg";
+import { BeerSteinDuotoneIcon } from '@/components/icons'
+import { Button } from '@/components/ui/button'
+import { Container } from '@/components/ui/container'
+import { RevealGroup, RevealItem } from '@/components/ui/reveal'
+import { homeContent } from '@/lib/contents/home'
+import bgImage from '@/public/assets/demo/restaurant-interior-2.jpg'
+import friendsImage from '@/public/assets/demo/three-friends-cheer-wine-glasses-with-red-white-wine-dinner.jpg'
 
 export function BeerSection() {
-  const sectionTitleId = "home-beer-title";
-  const sectionDescriptionId = "home-beer-description";
+  const sectionTitleId = 'home-beer-title'
+  const sectionDescriptionId = 'home-beer-description'
 
   return (
     <section
@@ -20,14 +20,7 @@ export function BeerSection() {
       className="relative z-40 overflow-hidden"
     >
       {/* Background photo */}
-      <Image
-        src={bgImage}
-        alt=""
-        fill
-        placeholder="blur"
-        className="object-cover object-center"
-        aria-hidden
-      />
+      <Image src={bgImage} alt="" fill placeholder="blur" className="object-cover object-center" aria-hidden />
 
       {/* Senape mask: solid on mobile, fades to transparent right on desktop */}
       <div
@@ -42,12 +35,7 @@ export function BeerSection() {
       />
 
       <Container className="relative z-10 py-32 lg:py-48">
-        <RevealGroup
-          className="flex flex-col gap-6 lg:gap-8"
-          stagger={0.22}
-          delayChildren={0.3}
-          amount={0.2}
-        >
+        <RevealGroup className="flex flex-col gap-6 lg:gap-8" stagger={0.22} delayChildren={0.3} amount={0.2}>
           {/* Giant title */}
           <RevealItem preset="fade-up" duration={1.1} distance={24}>
             <h2
@@ -63,9 +51,7 @@ export function BeerSection() {
             {/* Left: eyebrow + description + CTA */}
             <div className="flex flex-col gap-5">
               <RevealItem preset="fade-up" duration={1.0} distance={18}>
-                <span className="text-sm font-black uppercase tracking-[0.22em] text-lq-dark/70">
-                  Birreria
-                </span>
+                <span className="text-sm font-black uppercase tracking-[0.22em] text-lq-dark/70">Birreria</span>
               </RevealItem>
 
               <RevealItem preset="fade-up" duration={1.2} distance={22}>
@@ -93,12 +79,7 @@ export function BeerSection() {
             </div>
 
             {/* Right: single portrait photo */}
-            <RevealItem
-              preset="fade-up"
-              duration={1.5}
-              distance={36}
-              className="self-end"
-            >
+            <RevealItem preset="fade-up" duration={1.5} distance={36} className="self-end">
               <div className="relative mx-auto aspect-3/4 w-full max-w-xs overflow-hidden rounded-2xl shadow-2xl lg:max-w-sm">
                 <Image
                   src={friendsImage}
@@ -114,5 +95,5 @@ export function BeerSection() {
         </RevealGroup>
       </Container>
     </section>
-  );
+  )
 }

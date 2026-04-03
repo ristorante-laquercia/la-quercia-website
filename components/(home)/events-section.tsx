@@ -46,12 +46,7 @@ export function EventsSection() {
       <div aria-hidden className="pointer-events-none absolute inset-0 z-0 bg-black/65" />
 
       <Container className="relative z-10 py-32 lg:py-48">
-        <RevealGroup
-          className="flex flex-col gap-10 lg:gap-14"
-          stagger={0.2}
-          delayChildren={0.3}
-          amount={0.15}
-        >
+        <RevealGroup className="flex flex-col gap-10 lg:gap-14" stagger={0.2} delayChildren={0.3} amount={0.15}>
           {/* Giant title */}
           <RevealItem preset="fade-up" duration={1.1} distance={24}>
             <h2
@@ -67,9 +62,7 @@ export function EventsSection() {
             {/* Left: eyebrow + description + CTA */}
             <div className="flex flex-col gap-5 text-white">
               <RevealItem preset="fade-up" duration={1.0} distance={18}>
-                <span className="text-sm font-black uppercase tracking-[0.22em] text-lq-orange">
-                  Serate &amp; Concerti
-                </span>
+                <span className="text-sm font-black uppercase tracking-[0.22em] text-lq-orange">Serate &amp; Concerti</span>
               </RevealItem>
               <RevealItem preset="fade-up" duration={1.2} distance={22}>
                 <div
