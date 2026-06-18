@@ -13,7 +13,6 @@ export function SubFooter() {
             <span> MPM di Iuliano Tiziana - Via Elba, 1 - Termoli (CB)</span>
             <span>Partita IVA:IT01516690706</span>
           </div>
-          <div>Privacy & Cookie Policy</div>
         </div>
 
         <div className="col-span-12 flex items-center justify-center gap-x-1 text-xs xl:col-span-4 xl:justify-end">

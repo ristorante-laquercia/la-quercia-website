@@ -6,8 +6,9 @@ import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 import { homeContent } from '@/lib/contents/home'
-import bgImage from '@/public/assets/demo/restaurant-interior-2.jpg'
-import friendsImage from '@/public/assets/demo/three-friends-cheer-wine-glasses-with-red-white-wine-dinner.jpg'
+
+import bgImage from '@/public/assets/imgs/home/area-birreria.jpg'
+import pulcherioScuttiImage from '@/public/assets/imgs/home/Pulcherio-Scutti-beer-sommelier.jpg'
 
 export function BeerSection() {
   const sectionTitleId = 'home-beer-title'
@@ -20,7 +21,14 @@ export function BeerSection() {
       className="relative z-40 overflow-hidden"
     >
       {/* Background photo */}
-      <Image src={bgImage} alt="" fill placeholder="blur" className="object-cover object-center" aria-hidden />
+      <Image
+        src={bgImage}
+        alt="Area birreria della Ristobirreria La Quercia"
+        fill
+        placeholder="blur"
+        className="object-cover object-center"
+        aria-hidden
+      />
 
       {/* Senape mask: solid on mobile, fades to transparent right on desktop */}
       <div
@@ -51,7 +59,9 @@ export function BeerSection() {
             {/* Left: eyebrow + description + CTA */}
             <div className="flex flex-col gap-5">
               <RevealItem preset="fade-up" duration={1.0} distance={18}>
-                <span className="text-sm font-black uppercase tracking-[0.22em] text-lq-dark/70">Birreria</span>
+                <span className="text-sm font-black uppercase tracking-[0.22em] text-lq-dark/70">
+                  {homeContent.beer.kicker}
+                </span>
               </RevealItem>
 
               <RevealItem preset="fade-up" duration={1.2} distance={22}>
@@ -82,8 +92,8 @@ export function BeerSection() {
             <RevealItem preset="fade-up" duration={1.5} distance={36} className="self-end">
               <div className="relative mx-auto aspect-3/4 w-full max-w-xs overflow-hidden rounded-2xl shadow-2xl lg:max-w-sm">
                 <Image
-                  src={friendsImage}
-                  alt="Amici che brindano al locale La Quercia"
+                  src={pulcherioScuttiImage}
+                  alt="Pulcherio Scutti, Beer Sommelier"
                   fill
                   placeholder="blur"
                   sizes="(max-width: 768px) 80vw, 40vw"

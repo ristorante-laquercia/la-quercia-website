@@ -7,15 +7,23 @@ import { FacebookOutlined, InstagramOutlined, WhatsappOutlined } from '@lineicon
 import { SubFooter } from '@/components/(footer)/sub-footer'
 
 export function Footer() {
-  // TODO: sostituire con le pagine reali del sito.
   const infoLinks = [
     { label: 'Chi siamo', href: '/chi-siamo' },
-    { label: 'Menu', href: '/menu' },
-    { label: 'Esperienze', href: '/esperienze' },
+    {
+      label: 'Privacy Policy',
+      href: '/privacy-policy',
+    },
+    { label: 'Cookie Policy', href: '/cookie-policy' },
     { label: 'Contatti', href: '/contatti' },
   ]
 
-  const openingHours = ['Lun: 19:00 - 00:00', 'Martedì: Chiuso', 'Mer - Dom: 19:00 - 00:00']
+  const openingHours = [
+    'Ristorante - Pizzeria - Birreria',
+    'Dalle 19.00 alle 00.00',
+    'AperiBirra! Il tuo aperitivo differente e gustoso',
+    'dalle 17.30 alle 19.30',
+    'Giorno di chiusura: martedì.',
+  ]
 
   return (
     <footer id="site-footer" className="grid grid-cols-12">
@@ -89,8 +97,8 @@ export function Footer() {
 
           {/* End block */}
           <div className="md:max-mdp:col-span-2 mdp:col-span-1">
-            <h4 className="text-[32px] mdp:text-right font-gabarito">Orari di apertura</h4>
-            <ul className="[&_li]:text-xl font-light [&_li]:mdp:text-base mdp:text-right">
+            <h4 className="text-[32px] mdp:text-right font-gabarito">Orari</h4>
+            <ul className="space-y-1 [&_li]:text-xl font-light [&_li]:mdp:text-base mdp:text-right">
               {openingHours.map((hour) => (
                 <li key={hour}>{hour}</li>
               ))}

@@ -9,26 +9,26 @@ import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 
-import bgImage from '@/public/assets/demo/three-friends-cheer-wine-glasses-with-red-white-wine-dinner.jpg'
-import wideImage from '@/public/assets/demo/restaurant-interior-2.jpg'
-import g1 from '@/public/assets/demo/5210.jpg'
-import g2 from '@/public/assets/demo/brunette-woman-brown-cap-white-tee-her-friend-stylish-top-smiles-rests-street-cafe.jpg'
-import g3 from '@/public/assets/demo/table-set-dinning-table.jpg'
-import g4 from '@/public/assets/demo/friends-eating-restaurant.jpg'
-import g5 from '@/public/assets/demo/young-woman-eating-pasta-cafe.jpg'
-import g6 from '@/public/assets/demo/restaurant-interior.jpg'
-import g7 from '@/public/assets/demo/italian-lasagne-served-with-rocket-salad.jpg'
-import g8 from '@/public/assets/demo/2151639899.jpg'
+import bgImage from '@/public/assets/imgs/home/amici-che-brindano.jpg'
+import drinkingFriendsImage from '@/public/assets/imgs/home/gruppo-di-persone-che-brinda-presso-ristobirreria-la-quercia.jpg'
+import g1 from '@/public/assets/imgs/home/gallery/aperibirra-presso-ristobirreria-la-quercia.jpg'
+import g2 from '@/public/assets/imgs/home/gallery/birra-dama.jpg'
+import g3 from '@/public/assets/imgs/home/gallery/calici-di-diversi-tipi-di-birra.jpg'
+import g4 from '@/public/assets/imgs/home/gallery/colazione-dei-campioni-presso-ristobirreria-la-quercia.jpg'
+import g5 from '@/public/assets/imgs/home/gallery/freccette.jpg'
+import g6 from '@/public/assets/imgs/home/gallery/metro birra.jpg'
+import g7 from '@/public/assets/imgs/home/gallery/ragazza-che-partecipa-al-drink-and-play.jpg'
+import g8 from '@/public/assets/imgs/home/gallery/una-coppia-che-fa-aperitivo-presso-la-quercia.jpg'
 
 const galleryImages = [
-  { src: g1, alt: 'Serata al La Quercia' },
-  { src: g2, alt: 'Amici al bar La Quercia' },
-  { src: g3, alt: 'Tavola apparecchiata al La Quercia' },
-  { src: g4, alt: 'Amici a cena al La Quercia' },
-  { src: g5, alt: 'Pasta artigianale al La Quercia' },
-  { src: g6, alt: 'Interni del La Quercia' },
-  { src: g7, alt: 'Lasagna al La Quercia' },
-  { src: g8, alt: 'Atmosfera serale al La Quercia' },
+  { src: g1, alt: 'Aperitivo presso Ristobirreria La Quercia' },
+  { src: g2, alt: 'Birra dama presso Ristobirreria La Quercia' },
+  { src: g8, alt: 'Coppia che fa aperitivo presso Ristobirreria La Quercia' },
+  { src: g3, alt: 'Calici di diversi tipi di birra' },
+  { src: g4, alt: 'Colazione dei campioni presso Ristobirreria La Quercia' },
+  { src: g5, alt: 'Freccette' },
+  { src: g6, alt: 'Il metro di birra' },
+  { src: g7, alt: 'Ragazza che partecipa al drink and play presso Ristobirreria La Quercia' },
 ]
 
 export function EventsSection() {
@@ -42,7 +42,7 @@ export function EventsSection() {
       className="relative z-30 w-full overflow-hidden"
     >
       {/* Background image + overlay */}
-      <Image src={bgImage} alt="" fill placeholder="blur" className="object-cover" aria-hidden />
+      <Image src={bgImage} alt="Gruppo di amici che brinda" fill placeholder="blur" className="object-cover" aria-hidden />
       <div aria-hidden className="pointer-events-none absolute inset-0 z-0 bg-black/65" />
 
       <Container className="relative z-10 py-32 lg:py-48">
@@ -62,7 +62,9 @@ export function EventsSection() {
             {/* Left: eyebrow + description + CTA */}
             <div className="flex flex-col gap-5 text-white">
               <RevealItem preset="fade-up" duration={1.0} distance={18}>
-                <span className="text-sm font-black uppercase tracking-[0.22em] text-lq-orange">Serate &amp; Concerti</span>
+                <span className="text-sm font-black uppercase tracking-[0.22em] text-lq-orange">
+                  {homeContent.events.kicker}
+                </span>
               </RevealItem>
               <RevealItem preset="fade-up" duration={1.2} distance={22}>
                 <div
@@ -91,8 +93,8 @@ export function EventsSection() {
             <RevealItem preset="fade-up" duration={1.5} distance={32}>
               <div className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-2xl">
                 <Image
-                  src={wideImage}
-                  alt="Atmosfera serale al La Quercia"
+                  src={drinkingFriendsImage}
+                  alt="Amici che brindano presso Ristobirreria La Quercia"
                   fill
                   placeholder="blur"
                   sizes="(max-width: 768px) 100vw, 58vw"

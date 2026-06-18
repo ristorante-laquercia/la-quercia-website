@@ -9,8 +9,8 @@ import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 
-import sectionImage from '@/public/assets/demo/restaurant-interior-2.jpg'
-import friendsImage from '@/public/assets/demo/friends-playing-cards-bar.jpg'
+import fotoInterni from '@/public/assets/imgs/home/ristorbirreria-la-quercia-interni.jpg'
+import fotoFriends from '@/public/assets/imgs/home/gruppo-di-persone-che-brinda-presso-ristobirreria-la-quercia.jpg'
 
 export function AboutSection() {
   const sectionTitleId = 'home-about-title'
@@ -35,8 +35,8 @@ export function AboutSection() {
             <RevealItem preset="fade-up" duration={1.3} distance={28}>
               <div className="relative aspect-4/5 w-full overflow-hidden rounded-2xl shadow-lg">
                 <Image
-                  src={sectionImage}
-                  alt="Interno del locale La Quercia"
+                  src={fotoInterni}
+                  alt="Interno della Ristobirreria La Quercia"
                   fill
                   placeholder="blur"
                   sizes="(max-width: 1024px) 100vw, 40vw"
@@ -46,10 +46,10 @@ export function AboutSection() {
             </RevealItem>
 
             <RevealItem preset="fade-up" duration={1.5} distance={32}>
-              <div className="relative aspect-3/2 w-full overflow-hidden rounded-xl shadow-md">
+              <div className="relative aspect-7/6 w-full overflow-hidden rounded-xl shadow-md">
                 <Image
-                  src={friendsImage}
-                  alt={homeContent.about.images[0].alt}
+                  src={fotoFriends}
+                  alt="Gruppo di persone che brinda presso Ristobirreria La Quercia"
                   fill
                   placeholder="blur"
                   sizes="(max-width: 1024px) 100vw, 40vw"
