@@ -6,8 +6,22 @@ import { Container } from '@/components/ui/container'
 import { DiagonalElement } from '@/components/diagonal-element'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 
-import techniqueImage from '@/public/assets/demo/cook-pouring-sauce-plate-with-salad.jpg'
+import maltoAffumicatoImage from '@/public/assets/imgs/cucina/malto-affumicato.jpg'
 import backgroundTexture from '@/public/assets/backgrounds/blackboard-texture.jpg'
+
+import luppoloImg from '@/public/assets/imgs/cucina/luppolo.png'
+import maltoImg from '@/public/assets/imgs/cucina/malto.png'
+import marinatureImg from '@/public/assets/imgs/cucina/marinature.png'
+import reduzioniImg from '@/public/assets/imgs/cucina/riduzioni.png'
+
+import type { StaticImageData } from 'next/image'
+
+const techniqueImages: Record<string, StaticImageData> = {
+  'Il Luppolo': luppoloImg,
+  'Il Malto': maltoImg,
+  'Le Marinature': marinatureImg,
+  'Gelatine e Riduzioni': reduzioniImg,
+}
 
 export function CucinaTechniquesSection() {
   const titleId = 'cucina-techniques-title'
@@ -51,10 +65,10 @@ export function CucinaTechniquesSection() {
             className="relative overflow-hidden lg:sticky lg:top-[calc(var(--navbar-height,4rem)+2rem)] lg:self-start min-h-96 lg:h-full"
           >
             <Image
-              src={techniqueImage}
-              alt="Preparazione di un piatto con finitura di salsa e dettagli gastronomici"
+              src={maltoAffumicatoImage}
+              alt="Malto affumicato"
               placeholder="blur"
-              blurDataURL={techniqueImage.blurDataURL}
+              blurDataURL={maltoAffumicatoImage.blurDataURL}
               sizes="(max-width: 1024px) 100vw, 34vw"
               className="h-full min-h-96 w-full rounded-[2rem] object-cover lg:min-h-128"
             />
@@ -105,22 +119,19 @@ export function CucinaTechniquesSection() {
                   duration={1.1}
                   className="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 px-6 py-6 backdrop-blur-xs transition-colors duration-300 hover:bg-white/8"
                 >
-                  {/* SVG placeholder — sostituire con l'SVG dell'ingrediente */}
                   <div
                     aria-hidden
-                    className="pointer-events-none absolute bottom-3 right-3 h-20 w-20 select-none opacity-[0.07] transition-opacity duration-500 group-hover:opacity-[0.13]"
+                    className="pointer-events-none absolute bottom-3 right-3 h-20 w-20 select-none overflow-hidden rounded-full opacity-[0.07] transition-opacity duration-500 group-hover:opacity-[0.13]"
                   >
-                    <svg
-                      role="graphics-symbol"
-                      viewBox="0 0 80 80"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-full w-full"
-                    >
-                      <circle cx="40" cy="40" r="36" stroke="currentColor" strokeWidth="1.5" />
-                      <line x1="40" y1="4" x2="40" y2="76" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" />
-                      <line x1="4" y1="40" x2="76" y2="40" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" />
-                    </svg>
+                    {techniqueImages[item.title] && (
+                      <Image
+                        src={techniqueImages[item.title]}
+                        alt=""
+                        width={80}
+                        height={80}
+                        className="size-full object-contain invert mix-blend-screen"
+                      />
+                    )}
                   </div>
 
                   <h3 className="font-gabarito text-xl font-black tracking-tight text-lq-senape">{item.title}</h3>

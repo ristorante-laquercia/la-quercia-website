@@ -6,10 +6,16 @@ import { Container } from '@/components/ui/container'
 import { DiagonalElement } from '@/components/diagonal-element'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 
-import rootsImage from '@/public/assets/demo/friends-eating-restaurant.jpg'
-import localImage from '@/public/assets/demo/side-view-sac-with-meat-fried-potatoeslavash-table-restaurant.jpg'
-import kitchenImage from '@/public/assets/demo/chef-cooking-food-restaurant-kitchen.jpg'
+import bgImage from '@/public/assets/imgs/cucina/pizza-con-fave-e-speck.jpg'
+import kitchenImage from '@/public/assets/imgs/cucina/pizza-appena-posizionata-nel-forno-per-la-cottura.jpg'
 import logoAic from '@/public/assets/imgs/logo-aic.png'
+
+function renderInlineHtml(text: string) {
+  return text.split(/(<strong>.*?<\/strong>)/g).map((part) => {
+    const match = part.match(/^<strong>(.*?)<\/strong>$/)
+    return match ? <strong key={part}>{match[1]}</strong> : part
+  })
+}
 
 export function CucinaRootsSection() {
   const traditionTitleId = 'cucina-tradition-title'
@@ -63,21 +69,16 @@ export function CucinaRootsSection() {
             </RevealItem>
           </div>
 
-          {/* Right: roots image with editorial offset */}
+          {/* Right: tradition video with editorial offset */}
           <RevealItem
             preset="fade-up"
             distance={38}
             duration={1.45}
             className="overflow-hidden rounded-[2rem] shadow-xl lg:translate-y-6 lg:h-full"
           >
-            <Image
-              src={rootsImage}
-              alt="Tavolata nel locale con persone che condividono il pasto"
-              placeholder="blur"
-              blurDataURL={rootsImage.blurDataURL}
-              sizes="(max-width: 1024px) 100vw, 40vw"
-              className="h-full min-h-72 w-full object-cover lg:min-h-112 "
-            />
+            <video autoPlay muted loop playsInline className="h-full min-h-72 w-full object-cover lg:min-h-112">
+              <source src="/assets/video/lavorazione-cavatelli.mp4" type="video/mp4" />
+            </video>
           </RevealItem>
         </RevealGroup>
 
@@ -93,20 +94,20 @@ export function CucinaRootsSection() {
             preset="fade-up"
             distance={32}
             duration={1.35}
-            className="relative min-h-104 overflow-hidden rounded-[2rem] lg:min-h-128 bg-lq-dark lg:p-10"
+            className="relative min-h-104 overflow-hidden rounded-[2rem] bg-lq-dark p-8 lg:min-h-128 lg:p-10"
           >
             <Image
-              src={localImage}
-              alt="Dettaglio di un piatto servito con cura e ingredienti ricchi"
+              src={bgImage}
+              alt="Pizza con fave e speck"
               placeholder="blur"
-              blurDataURL={localImage.blurDataURL}
+              blurDataURL={bgImage.blurDataURL}
               sizes="(max-width: 768px) 100vw, 45vw"
               className="absolute inset-0 h-full w-full object-cover z-0"
             />
 
-            <div className="absolute inset-0 bg-linear-to-t from-lq-dark/85 to-lq-dark/50" />
+            <div className="absolute inset-0 bg-black/60" />
 
-            <div className="flex flex-col gap-3 relative">
+            <div className="relative z-10 flex flex-col gap-3">
               <span className="text-xs font-black uppercase tracking-[0.22em] text-lq-senape">
                 {cucinaContent.territory.eyebrow}
               </span>
@@ -116,7 +117,7 @@ export function CucinaRootsSection() {
               <div className="mt-1 space-y-2">
                 {cucinaContent.territory.paragraphs.map((paragraph) => (
                   <p key={paragraph} className="text-lg leading-relaxed text-white">
-                    {paragraph}
+                    {renderInlineHtml(paragraph)}
                   </p>
                 ))}
               </div>
@@ -130,7 +131,7 @@ export function CucinaRootsSection() {
             duration={1.2}
             className="relative flex min-h-104 flex-col overflow-hidden rounded-[2rem] bg-lq-dark p-8 lg:min-h-128 lg:p-10"
           >
-            <div className="flex flex-col gap-3 pr-32">
+            <div className="flex flex-col gap-3 lg:pr-32">
               <span className="text-xs font-black uppercase tracking-[0.22em] text-lq-orange">
                 {cucinaContent.glutenFree.eyebrow}
               </span>
@@ -148,7 +149,7 @@ export function CucinaRootsSection() {
               height={logoAic.height}
               placeholder="blur"
               blurDataURL={logoAic.blurDataURL}
-              className="h-auto w-80 mx-auto mt-auto"
+              className="h-auto w-80 mx-auto mt-8 lg:mt-auto"
             />
           </RevealItem>
 
@@ -161,11 +162,11 @@ export function CucinaRootsSection() {
           >
             <Image
               src={kitchenImage}
-              alt="Chef al lavoro in cucina durante la preparazione dei piatti"
+              alt="Pizza posizionata nel forno per la cottura"
               placeholder="blur"
               blurDataURL={kitchenImage.blurDataURL}
               sizes="(max-width: 768px) 100vw, 80vw"
-              className="h-36 w-full object-cover object-center lg:h-64"
+              className="h-48 w-full object-cover object-center lg:h-64"
             />
           </RevealItem>
         </RevealGroup>
