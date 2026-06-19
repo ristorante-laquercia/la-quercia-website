@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: `${BASE_URL}/assets/og/home.jpg`,
+        url: `${BASE_URL}/assets/imgs/home/og-image-home.png`,
         width: 1200,
         height: 630,
         alt: 'La Quercia Ristobirreria – cucina alla birra e cavatelli live a Termoli',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'La Quercia – Ristobirreria a Termoli',
     description: 'Cavatelli live, cucina alla birra e Beer Sommelier. Nati sotto una grande quercia, a Termoli.',
-    images: [`${BASE_URL}/assets/og/home.jpg`],
+    images: [`${BASE_URL}/assets/imgs/home/og-image-home.png`],
   },
 }
 
@@ -67,7 +67,7 @@ const jsonLd = {
       '@id': `${BASE_URL}#restaurant`,
       name: 'La Quercia Ristobirreria',
       url: BASE_URL,
-      image: `${BASE_URL}/assets/og/home.jpg`,
+      image: `${BASE_URL}/assets/imgs/home/og-image-home.png`,
       description:
         'Ristobirreria nata sotto una grande quercia. Cavatelli fatti a mano da Annamaria dal 1989, cucina alla birra con malto e luppolo, e una selezione guidata dal Beer Sommelier Pulcherio.',
       address: {
