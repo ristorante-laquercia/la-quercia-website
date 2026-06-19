@@ -5,11 +5,11 @@ import { chiSiamoContent } from '@/lib/contents/chi-siamo'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 
-import mainImage from '@/public/assets/demo/friends-eating-restaurant.jpg'
-import gridImage1 from '@/public/assets/demo/cook-pouring-sauce-plate-with-salad.jpg'
-import gridImage2 from '@/public/assets/demo/toast-dinner.jpg'
-import gridImage3 from '@/public/assets/demo/italian-lasagne-served-with-rocket-salad.jpg'
-import gridImage4 from '@/public/assets/demo/side-view-sac-with-meat-fried-potatoeslavash-table-restaurant.jpg'
+import mainImage from '@/public/assets/imgs/chi-siamo/gruppo-di-persone-sorridenti.jpg'
+import gridImage1 from '@/public/assets/imgs/chi-siamo/gallery/dettaglio-pizza-nel-forno-per-la-cottura.jpg'
+import gridImage2 from '@/public/assets/imgs/chi-siamo/gallery/signora-annamaria-che-impasta.jpg'
+import gridImage3 from '@/public/assets/imgs/chi-siamo/gallery/pulcherio-scutti-beer-sommelier.jpg'
+import gridImage4 from '@/public/assets/imgs/chi-siamo/gallery/piatto-con-uno-stinco-di-maiale.jpg'
 
 const titleId = 'chi-siamo-philosophy-title'
 const descriptionId = 'chi-siamo-philosophy-description'
@@ -56,7 +56,7 @@ export function PhilosophyBlock() {
 
       {/* Full-width image grid spanning the entire green section */}
       <div className="mt-8 grid grid-cols-2 gap-2 lg:mt-12 lg:grid-cols-4 lg:gap-3">
-        <RevealItem preset="fade-up" distance={20} duration={1.05} className="relative aspect-[4/3] overflow-hidden">
+        <RevealItem preset="fade-up" distance={20} duration={1.05} className="relative aspect-4/3 overflow-hidden">
           <Image
             src={gridImage1}
             alt="Chef che versa salsa su un piatto"
@@ -66,7 +66,7 @@ export function PhilosophyBlock() {
             className="object-cover"
           />
         </RevealItem>
-        <RevealItem preset="fade-up" distance={22} duration={1.1} className="relative aspect-[4/3] overflow-hidden">
+        <RevealItem preset="fade-up" distance={22} duration={1.1} className="relative aspect-4/3 overflow-hidden">
           <Image
             src={gridImage2}
             alt="Brindisi durante una cena"
@@ -76,7 +76,7 @@ export function PhilosophyBlock() {
             className="object-cover"
           />
         </RevealItem>
-        <RevealItem preset="fade-up" distance={24} duration={1.1} className="relative aspect-[4/3] overflow-hidden">
+        <RevealItem preset="fade-up" distance={24} duration={1.1} className="relative aspect-4/3 overflow-hidden">
           <Image
             src={gridImage3}
             alt="Lasagna italiana servita con insalata di rucola"
@@ -86,7 +86,7 @@ export function PhilosophyBlock() {
             className="object-cover"
           />
         </RevealItem>
-        <RevealItem preset="fade-up" distance={22} duration={1.15} className="relative aspect-[4/3] overflow-hidden">
+        <RevealItem preset="fade-up" distance={22} duration={1.15} className="relative aspect-4/3 overflow-hidden">
           <Image
             src={gridImage4}
             alt="Piatto di carne con patate fritte al ristorante"
