@@ -5,9 +5,9 @@ import { cucinaContent } from '@/lib/contents/cucina'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 
-import diningImage from '@/public/assets/demo/restaurant-interior-2.jpg'
-import dishImage from '@/public/assets/demo/side-view-spaghetti-with-greens-ricotta-cheese-round-white-plate.jpg'
-import atmosphereImage from '@/public/assets/demo/friends-eating-restaurant.jpg'
+import cavatelliImage from '@/public/assets/imgs/cucina/cavatelli-appena-preparati.jpg'
+import maltoImage from '@/public/assets/imgs/cucina/malto-utilizzato-in-cucina.jpg'
+import rollImage from '@/public/assets/imgs/cucina/un-roll-di-tubbbo.jpg'
 
 export function CucinaIntroSection() {
   const titleId = 'cucina-intro-title'
@@ -67,14 +67,6 @@ export function CucinaIntroSection() {
                 </RevealItem>
               ))}
             </div>
-
-            <RevealItem preset="fade-up" distance={28} duration={1.25}>
-              <blockquote className="mt-4 border-l-[3px] border-lq-orange/50 pl-5">
-                <p className="font-gabarito text-xl font-light italic text-lq-dark/55" style={{ letterSpacing: '0.01em' }}>
-                  &rdquo;Non usiamo la birra come nota aromatica — la trattiamo come una materia prima nobile.&rdquo;
-                </p>
-              </blockquote>
-            </RevealItem>
           </div>
 
           <div className="grid grid-cols-2 gap-4 md:gap-6 lg:h-full lg:grid-rows-2">
@@ -85,10 +77,10 @@ export function CucinaIntroSection() {
               className="relative overflow-hidden rounded-[1.75rem] shadow-lg lg:row-span-2 lg:h-full"
             >
               <Image
-                src={diningImage}
-                alt="Interno del locale con tavoli apparecchiati"
+                src={cavatelliImage}
+                alt="Cavatelli appena preparati"
                 placeholder="blur"
-                blurDataURL={diningImage.blurDataURL}
+                blurDataURL={cavatelliImage.blurDataURL}
                 sizes="(max-width: 768px) 45vw, 26vw"
                 className="h-full min-h-80 w-full object-cover lg:min-h-full"
               />
@@ -102,10 +94,10 @@ export function CucinaIntroSection() {
               className="relative overflow-hidden rounded-[1.75rem] shadow-lg lg:h-full"
             >
               <Image
-                src={dishImage}
-                alt="Piatto della cucina della casa impiattato con cura"
+                src={maltoImage}
+                alt="Malto utilizzato in cucina"
                 placeholder="blur"
-                blurDataURL={dishImage.blurDataURL}
+                blurDataURL={maltoImage.blurDataURL}
                 sizes="(max-width: 768px) 45vw, 20vw"
                 className="h-full min-h-64 w-full object-cover lg:min-h-full"
               />
@@ -118,10 +110,10 @@ export function CucinaIntroSection() {
               className="relative overflow-hidden rounded-[1.75rem] shadow-lg lg:h-full"
             >
               <Image
-                src={atmosphereImage}
-                alt="Persone sedute al tavolo durante un momento conviviale"
+                src={rollImage}
+                alt="Un roll di tubbbo"
                 placeholder="blur"
-                blurDataURL={atmosphereImage.blurDataURL}
+                blurDataURL={rollImage.blurDataURL}
                 sizes="(max-width: 768px) 45vw, 20vw"
                 className="h-full min-h-56 w-full object-cover lg:min-h-full"
               />

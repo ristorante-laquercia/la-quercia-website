@@ -1,9 +1,9 @@
 export const cucinaContent = {
   hero: {
-    title: 'Cucina',
+    title: 'Tradizione e innovazione',
   },
   intro: {
-    eyebrow: "Cucina alla Birra, Tradizione Molisana e Pizza d'Autore",
+    eyebrow: "Cucina alla birra, tradizione molisana e pizza d'autore",
     title: 'Piatti che parlano la lingua del malto, della terra e del tempo.',
     paragraphs: [
       "La nostra cucina nasce dall'incontro tra intuizione brassicola, gesti antichi e ingredienti che raccontano il Molise.",
