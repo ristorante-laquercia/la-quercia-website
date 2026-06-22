@@ -6,9 +6,9 @@ import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 import { DiagonalElement } from '@/components/diagonal-element'
 
-import introImage from '@/public/assets/demo/three-friends-cheer-wine-glasses-with-red-white-wine-dinner.jpg'
-import detailImage from '@/public/assets/demo/toast-dinner.jpg'
-import atmosphereImage from '@/public/assets/demo/table-set-dinning-table.jpg'
+import introImage from '@/public/assets/imgs/esperienze/ragazzo-che-sta-partecipando-ad-un-drink-and-play.jpg'
+import detailImage from '@/public/assets/imgs/esperienze/una-ragazza-mora-beve-una-birra.jpg'
+import atmosphereImage from '@/public/assets/imgs/esperienze/un-dettaglio-di-una-scacchiera-durante-una-partita.jpg'
 
 export function EsperienzeIntroSection() {
   const titleId = 'esperienze-intro-title'
@@ -115,7 +115,7 @@ export function EsperienzeIntroSection() {
             </RevealItem>
 
             <RevealItem preset="fade-up" distance={22} duration={1.08}>
-              <div className="h-[3px] w-10 rounded-full bg-lq-orange/50" />
+              <div className="h-0.75 w-10 rounded-full bg-lq-orange/50" />
             </RevealItem>
 
             <div id={descriptionId} className="space-y-4 text-lq-dark">

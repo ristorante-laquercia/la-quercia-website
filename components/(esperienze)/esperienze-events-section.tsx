@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Lineicons from '@lineiconshq/react-lineicons'
-import { HatChef3Duotone, InstagramOutlined } from '@lineiconshq/free-icons'
+import { HatChef3Duotone, WhatsappOutlined } from '@lineiconshq/free-icons'
 
 import { esperienzeContent } from '@/lib/contents/esperienze'
 
@@ -10,11 +10,11 @@ import { Button } from '@/components/ui/button'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 import { DiagonalElement } from '@/components/diagonal-element'
 
-import degustazioneImage from '@/public/assets/demo/italian-lasagne-served-with-rocket-salad.jpg'
-import birraImage from '@/public/assets/demo/2151639899.jpg'
+import degustazioneImage from '@/public/assets/imgs/esperienze/beer-sommelier-spiega-abbinamenti.jpg'
+import colazioneCampioni from '@/public/assets/imgs/esperienze/la-colazione-dei-campioni.jpg'
 
-const eventImages = [degustazioneImage, birraImage] as const
-const eventIcons = [HatChef3Duotone, InstagramOutlined] as const
+const eventImages = [degustazioneImage, colazioneCampioni] as const
+const eventIcons = [HatChef3Duotone, WhatsappOutlined] as const
 
 function isExternalHref(href: string) {
   return href.startsWith('http://') || href.startsWith('https://')
@@ -123,9 +123,12 @@ export function EsperienzeEventsSection() {
                         <span className="rounded-[0.3rem] border border-white/22 bg-black/28 px-3 py-1.5 text-[0.6rem] font-bold uppercase tracking-[0.22em] text-white backdrop-blur-sm">
                           {item.dateLabel}
                         </span>
-                        <span className="rounded-[0.3rem] border border-white/22 bg-black/28 px-3 py-1.5 text-[0.6rem] font-bold uppercase tracking-[0.22em] text-white backdrop-blur-sm">
-                          {item.timeLabel}
-                        </span>
+
+                        {'timeLabel' in item && (
+                          <span className="rounded-[0.3rem] border border-white/22 bg-black/28 px-3 py-1.5 text-[0.6rem] font-bold uppercase tracking-[0.22em] text-white backdrop-blur-sm">
+                            {item.timeLabel}
+                          </span>
+                        )}
                       </div>
                     </div>
 

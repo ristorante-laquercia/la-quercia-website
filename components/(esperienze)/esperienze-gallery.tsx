@@ -6,17 +6,21 @@ import { esperienzeContent } from '@/lib/contents/esperienze'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 
-import galleryImage1 from '@/public/assets/demo/brunette-woman-brown-cap-white-tee-her-friend-stylish-top-smiles-rests-street-cafe.jpg'
-import galleryImage2 from '@/public/assets/demo/young-couple-drinking-wine-having-fun-lunch-bar-focus-is-man.jpg'
-import galleryImage3 from '@/public/assets/demo/friends-playing-cards-bar.jpg'
-import galleryImage4 from '@/public/assets/demo/three-friends-cheer-wine-glasses-with-red-white-wine-dinner.jpg'
-import galleryImage5 from '@/public/assets/demo/young-woman-eating-pasta-cafe.jpg'
-import galleryImage6 from '@/public/assets/demo/restaurant-interior.jpg'
-import galleryImage7 from '@/public/assets/demo/table-set-dinning-table.jpg'
-import galleryImage8 from '@/public/assets/demo/toast-dinner.jpg'
-import galleryImage9 from '@/public/assets/demo/restaurant-interior-2.jpg'
-import galleryImage10 from '@/public/assets/demo/2151639899.jpg'
-import galleryImage11 from '@/public/assets/demo/chef-cooking-food-restaurant-kitchen.jpg'
+import imgAperibirraQuattroRagazzi from '@/public/assets/imgs/esperienze/gallery/aperibirra-con-quattro-ragazzi.jpg'
+import imgAperitivoAperibirra from '@/public/assets/imgs/esperienze/gallery/aperitivo aperibirra.jpg'
+import imgColazioneDettaglioPersone from '@/public/assets/imgs/esperienze/gallery/colazione-dei-campioni-dettaglio-con-persone-che-dialogano.jpg'
+import imgDueBicchieriBirra from '@/public/assets/imgs/esperienze/gallery/due-bicchieri-di-birra-in-primo-piano.jpg'
+import imgDueRagazzeRidono from '@/public/assets/imgs/esperienze/gallery/due-ragazze-ridono-mentre-bevono-della-birra.jpg'
+import imgGiocoFreccette from '@/public/assets/imgs/esperienze/gallery/gioco-delle-freccette.jpg'
+import imgBeerGarden from '@/public/assets/imgs/esperienze/gallery/il-beer-garden-della-ristobirreria-la-quercia.jpg'
+import imgColazioneDettaglio from '@/public/assets/imgs/esperienze/gallery/la-colazione-dei-campioni-un-dettaglio.jpg'
+import imgColazioneCampioni from '@/public/assets/imgs/esperienze/gallery/la-colazione-dei-campioni.jpg'
+import imgRagazzaFacendoAperitivo from '@/public/assets/imgs/esperienze/gallery/ragazza-che-sta-facendo un aperitivo.jpg'
+import imgRagazzaMangiaAperibirra from '@/public/assets/imgs/esperienze/gallery/ragazza-mentre-mangia-durante-un-aperibirra.jpg'
+import imgTavolaApparecchiata from '@/public/assets/imgs/esperienze/gallery/tavola-apparecchiata-un-dettaglio.jpg'
+import imgTavoloDueBicchieri from '@/public/assets/imgs/esperienze/gallery/tavolo-con-due-bicchieri-per-un-aperitivo.jpg'
+import imgBicchiereSprite from '@/public/assets/imgs/esperienze/gallery/un-bicchiere-con-dello-spritz-pronto-per-essere-servito.jpg'
+import imgDettaglioPastoColazione from '@/public/assets/imgs/esperienze/gallery/un-dettaglio-del-pasto-durante-la-colazione-dei-campioni.jpg'
 
 type GalleryItem = {
   src: StaticImageData
@@ -33,76 +37,31 @@ const galleryRows: readonly GalleryRow[] = [
   {
     heightClassName: 'h-[8rem] sm:h-[13rem] md:h-[20rem] lg:h-[24rem]',
     items: [
-      {
-        src: galleryImage1,
-        alt: 'Persone sedute in un momento conviviale',
-        flexGrow: 36,
-      },
-      {
-        src: galleryImage2,
-        alt: "Coppia che brinda e sorride durante l'aperitivo",
-        flexGrow: 22,
-      },
-      {
-        src: galleryImage3,
-        alt: 'Amici che giocano a carte nel locale',
-        flexGrow: 30,
-      },
-      {
-        src: galleryImage9,
-        alt: 'Spazio interno adatto a incontri e momenti di vita',
-        flexGrow: 20,
-      },
+      { src: imgAperibirraQuattroRagazzi, alt: 'aperibirra-con-quattro-ragazzi', flexGrow: 30 },
+      { src: imgDueRagazzeRidono, alt: 'due-ragazze-ridono-mentre-bevono-della-birra', flexGrow: 24 },
+      { src: imgRagazzaMangiaAperibirra, alt: 'ragazza-mentre-mangia-durante-un-aperibirra', flexGrow: 22 },
+      { src: imgBeerGarden, alt: 'il-beer-garden-della-ristobirreria-la-quercia', flexGrow: 32 },
+      { src: imgTavoloDueBicchieri, alt: 'tavolo-con-due-bicchieri-per-un-aperitivo', flexGrow: 18 },
     ],
   },
   {
     heightClassName: 'h-[11rem] sm:h-[17rem] md:h-[28rem] lg:h-[34rem]',
     items: [
-      {
-        src: galleryImage4,
-        alt: 'Brindisi serale tra amici durante una ricorrenza',
-        flexGrow: 42,
-      },
-      {
-        src: galleryImage6,
-        alt: 'Sala interna del ristorante pronta ad accogliere gli ospiti',
-        flexGrow: 22,
-      },
-      {
-        src: galleryImage5,
-        alt: 'Momento rilassato al tavolo durante una pausa al locale',
-        flexGrow: 30,
-      },
+      { src: imgColazioneCampioni, alt: 'la-colazione-dei-campioni', flexGrow: 36 },
+      { src: imgAperitivoAperibirra, alt: 'aperitivo aperibirra', flexGrow: 28 },
+      { src: imgRagazzaFacendoAperitivo, alt: 'ragazza-che-sta-facendo un aperitivo', flexGrow: 24 },
+      { src: imgGiocoFreccette, alt: 'gioco-delle-freccette', flexGrow: 20 },
     ],
   },
   {
     heightClassName: 'h-[6rem] sm:h-[10rem] md:h-[16rem] lg:h-[19rem]',
     items: [
-      {
-        src: galleryImage7,
-        alt: 'Tavolo apparecchiato con atmosfera serale',
-        flexGrow: 28,
-      },
-      {
-        src: galleryImage8,
-        alt: 'Dettaglio di brindisi durante il dopocena',
-        flexGrow: 20,
-      },
-      {
-        src: galleryImage10,
-        alt: 'Birra servita al tavolo durante una serata speciale',
-        flexGrow: 38,
-      },
-      {
-        src: galleryImage11,
-        alt: 'Chef al lavoro in cucina durante la preparazione dei piatti',
-        flexGrow: 18,
-      },
-      {
-        src: galleryImage3,
-        alt: 'Giochi e convivialità nella serata del dopocena',
-        flexGrow: 24,
-      },
+      { src: imgDueBicchieriBirra, alt: 'due-bicchieri-di-birra-in-primo-piano', flexGrow: 20 },
+      { src: imgBicchiereSprite, alt: 'un-bicchiere-con-dello-spritz-pronto-per-essere-servito', flexGrow: 18 },
+      { src: imgTavolaApparecchiata, alt: 'tavola-apparecchiata-un-dettaglio', flexGrow: 24 },
+      { src: imgColazioneDettaglioPersone, alt: 'colazione-dei-campioni-dettaglio-con-persone-che-dialogano', flexGrow: 28 },
+      { src: imgColazioneDettaglio, alt: 'la-colazione-dei-campioni-un-dettaglio', flexGrow: 20 },
+      { src: imgDettaglioPastoColazione, alt: 'un-dettaglio-del-pasto-durante-la-colazione-dei-campioni', flexGrow: 26 },
     ],
   },
 ]

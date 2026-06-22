@@ -9,11 +9,11 @@ import { Container } from '@/components/ui/container'
 import { Button } from '@/components/ui/button'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 
-import aperibirraImage from '@/public/assets/demo/young-couple-drinking-wine-having-fun-lunch-bar-focus-is-man.jpg'
-import familyImage from '@/public/assets/demo/three-friends-cheer-wine-glasses-with-red-white-wine-dinner.jpg'
-import playImage from '@/public/assets/demo/friends-playing-cards-bar.jpg'
+import aperibirraImage from '@/public/assets/imgs/esperienze/una-ragazza-mora-beve-una-birra.jpg'
+import babyAperitivoImage from '@/public/assets/imgs/esperienze/un-dettaglio-di-una-scacchiera-durante-una-partita.jpg'
+import drinkPlayImage from '@/public/assets/imgs/esperienze/ragazzo-che-sta-partecipando-ad-un-drink-and-play.jpg'
 
-const cardImages = [aperibirraImage, familyImage, playImage] as const
+const cardImages = [aperibirraImage, babyAperitivoImage, drinkPlayImage] as const
 const cardIcons = [HatChef3Duotone, HatChef3Duotone, InstagramOutlined] as const
 
 export function EsperienzeCardsSection() {
@@ -65,7 +65,7 @@ export function EsperienzeCardsSection() {
           letterSpacing: '-0.04em',
         }}
       >
-        ESPERIENZE
+        {esperienzeContent.experiences.eyebrow}
       </span>
 
       <Container className="relative z-10">
@@ -94,7 +94,7 @@ export function EsperienzeCardsSection() {
                   lineHeight: 0.93,
                 }}
               >
-                Modi diversi di <span className="text-lq-orange">stare insieme</span>, con la stessa atmosfera di casa.
+                {esperienzeContent.experiences.title}
               </h2>
             </RevealItem>
           </div>
@@ -128,16 +128,29 @@ export function EsperienzeCardsSection() {
               duration={1.1 + index * 0.08}
             >
               <article className="xl:contents">
-                {/* Row 1 — image (22rem track on xl, h-72 on mobile) */}
-                <div className="relative h-72 shrink-0 xl:h-auto">
-                  <Image
-                    src={cardImages[index]}
-                    alt={card.imageAlt}
-                    placeholder="blur"
-                    blurDataURL={cardImages[index].blurDataURL}
-                    sizes="(max-width: 1280px) 100vw, 30vw"
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
+                {/* Row 1 — video or image (22rem track on xl, 16:9 / h-72 on mobile) */}
+                <div
+                  className={`relative shrink-0 xl:h-auto ${card.video ? 'aspect-video xl:aspect-auto' : 'h-72'}`}
+                >
+                  {card.video ? (
+                    <video
+                      src={card.video}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
+                  ) : (
+                    <Image
+                      src={cardImages[index]}
+                      alt={card.imageAlt}
+                      placeholder="blur"
+                      blurDataURL={cardImages[index].blurDataURL}
+                      sizes="(max-width: 1280px) 100vw, 30vw"
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
+                  )}
                   {/* subtle bottom vignette */}
                   <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
                 </div>

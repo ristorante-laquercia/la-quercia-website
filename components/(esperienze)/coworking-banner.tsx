@@ -9,7 +9,7 @@ import { Container } from '@/components/ui/container'
 import { Button } from '@/components/ui/button'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 
-import coworkingImage from '@/public/assets/demo/restaurant-interior-2.jpg'
+import coworkingImage from '@/public/assets/imgs/esperienze/sala-riunioni-la-quercia.jpg'
 
 export function CoworkingBanner() {
   const titleId = 'esperienze-coworking-title'
