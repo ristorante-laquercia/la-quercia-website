@@ -36,7 +36,7 @@ export function FoodSection() {
         className="pointer-events-none absolute inset-0 z-0 bg-linear-to-r from-black/90 via-black/65 to-black/25"
       />
 
-      <Container className="relative z-10 py-32 lg:py-48">
+      <Container className="relative z-10 py-32 max-lg:max-w-xl max-lg:mx-auto lg:py-48">
         <RevealGroup className="flex flex-col gap-6 lg:gap-8" stagger={0.22} delayChildren={0.3} amount={0.2}>
           {/* Giant title */}
           <RevealItem preset="fade-up" duration={1.1} distance={24}>
@@ -49,7 +49,7 @@ export function FoodSection() {
           </RevealItem>
 
           {/* Bottom row: description + image */}
-          <div className="grid grid-cols-1 gap-x-14 gap-y-8 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-x-14 gap-y-8 lg:grid-cols-2">
             <div className="flex flex-col gap-5 text-white">
               {/* Eyebrow */}
               <RevealItem preset="fade-up" duration={1.0} distance={18}>
@@ -82,7 +82,7 @@ export function FoodSection() {
             </div>
 
             <RevealItem preset="fade-up" duration={1.5} distance={36} className="self-end">
-              <div className="relative mx-auto aspect-3/4 w-full max-w-xs overflow-hidden rounded-2xl shadow-2xl lg:max-w-sm">
+              <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl max-lg:min-h-180 lg:max-w-sm lg:aspect-3/4 lg:mx-auto">
                 <Image
                   src={foodImage}
                   alt="Signora che lavora la pasta fresca"

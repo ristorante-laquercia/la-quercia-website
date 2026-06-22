@@ -23,7 +23,7 @@ export function AboutSection() {
       aria-describedby={sectionDescriptionId}
     >
       {/* Main content */}
-      <Container>
+      <Container className="max-lg:max-w-xl max-lg:mx-auto">
         <RevealGroup
           className="grid grid-cols-1 gap-12 lg:grid-cols-[5fr_7fr] lg:gap-16 xl:gap-20"
           stagger={0.18}
@@ -31,7 +31,7 @@ export function AboutSection() {
           amount={0.15}
         >
           {/* Left column: stacked images */}
-          <div className="flex flex-col gap-3.5">
+          <div className="flex flex-col gap-3.5 order-2 lg:order-1">
             <RevealItem preset="fade-up" duration={1.3} distance={28}>
               <div className="relative aspect-4/5 w-full overflow-hidden rounded-2xl shadow-lg">
                 <Image
@@ -86,8 +86,10 @@ export function AboutSection() {
                   [&>p:last-child]:bg-(--lq-orange)/4
                   [&>p:last-child]:py-3
                   [&>p:last-child]:rounded-r-lg
-                  [&>p:last-child]:mt-2
-                  [&>p:last-child]:italic"
+                  [&>p:last-child]:mt-4
+                  [&>p:last-child]:italic
+                  [&>p:last-child]:pr-2
+                  [&>p:last-child]:text-2xl"
               />
             </RevealItem>
 

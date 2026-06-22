@@ -45,7 +45,7 @@ export function EventsSection() {
       <Image src={bgImage} alt="Gruppo di amici che brinda" fill placeholder="blur" className="object-cover" aria-hidden />
       <div aria-hidden className="pointer-events-none absolute inset-0 z-0 bg-black/65" />
 
-      <Container className="relative z-10 py-32 lg:py-48">
+      <Container className="relative z-10 py-32 max-lg:max-w-xl max-lg:mx-auto lg:py-48">
         <RevealGroup className="flex flex-col gap-10 lg:gap-14" stagger={0.2} delayChildren={0.3} amount={0.15}>
           {/* Giant title */}
           <RevealItem preset="fade-up" duration={1.1} distance={24}>
@@ -58,7 +58,7 @@ export function EventsSection() {
           </RevealItem>
 
           {/* First grid: text + wide photo */}
-          <div className="grid grid-cols-1 items-center gap-x-12 gap-y-8 md:grid-cols-[5fr_7fr]">
+          <div className="grid grid-cols-1 items-start gap-x-12 gap-y-8 lg:grid-cols-[5fr_7fr]">
             {/* Left: eyebrow + description + CTA */}
             <div className="flex flex-col gap-5 text-white">
               <RevealItem preset="fade-up" duration={1.0} distance={18}>
@@ -106,7 +106,7 @@ export function EventsSection() {
 
           {/* Mini gallery — 8 photos, 4 per row */}
           <RevealItem preset="fade-up" duration={1.4} distance={20}>
-            <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:gap-3">
+            <div className="grid grid-cols-1 gap-x-2 gap-y-4 sm:grid-cols-2 lg:gap-3 lg:grid-cols-4">
               {galleryImages.map((img, i) => (
                 <div
                   key={img.alt}
