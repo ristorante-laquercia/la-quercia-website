@@ -11,18 +11,20 @@ export const cucinaContent = {
     ],
   },
   innovation: {
-    eyebrow: "Esplorazione gastronomica",
+    eyebrow: 'Esplorazione gastronomica',
     title: 'La Cucina alla Birra',
     intro:
       'Usiamo gli ingredienti nobili del mondo brassicolo come spezie preziose per comporre sapori nuovi, mai decorativi. I nostri piatti non li troverai altrove.',
     techniques: [
       {
         title: 'Il Luppolo',
-        description: 'In polvere, foglie o fiori per donare note erbacee, amare o floreali ai piatti per sapori inaspettati.',
+        description:
+          'In polvere, foglie o fiori per donare note erbacee, amare o floreali ai piatti per sapori inaspettati.',
       },
       {
         title: 'Il Malto',
-        description: 'Tostato e triturato al mortaio per regalare sentori di caffè e cioccolato ai dolci, o nelle riduzioni per legare i sapori della carne.',
+        description:
+          'Tostato e triturato al mortaio per regalare sentori di caffè e cioccolato ai dolci, o nelle riduzioni per legare i sapori della carne.',
       },
       {
         title: 'Le Marinature',

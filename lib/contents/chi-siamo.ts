@@ -8,7 +8,7 @@ export const chiSiamoContent = {
       "È qui che nasce la nostra ossessione per la genuinità e per l'accoglienza, valori che ancora oggi sono le fondamenta del locale.",
   },
   present: {
-    title: "La tradizione si rinnova ed evolve.",
+    title: 'La tradizione si rinnova ed evolve.',
     description:
       '<p>Dal 2014, con la vittoria di Pulcherio al campionato mondiale di spillatura Pilsner Urquell e il percorso da Beer Sommelier, La Quercia cambia pelle.</p><p>La birra diventa protagonista assoluta, trasformando il locale in un laboratorio di gusto e cultura. Non abbiamo dimenticato chi siamo: Annamaria è ancora lì, a impastare cavatelli in sala, ma accanto a lei oggi <strong>c’è una cucina che sperimenta con nuovi ingredienti con i quali solitamente si produce birra: luppoli e malti.</strong></p>',
   },

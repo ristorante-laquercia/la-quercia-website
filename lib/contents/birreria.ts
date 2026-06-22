@@ -1,13 +1,13 @@
 export const birreriaContent = {
   hero: {
-    title: 'Birra come Arte',
+    title: 'La birreria per i veri Luppolover',
   },
   selezione: {
-    eyebrow: 'La Nostra Selezione',
-    title: "Una ricerca continua di birrifici con un'anima vibrante.",
+    eyebrow: 'La Nostra Filosofia',
+    title: 'Birra: cultura ed esperienza consapevole.',
     paragraphs: [
-      "La nostra è una ricerca continua di birrifici con un'anima vibrante, capaci di trasformare una serata in un'esperienza sensoriale autentica.",
-      "Garantiamo sempre <strong>freschezza, qualità e varietà</strong>, selezionando solo chi della birra ha fatto una forma d'arte.",
+      'Scoprire nuove etichette e abbinamenti, da soli o in compagnia, per un consumo consapevole e di qualità.',
+      'Dall’aperitivo, alla cena fino al dopocena puoi spaziare tra stili e abbinamenti per il tuo momento di relax e gusto.',
     ],
     spinaTitle: 'Birra alla spina: storica qualità, varietà dinamica.',
     vieLabel: 'Le 4 Vie Maestre',
@@ -19,139 +19,176 @@ export const birreriaContent = {
     sommelier: {
       name: 'Pulcherio Scutti',
       role: 'Beer Sommelier & Formatore Luppolover',
-      description:
-        "Sommelier della birra ed esperto di spillatura, si impegna a guidare ogni cliente nella scelta della birra più adatta. Che tu abbia gusti semplici o raffinati non importa: ogni richiesta è una sfida e l'obiettivo è quello di accontentare anche i palati più esigenti.",
+      paragraphs: [
+        'Appassionato di birra, esperto di spillatura, formatore “Luppolover”, campione italiano e mondiale Pilsner Urquell, “Beer Sommelier” diplomato in uno dei più importanti istituti al mondo di formazione in ambito birraio: il Doemens di Monaco di Baviera.',
+        'A La Quercia trovi una guida rinomata in ambito nazionale. Che tu abbia gusti semplici o raffinati Pulcherio ti aiuterà ad abbinare piatti, gusti ed emozioni.',
+      ],
+      social: {
+        label: 'Passione, curiosità e cultura birraia sui social',
+        links: [
+          { platform: 'facebook', href: 'https://www.facebook.com/LUPPOLOVER', label: 'Facebook' },
+          { platform: 'instagram', href: 'https://www.instagram.com/luppolover_birreria/', label: 'Instagram' },
+          { platform: 'youtube', href: 'https://www.youtube.com/channel/UC4DjkMNmEWs-EDjEePpCVMg', label: 'YouTube' },
+        ],
+      },
     },
   },
-  spillatura: {
-    eyebrow: '#LaGiustaSpillatura',
+  beerMood: {
+    eyebrow: 'Scegli il tuo "Beer Mood"',
     title: 'Cosa vuoi da una birra?',
-    description:
-      "E se ti dicessimo che <strong>dipende tutto dalla spillatura?</strong> La spillatura è il momento finale, quello in cui viene esaltato e valorizzato tutto il processo di produzione della birra: dalla scelta degli ingredienti, alla birrificazione, all'infustamento, fino alla conservazione. È <strong>l'atto d'amore tra la birra, l'impianto e lo spillatore</strong>... Il piacere che ne deriva è il bicchiere pronto ad essere sorseggiato.",
+    paragraphs: [
+      'Non ti chiederemo "che birra vuoi": la nostra carta delle birre è una mappa di emozioni, curata personalmente da Pulcherio, Beer Sommelier e formatore "Luppolover".',
+      'Troverai una vasta selezione di etichette in bottiglia e lattina, molisane, artigianali e non, italiane e internazionali.',
+    ],
     cards: [
       {
         label: 'CHILL!',
+        kicker: 'Una bevuta rilassata',
         description:
-          'Una bevuta rilassata, semplice e poco impegnativa con sapori che vanno dal pane al miele, passando per fruttato di banana e spezie.',
+          'Se cerchi una birra semplice e poco impegnativa, con sapori che vanno dal pane al miele, passando per fruttato di banana e spezie.',
         imageAlt: 'CHILL! – birra rilassata e semplice',
       },
       {
         label: 'WOOOO!',
+        kicker: "Se cerchi l'amaro del luppolo.",
         description:
-          "Se cerchi l'amaro del luppolo, ecco le birre che fanno per te. Un viaggio tra sapori fruttati, resinosi e intensi.",
+          "Ecco le birre che fanno per te: un viaggio tra sapori fruttati, resinosi e intensi.",
         imageAlt: 'WOOOO! – birre luppolate e intense',
       },
       {
         label: 'SBAM!',
+        kicker: 'Per te che ami i gusti forti.',
         description:
-          'Per te che ami i gusti forti: le birre acide, con fermentazioni miste, acetiche, fruttate… sì, esistono birre così!',
+          'Le birre acide, con fermentazioni miste, acetiche, fruttate… sì, esistono birre così!',
         imageAlt: 'SBAM! – birre acide e fermentate',
       },
       {
         label: 'AWWW!',
+        kicker: 'Più malto per tutti!',
         description:
-          'Più malto per tutti! Troverai il malto con i suoi sapori avvolgenti, dal chiaro allo scuro, con note agrumate, torrefatte o affumicate.',
+          'Troverai il malto con i suoi sapori avvolgenti, dal chiaro allo scuro, con note agrumate, torrefatte o affumicate.',
         imageAlt: 'AWWW! – birre maltate e avvolgenti',
       },
     ],
+
+  },
+  spillatura: {
+    eyebrow: '#LaGiustaSpillatura',
+    title: 'E se ti dicessimo che dipende tutto dalla spillatura?',
+    description:
+      "La spillatura è il momento finale, quello in cui viene esaltato e valorizzato tutto il processo di produzione della birra: dalla scelta degli ingredienti, alla birrificazione, all'infustamento, fino alla conservazione. È l'atto d'amore tra la birra, l'impianto e lo spillatore... Il piacere che ne deriva è il bicchiere che verrà sorseggiato.",
   },
   birrifici: {
-    eyebrow: 'I Birrifici Partner',
-    title: 'Tradizione senza compromessi.',
-    description: 'Alle nostre spine trovano posto due miti birrari: eccellenza ceca e anima bavarese.',
+    eyebrow: 'Due pilastri della storia birraria',
+    title: 'Tradizione, gusto, varietà.',
+    description: 'Alle nostre spine trovano posto due miti birrari: l’eccellenza ceca e l’anima bavarese.',
     ferdinand: {
       eyebrow: 'Dal 1897 · Benešov, Repubblica Ceca',
       name: 'Birrificio Ferdinand',
-      tagline: "L'Autentica Tradizione Ceca.",
-      description: 'Il marchio che dal 1897 produce «La Vera Birra» a Benešov.',
+      tagline: 'Autentica Tradizione.',
+      description:
+        'Il marchio che da oltre 126 anni produce "la Vera Birra" Ceca. Ferdinand non è solo un birrificio, è un simbolo di eccellenza che ha fatto della qualità senza compromessi la propria firma, seguendo ancora oggi le formule originali del diciannovesimo secolo.',
       features: [
         {
-          title: 'Malteria a Pavimento',
+          title: 'Malteria a pavimento',
           detail:
             'Una delle rare realtà in Repubblica Ceca che produce il proprio malto in una struttura storica persino più antica del birrificio.',
         },
         {
-          title: 'Luppolo Saaz',
+          title: 'Luppolo di Saaz',
           detail: 'Utilizzo esclusivo del pregiato luppolo locale per un aroma erbaceo, unico e inconfondibile.',
         },
         {
-          title: 'Ingredienti Puri',
-          detail: 'Solo orzo dei coltivatori vicini, acqua purissima e lieviti selezionati. Niente di più, niente di meno.',
-        },
-        {
-          title: 'Bassa Fermentazione',
-          detail: 'Rispetto dei tempi naturali per un gusto pulito, con maturazione lenta in cantina.',
+          title: 'Ingredienti puri e metodo artigianale',
+          detail:
+            'Solo orzo dei coltivatori vicini, acqua purissima e lieviti selezionati. Bassa fermentazione per un gusto pulito, un riposo lento che assicura un sapore autentico, ricco e bilanciato.',
         },
       ],
     },
     augustiner: {
       eyebrow: 'Dal 1328 · Monaco di Baviera',
       name: 'Birrificio Augustiner',
-      tagline: 'Il Mito di Monaco di Baviera.',
-      description: 'Dal 1328, la più antica e amata istituzione birraria della capitale bavarese.',
+      tagline: 'La più antica e amata istituzione birraria della capitale bavarese.',
+      description:
+        "È un birrificio che non ha bisogno di pubblicità: Augustiner-Bräu incarna l'anima di Monaco.La sua fama si basa esclusivamente sulla perfezione del prodotto: sette secoli di tradizione immutata. È un birrificio che non ha bisogno di pubblicità: Augustiner-Bräu incarna l'anima di Monaco. La sua fama si basa esclusivamente sulla perfezione del prodotto: sette secoli di tradizione immutata.",
       features: [
-        {
-          title: 'Sette Secoli di Storia',
-          detail: "Augustiner incarna l'anima di Monaco. La sua fama si basa esclusivamente sulla perfezione del prodotto.",
-        },
         {
           title: 'Malteria Storica',
           detail:
-            "L'orzo viene ancora lavorato nelle proprie malterie a pavimento, garantendo un controllo totale sulla base aromatica.",
+            "L'orzo viene ancora lavorato nelle proprie malterie a pavimento, garantendo un controllo totale sulla base aromatica di ogni birra.",
         },
         {
-          title: 'Acqua Pura di Fonte',
+          title: 'Ingredienti Naturali e Acqua Pura',
           detail:
-            'Prelevata da una fonte profonda di proprietà, garantisce una purezza microbiologica ideale per la brassazione.',
+            "Malto d'orzo e luppolo selezionato, senza alcun additivo o trattamento moderno. Una fonte d’acqua profonda di proprietà, garantisce una purezza microbiologica e un residuo fisso ideale per la brassazione.",
         },
         {
-          title: 'Lunga Stagionatura',
-          detail: 'Le birre riposano nelle cantine fino al raggiungimento della perfetta maturità gustativa.',
+          title: 'Lunga Stagionatura e Bevibilità Leggendaria',
+          detail:
+            'Le birre riposano nelle cantine fino al raggiungimento della perfetta maturità gustativa che rende ogni sorso armonioso, morbido e rinfrescante.',
         },
       ],
     },
   },
   logos: {
-    eyebrow: 'I Nostri Partner',
-    title: 'Le Etichette che Selezioniamo',
+    eyebrow: 'La nostra selezione',
+    title: 'Birre scelte per esperienze sensoriali autentiche',
     description:
-      'Il nostro è un «Approccio Emozionale». La nostra carta delle birre è una mappa di emozioni, curata personalmente da Pulcherio, Beer Sommelier e formatore "Luppolover". Una selezione vasta di etichette molisane, italiane e internazionali.',
+      "<p>La nostra è una ricerca continua di birrifici con un'anima vibrante che hanno fatto della birra una forma d’arte. Garantiamo <strong>freschezza, qualità e varietà</strong>, per offrirvi sempre il meglio.</p>",
     partners: [
+      'Achouffe',
+      'Augustiner',
+      'Baladin',
+      'Benediktiner',
+      'Bibibir',
+      'Bitburger',
+      'Boon',
+      'Chimay',
       'Del Ducato',
       'Ferdinand',
-      'Lupulus',
-      'Malastrana',
-      'Augustiner',
-      'Pilsner Urquell',
-      'Weiherer',
-      'Bitburger',
-      'Liefmans',
-      'Spaten-Bräu',
-      'Baladin',
-      'Malto Lento',
-      'Birrificio Maiella',
+      'Giesinger',
+      'Het Anker',
+      'Hopposti',
+      'Jacob',
+      'Kilkenny',
+      'Kwak',
       'La Fucina',
-      'Schlenkerla',
-      'Benediktiner',
-      'Nittenau',
+      'La Trappe',
+      'Liefmans',
+      'Lupulus',
+      'Maiella',
+      'Maisel',
+      'Malastrana',
+      'Malto Lento',
+      'Nittenauer',
+      "O'Hara's",
       'Opperbacco',
+      'Pilsner Urquell',
+      'Rodenbach',
+      'Schlenkerla',
+      'Spaten',
+      'Steen Brugge',
+      'Vocation',
+      'War',
+      'Weiherer',
     ],
   },
   gallery: {
-    eyebrow: 'La Birreria',
+    eyebrow: 'Dall’aperitivo al dopo cena',
     title: 'Atmosfera, birra e momenti da vivere.',
     description: 'Un posto dove ogni bicchiere racconta una storia e ogni serata diventa un ricordo.',
   },
   connect: {
     eyebrow: '#LAQUERCIATERMOLI',
-    title: 'Resta nel mondo Quercia.',
-    description: 'Aggiornamenti, eventi in arrivo, curiosità sulla birra e molto altro: seguici sui nostri canali.',
+    title: 'Prima gli amici.',
+    description: 'Entra nel gruppo riservato per ricevere news in anteprima e inviti ad eventi esclusivi.',
+    moreInfo: 'Aggiornamenti, eventi, curiosità sulla birra e molto altro: seguici sui nostri canali.',
     links: [
       { label: 'Instagram', href: 'https://www.instagram.com/laquerciatermoli/', platform: 'instagram' },
       { label: 'Facebook', href: 'https://www.facebook.com/laquerciatermoli', platform: 'facebook' },
       {
         label: 'WhatsApp',
-        href: 'https://wa.me/+393791269699?text=Vorrei%20ricevere%20maggiori%20informazioni',
+        href: 'https://chat.whatsapp.com/In1d1D89Ja6HA1LlTQxpR6?mode=gi_t',
         platform: 'whatsapp',
       },
     ],

@@ -39,30 +39,30 @@ const galleryRows: readonly GalleryRow[] = [
     // Riga media: 4 foto — visibili 2 / 3 / 4 per breakpoint
     heightClassName: 'h-[8rem] sm:h-[13rem] md:h-[20rem] lg:h-[24rem]',
     items: [
-      { src: imgCavatelliLuppolo,    alt: 'Cavatelli con luppolo',                          flexGrow: 42 },
-      { src: imgDettaglioCavatelli,  alt: 'Dettaglio di un piatto di cavatelli con sugo',   flexGrow: 18 },
-      { src: imgPizzaPecorino,       alt: 'Pizza che viene condita con del pecorino',        flexGrow: 34, hideBelow: 'sm' },
-      { src: imgTagliereMisto,       alt: 'Tagliere misto con formaggi',                     flexGrow: 22, hideBelow: 'md' },
+      { src: imgCavatelliLuppolo, alt: 'Cavatelli con luppolo', flexGrow: 42 },
+      { src: imgDettaglioCavatelli, alt: 'Dettaglio di un piatto di cavatelli con sugo', flexGrow: 18 },
+      { src: imgPizzaPecorino, alt: 'Pizza che viene condita con del pecorino', flexGrow: 34, hideBelow: 'sm' },
+      { src: imgTagliereMisto, alt: 'Tagliere misto con formaggi', flexGrow: 22, hideBelow: 'md' },
     ],
   },
   {
     // Riga alta: 4 foto — visibili 2 / 3 / 4 per breakpoint
     heightClassName: 'h-[11rem] sm:h-[17rem] md:h-[28rem] lg:h-[34rem]',
     items: [
-      { src: imgStincoConPatatine,   alt: 'Stinco di maiale servito con patatine e varie salse', flexGrow: 28 },
-      { src: imgCucinaMolisana,      alt: 'Cucina tipica molisana',                               flexGrow: 36 },
-      { src: imgFilettoLime,         alt: 'Filetto lime e pepe',                                  flexGrow: 26, hideBelow: 'sm' },
-      { src: imgSalumi,              alt: 'Piatto di salumi serviti al tavolo ad una persona',    flexGrow: 20, hideBelow: 'md' },
+      { src: imgStincoConPatatine, alt: 'Stinco di maiale servito con patatine e varie salse', flexGrow: 28 },
+      { src: imgCucinaMolisana, alt: 'Cucina tipica molisana', flexGrow: 36 },
+      { src: imgFilettoLime, alt: 'Filetto lime e pepe', flexGrow: 26, hideBelow: 'sm' },
+      { src: imgSalumi, alt: 'Piatto di salumi serviti al tavolo ad una persona', flexGrow: 20, hideBelow: 'md' },
     ],
   },
   {
     // Riga bassa: 4 foto — visibili 2 / 3 / 4 per breakpoint
     heightClassName: 'h-[6rem] sm:h-[10rem] md:h-[16rem] lg:h-[19rem]',
     items: [
-      { src: imgMaltoAffumicato,      alt: 'Malto affumicato in un bicchiere',          flexGrow: 20 },
-      { src: imgCavatelliTagliere,    alt: 'Cavatelli sul tagliere in legno',            flexGrow: 33 },
-      { src: imgDettaglioPizza,       alt: 'Dettaglio di un tubo di pizza',              flexGrow: 20, hideBelow: 'sm' },
-      { src: imgPreparazioneCavatelli, alt: 'Preparazione di un piatto di cavatelli',   flexGrow: 28, hideBelow: 'md' },
+      { src: imgMaltoAffumicato, alt: 'Malto affumicato in un bicchiere', flexGrow: 20 },
+      { src: imgCavatelliTagliere, alt: 'Cavatelli sul tagliere in legno', flexGrow: 33 },
+      { src: imgDettaglioPizza, alt: 'Dettaglio di un tubo di pizza', flexGrow: 20, hideBelow: 'sm' },
+      { src: imgPreparazioneCavatelli, alt: 'Preparazione di un piatto di cavatelli', flexGrow: 28, hideBelow: 'md' },
     ],
   },
 ]

@@ -14,7 +14,7 @@ import { Container } from '@/components/ui/container'
 import { Button } from '@/components/ui/button'
 import { ContactForm } from '@/components/contact-form'
 
-import demoImage from '@/public/assets/demo/restaurant-interior-2.jpg'
+import location from '@/public/assets/imgs/contatti/interni-ristobirreria-la-quercia.jpg'
 
 export function ContactFormContainer() {
   const hoursTitleId = 'contact-hours-title'
@@ -49,37 +49,37 @@ export function ContactFormContainer() {
 
         <div className="flex gap-y-6 flex-col order-1 mdp:order-2">
           <Image
-            src={demoImage.src}
+            src={location.src}
             alt="Interno del ristorante La Quercia"
-            width={demoImage.width}
-            height={demoImage.height}
+            width={location.width}
+            height={location.height}
             placeholder="blur"
-            blurDataURL={demoImage.blurDataURL}
+            blurDataURL={location.blurDataURL}
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="max-w-full rounded-[1.75rem]"
           />
           <div className="max-w-lg">
             <h2 id={hoursTitleId}>{contattiContent.orari.title}</h2>
             <table className="mt-4 w-full text-left text-lq-dark">
-              <caption className="sr-only">Orari di apertura</caption>
+              <caption className="sr-only">Orari</caption>
               <tbody>
                 <tr>
                   <th scope="row" className="py-1 pr-6 font-semibold">
-                    Lunedì
+                    Ristorante - Pizzeria - Birreria
                   </th>
-                  <td className="py-1">19:00 - 00:00</td>
+                  <td className="py-1 text-right text-xs md:text-sm md:text-left">Dalle 19:00 - 00:00</td>
                 </tr>
                 <tr>
                   <th scope="row" className="py-1 pr-6 font-semibold">
-                    Martedì
+                    AperiBirra! Il tuo aperitivo differente e gustoso
                   </th>
-                  <td className="py-1">Chiuso</td>
+                  <td className="py-1 text-right text-xs md:text-sm md:text-left">Dalle 17:30 alle 19:30</td>
                 </tr>
                 <tr>
                   <th scope="row" className="py-1 pr-6 font-semibold">
-                    Mercoledì - Domenica
+                    Giorno di chiusura:
                   </th>
-                  <td className="py-1">19:00 - 00:00</td>
+                  <td className="py-1 text-right text-xs md:text-sm md:text-left">Martedì</td>
                 </tr>
               </tbody>
             </table>
