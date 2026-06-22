@@ -42,7 +42,7 @@ export function ContactFormContainer() {
       >
         SCRIVICI
       </span>
-      <Container className="relative z-10 grid grid-cols-1 mdp:grid-cols-2 py-24 gap-y-32 mdp:gap-x-20 lg:gap-x-32 lg:pb-48">
+      <Container className="relative z-10 grid grid-cols-1 lg:grid-cols-2 py-24 gap-y-32 max-lg:max-w-xl max-lg:mx-auto lg:gap-x-32 lg:pb-48">
         <div className="order-2 mdp:order-1 max-w-lg">
           <ContactForm />
         </div>
