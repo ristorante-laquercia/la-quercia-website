@@ -17,9 +17,9 @@ export function PresentSection() {
       className="relative overflow-hidden grid grid-cols-1 bg-lq-dark lg:grid-cols-2"
     >
       <DiagonalElement position="top" side="right" className="text-(--lq-cream)" />
-      <div className="relative min-h-88 w-full overflow-hidden lg:min-h-full lg:py-24">
+      <div className="relative min-h-88 w-full overflow-hidden md:min-h-120 lg:min-h-full lg:py-24">
         <video
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 size-full object-cover rounded-tr-2xl"
           autoPlay
           loop
           muted
@@ -32,7 +32,7 @@ export function PresentSection() {
         </video>
       </div>
 
-      <div className="relative flex justify-center px-8 py-24 text-center md:py-32 lg:px-14 lg:text-left lg:py-44">
+      <div className="relative flex justify-center px-8 pt-24 pb-32 text-center md:py-32 max-lg:max-w-xl max-lg:mx-auto lg:px-14 lg:text-left lg:py-44">
         <Image
           src={sectionBackground.src}
           alt="Sfondo della sezione con elementi ed ingredienti tipici della pizza"
