@@ -55,7 +55,7 @@ export function CucinaTechniquesSection() {
 
       <DiagonalElement className="text-white" position="top" side="left" />
 
-      <Container className="relative z-10">
+      <Container className="relative z-10 max-lg:max-w-xl max-lg:mx-auto">
         <div className="grid grid-cols-1 gap-y-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-x-14">
           {/* Left: sticky atmospheric image panel */}
           <RevealItem

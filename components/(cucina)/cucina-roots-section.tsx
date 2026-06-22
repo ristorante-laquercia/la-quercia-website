@@ -24,7 +24,7 @@ export function CucinaRootsSection() {
 
   return (
     <section className="relative overflow-hidden bg-lq-senape py-24 lg:py-32">
-      <Container className="relative z-10">
+      <Container className="relative z-10 max-lg:max-w-xl max-lg:mx-auto">
         {/* Chapter 1 — Tradition */}
         <RevealGroup
           className="grid grid-cols-1 gap-y-12 lg:grid-cols-[1fr_0.85fr] lg:items-end lg:gap-x-16"
@@ -84,7 +84,7 @@ export function CucinaRootsSection() {
 
         {/* Chapter 2 — Territory + Gluten-Free */}
         <RevealGroup
-          className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:mt-20 lg:gap-8"
+          className="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-2 lg:mt-20 lg:gap-8"
           stagger={0.18}
           delayChildren={0.12}
           amount={0.15}
@@ -94,7 +94,7 @@ export function CucinaRootsSection() {
             preset="fade-up"
             distance={32}
             duration={1.35}
-            className="relative min-h-104 overflow-hidden rounded-[2rem] bg-lq-dark p-8 lg:min-h-128 lg:p-10"
+            className="relative min-h-104 overflow-hidden rounded-[2rem] bg-lq-dark p-8 md:col-span-2 lg:col-span-1 lg:min-h-128 lg:p-10"
           >
             <Image
               src={bgImage}
@@ -129,7 +129,7 @@ export function CucinaRootsSection() {
             preset="fade-up"
             distance={28}
             duration={1.2}
-            className="relative flex min-h-104 flex-col overflow-hidden rounded-[2rem] bg-lq-dark p-8 lg:min-h-128 lg:p-10"
+            className="relative flex min-h-104 flex-col overflow-hidden rounded-[2rem] bg-lq-dark p-8 md:col-span-2 lg:col-span-1 lg:min-h-128 lg:p-10"
           >
             <div className="flex flex-col gap-3 lg:pr-32">
               <span className="text-xs font-black uppercase tracking-[0.22em] text-lq-orange">
@@ -166,7 +166,7 @@ export function CucinaRootsSection() {
               placeholder="blur"
               blurDataURL={kitchenImage.blurDataURL}
               sizes="(max-width: 768px) 100vw, 80vw"
-              className="h-48 w-full object-cover object-center lg:h-64"
+              className="h-82 w-full object-cover object-center lg:h-96"
             />
           </RevealItem>
         </RevealGroup>

@@ -40,7 +40,7 @@ export function CucinaIntroSection() {
         TRADIZIONE
       </span>
 
-      <Container className="relative z-10">
+      <Container className="relative z-10 max-lg:max-w-xl max-lg:mx-auto">
         <RevealGroup
           className="grid grid-cols-1 gap-y-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch lg:gap-x-14"
           stagger={0.16}

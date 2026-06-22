@@ -26,7 +26,7 @@ type GalleryItem = {
   /** Peso proporzionale usato come flex-grow per riempire la riga */
   flexGrow: number
   /** Nasconde l'elemento sotto il breakpoint indicato */
-  hideBelow?: 'sm' | 'md'
+  hideBelow?: 'sm' | 'md' | 'lg'
 }
 
 type GalleryRow = {
@@ -37,12 +37,12 @@ type GalleryRow = {
 const galleryRows: readonly GalleryRow[] = [
   {
     // Riga media: 4 foto — visibili 2 / 3 / 4 per breakpoint
-    heightClassName: 'h-[8rem] sm:h-[13rem] md:h-[20rem] lg:h-[24rem]',
+    heightClassName: 'h-[12rem] sm:h-[13rem] md:h-[20rem] lg:h-[24rem]',
     items: [
       { src: imgCavatelliLuppolo, alt: 'Cavatelli con luppolo', flexGrow: 42 },
       { src: imgDettaglioCavatelli, alt: 'Dettaglio di un piatto di cavatelli con sugo', flexGrow: 18 },
       { src: imgPizzaPecorino, alt: 'Pizza che viene condita con del pecorino', flexGrow: 34, hideBelow: 'sm' },
-      { src: imgTagliereMisto, alt: 'Tagliere misto con formaggi', flexGrow: 22, hideBelow: 'md' },
+      { src: imgTagliereMisto, alt: 'Tagliere misto con formaggi', flexGrow: 22, hideBelow: 'lg' },
     ],
   },
   {
@@ -52,17 +52,17 @@ const galleryRows: readonly GalleryRow[] = [
       { src: imgStincoConPatatine, alt: 'Stinco di maiale servito con patatine e varie salse', flexGrow: 28 },
       { src: imgCucinaMolisana, alt: 'Cucina tipica molisana', flexGrow: 36 },
       { src: imgFilettoLime, alt: 'Filetto lime e pepe', flexGrow: 26, hideBelow: 'sm' },
-      { src: imgSalumi, alt: 'Piatto di salumi serviti al tavolo ad una persona', flexGrow: 20, hideBelow: 'md' },
+      { src: imgSalumi, alt: 'Piatto di salumi serviti al tavolo ad una persona', flexGrow: 20, hideBelow: 'lg' },
     ],
   },
   {
     // Riga bassa: 4 foto — visibili 2 / 3 / 4 per breakpoint
-    heightClassName: 'h-[6rem] sm:h-[10rem] md:h-[16rem] lg:h-[19rem]',
+    heightClassName: 'h-[12rem] sm:h-[10rem] md:h-[16rem] lg:h-[19rem]',
     items: [
       { src: imgMaltoAffumicato, alt: 'Malto affumicato in un bicchiere', flexGrow: 20 },
       { src: imgCavatelliTagliere, alt: 'Cavatelli sul tagliere in legno', flexGrow: 33 },
       { src: imgDettaglioPizza, alt: 'Dettaglio di un tubo di pizza', flexGrow: 20, hideBelow: 'sm' },
-      { src: imgPreparazioneCavatelli, alt: 'Preparazione di un piatto di cavatelli', flexGrow: 28, hideBelow: 'md' },
+      { src: imgPreparazioneCavatelli, alt: 'Preparazione di un piatto di cavatelli', flexGrow: 28, hideBelow: 'lg' },
     ],
   },
 ]
@@ -117,7 +117,7 @@ export function CucinaGallery() {
         {cucinaContent.gallery.eyebrow}
       </span>
 
-      <Container className="relative z-10">
+      <Container className="relative z-10 max-lg:max-w-xl max-lg:mx-auto">
         <RevealGroup className="flex flex-col items-center gap-y-5 text-center" stagger={0.12} amount={0.2}>
           <RevealItem preset="fade-up" distance={18} duration={1}>
             <div className="flex items-center gap-4">
@@ -163,6 +163,7 @@ export function CucinaGallery() {
                     'group relative min-w-0 overflow-hidden rounded-xl md:rounded-2xl',
                     item.hideBelow === 'sm' && 'hidden sm:block',
                     item.hideBelow === 'md' && 'hidden md:block',
+                    item.hideBelow === 'lg' && 'hidden lg:block',
                   )}
                   style={{ flexGrow: item.flexGrow }}
                 >
