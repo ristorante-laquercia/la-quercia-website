@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: `${BASE_URL}/assets/og/birreria.jpg`,
+        url: `${BASE_URL}/assets/imgs/birreria/og-image-birreria.png`,
         width: 1200,
         height: 630,
         alt: 'La birreria de La Quercia – birre artigianali alla spina',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'La Birreria | La Quercia Ristobirreria',
     description: 'Birre alla spina, Ferdinand, Augustiner e un Beer Sommelier che ti guida nella scelta.',
-    images: [`${BASE_URL}/assets/og/birreria.jpg`],
+    images: [`${BASE_URL}/assets/imgs/birreria/og-image-birreria.png`],
   },
 }
 

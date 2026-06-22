@@ -1,5 +1,22 @@
+import type { Metadata } from 'next'
+
 import { Container } from '@/components/ui/container'
 import { privacyPolicyContent } from '@/lib/contents/privacy-policy'
+
+const BASE_URL = process.env.BASE_URL ?? 'https://www.ristorante-laquercia.it'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | La Quercia Ristobirreria',
+  description:
+    'Informativa sul trattamento dei dati personali ai sensi del D.lgs 196/03 e del Regolamento (UE) 2016/679 per il sito ristorante-laquercia.it.',
+  alternates: {
+    canonical: `${BASE_URL}/privacy-policy`,
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
 
 function stripLegacyClasses(html: string) {
   return html.replace(/\sclass="[^"]*"/gi, '').replace(/\sclass='[^']*'/gi, '')

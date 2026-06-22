@@ -7,7 +7,7 @@ import { CucinaTechniquesSection } from '@/components/(cucina)/cucina-techniques
 
 import { cucinaContent } from '@/lib/contents/cucina'
 
-const BASE_URL = process.env.BASE_URL ?? 'https://www.laquercia.it'
+const BASE_URL = process.env.BASE_URL ?? 'https://www.ristorante-laquercia.it'
 
 export const metadata: Metadata = {
   title: 'La Cucina | La Quercia Ristobirreria – Campobasso',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: `${BASE_URL}/assets/og/cucina.jpg`,
+        url: `${BASE_URL}/assets/imgs/cucina/og-image-cucina.png`,
         width: 1200,
         height: 630,
         alt: 'La cucina de La Quercia – piatti alla birra e tradizione molisana',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'La Cucina | La Quercia Ristobirreria',
     description: 'Cucina alla birra, cavatelli live e ingredienti molisani. Certificati AIC dal 2013.',
-    images: [`${BASE_URL}/assets/og/cucina.jpg`],
+    images: [`${BASE_URL}/assets/imgs/cucina/og-image-cucina.png`],
   },
 }
 
@@ -108,6 +108,11 @@ const jsonLd = {
 export default function CucinaPage() {
   return (
     <main id="main-content" className="w-full overflow-x-clip">
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD strutturato, nessun input utente
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <VideoHero
         videoSrc="/assets/video/cucina-hero.mp4"
         title={`<h1>${cucinaContent.hero.title}</h1>`}

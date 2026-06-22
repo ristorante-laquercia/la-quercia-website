@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-const BASE_URL = process.env.BASE_URL ?? 'https://www.laquercia.it'
+const BASE_URL = process.env.BASE_URL ?? 'https://www.ristorante-laquercia.it'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
