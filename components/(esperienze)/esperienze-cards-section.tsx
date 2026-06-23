@@ -129,9 +129,7 @@ export function EsperienzeCardsSection() {
             >
               <article className="xl:contents">
                 {/* Row 1 — video or image (22rem track on xl, 16:9 / h-72 on mobile) */}
-                <div
-                  className={`relative shrink-0 xl:h-auto ${card.video ? 'aspect-video xl:aspect-auto' : 'h-72'}`}
-                >
+                <div className={`relative shrink-0 xl:h-auto ${card.video ? 'aspect-video xl:aspect-auto' : 'h-72'}`}>
                   {card.video ? (
                     <video
                       src={card.video}

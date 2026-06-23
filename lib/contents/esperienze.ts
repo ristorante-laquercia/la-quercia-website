@@ -14,17 +14,17 @@ export const esperienzeContent = {
     eyebrow: 'Esperienze',
     title: 'Vivi il tuo tempo, sentendoti sempre a casa.',
     description:
-      "Dall’aperitivo fatto a regola d’arte fino al dopocena tra drink e giochi di società, ogni momento a La Quercia ha il suo ritmo, il suo sapore e il suo spazio naturale.",
+      'Dall’aperitivo fatto a regola d’arte fino al dopocena tra drink e giochi di società, ogni momento a La Quercia ha il suo ritmo, il suo sapore e il suo spazio naturale.',
     cards: [
       {
-        kicker: "L’Aperitivo che meriti",
-        title: "Apertibirra",
+        kicker: 'L’Aperitivo che meriti',
+        title: 'Apertibirra',
         description: 'Dimentica il solito tagliere: per il tuo aperitivo meriti molto di piu.',
         details:
           'Tutti i giorni anticipiamo l’apertura del ristorante alle 17.30 per proporvi un aperitivo differente e gustoso.Cocktail rivisitati alla birra come SpritzIPA e AperolPILS, abbinati a stuzzichicheria sempre fresca e innovativa dalla “Cucina alla Birra”',
         ctaText: 'Prenota ora!',
         ctaHref: '/contatti',
-        imageAlt: "Apertibirra",
+        imageAlt: 'Apertibirra',
         video: '/assets/video/aperibirra.mp4',
       },
       {
@@ -71,7 +71,7 @@ export const esperienzeContent = {
         title: 'La colazione dei campioni',
         dateLabel: 'Eventi esclusivi',
         description:
-          "Un evento esclusivo per una nuova esperienza: il gusto inaspettato della birra a colazione.Solitamente ogni due mesi, la domenica mattina. Stuzzicheria tipica e stagionale e ottima birra. in buona compagnia! Entra nel gruppo riservato per ricevere inviti e news in anteprima",
+          'Un evento esclusivo per una nuova esperienza: il gusto inaspettato della birra a colazione.Solitamente ogni due mesi, la domenica mattina. Stuzzicheria tipica e stagionale e ottima birra. in buona compagnia! Entra nel gruppo riservato per ricevere inviti e news in anteprima',
         ctaText: 'Entra nel gruppo',
         ctaHref: 'https://chat.whatsapp.com/In1d1D89Ja6HA1LlTQxpR6?mode=gi_t',
         imageAlt: 'La colazione dei campioni',
@@ -92,7 +92,7 @@ export const esperienzeContent = {
   },
   gallery: {
     eyebrow: 'La Quercia, sempre',
-    title: "Dall’aperitivo al dopocena: vivi di gusto ogni momento.",
+    title: 'Dall’aperitivo al dopocena: vivi di gusto ogni momento.',
     description:
       'Mangia, Bevi, Vivi: una filosofia, la nostra, che fa da sfondo al piacere di stare insieme per rilassarsi, divertirsi e gustare.',
   },

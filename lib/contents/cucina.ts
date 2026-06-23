@@ -61,6 +61,15 @@ export const cucinaContent = {
     description:
       'Seguiamo protocolli rigorosi per la sicurezza e dal 2013 siamo certificati AIC, tra i riferimenti in Molise per la cucina senza glutine.',
   },
+  pizza: {
+    title: 'La nostra pizza: piccolo gioiello di artigianato gastronomico',
+    paragraphs: [
+      'La lievitazione di almeno ventiquattro ore a tutto vantaggio della leggerezza.',
+      'La farina rimacinata di grano duro de "La Molisana" per impasti salutari e saporiti.',
+      'Gli ingredienti tipici della cucina molisana, come il tartufo, il caciocavallo e la pampanella.',
+      'Questi dettagli rappresentano il sigillo sulla nostra volontà di proporre una pizza non soltanto sana, ma anche originale e ricercata, che sia diretta espressione del territorio.',
+    ],
+  },
   gallery: {
     eyebrow: "Dall'aperitivo alla cena",
     title: 'Un’esperienza da vivere con tutti i sensi.',

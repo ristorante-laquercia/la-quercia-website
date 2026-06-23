@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { VideoHero } from '@/components/video-hero'
+import { cucinaContent } from '@/lib/contents/cucina'
 import { CucinaGallery } from '@/components/(cucina)/cucina-gallery'
 import { CucinaIntroSection } from '@/components/(cucina)/cucina-intro-section'
+import { CucinaPizzaSection } from '@/components/(cucina)/cucina-pizza-section'
 import { CucinaRootsSection } from '@/components/(cucina)/cucina-roots-section'
 import { CucinaTechniquesSection } from '@/components/(cucina)/cucina-techniques-section'
-
-import { cucinaContent } from '@/lib/contents/cucina'
+import { VideoHero } from '@/components/video-hero'
 
 const BASE_URL = process.env.BASE_URL ?? 'https://www.ristorante-laquercia.it'
 
@@ -122,6 +122,7 @@ export default function CucinaPage() {
       <CucinaIntroSection />
       <CucinaTechniquesSection />
       <CucinaRootsSection />
+      <CucinaPizzaSection />
       <CucinaGallery />
     </main>
   )

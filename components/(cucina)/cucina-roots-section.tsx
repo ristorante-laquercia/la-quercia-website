@@ -1,12 +1,8 @@
 import Image from 'next/image'
-
 import { cucinaContent } from '@/lib/contents/cucina'
-
-import { Container } from '@/components/ui/container'
 import { DiagonalElement } from '@/components/diagonal-element'
+import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-
-import bgImage from '@/public/assets/imgs/cucina/pizza-con-fave-e-speck.jpg'
 import kitchenImage from '@/public/assets/imgs/cucina/pizza-appena-posizionata-nel-forno-per-la-cottura.jpg'
 import logoAic from '@/public/assets/imgs/logo-aic.png'
 
@@ -89,25 +85,14 @@ export function CucinaRootsSection() {
           delayChildren={0.12}
           amount={0.15}
         >
-          {/* Territory card: photo background with gradient overlay */}
+          {/* Territory card: dark background */}
           <RevealItem
             preset="fade-up"
             distance={32}
             duration={1.35}
             className="relative min-h-104 overflow-hidden rounded-[2rem] bg-lq-dark p-8 md:col-span-2 lg:col-span-1 lg:min-h-128 lg:p-10"
           >
-            <Image
-              src={bgImage}
-              alt="Pizza con fave e speck"
-              placeholder="blur"
-              blurDataURL={bgImage.blurDataURL}
-              sizes="(max-width: 768px) 100vw, 45vw"
-              className="absolute inset-0 h-full w-full object-cover z-0"
-            />
-
-            <div className="absolute inset-0 bg-black/60" />
-
-            <div className="relative z-10 flex flex-col gap-3">
+            <div className="flex flex-col gap-3">
               <span className="text-xs font-black uppercase tracking-[0.22em] text-lq-senape">
                 {cucinaContent.territory.eyebrow}
               </span>
@@ -132,7 +117,7 @@ export function CucinaRootsSection() {
             className="relative flex min-h-104 flex-col overflow-hidden rounded-[2rem] bg-lq-dark p-8 md:col-span-2 lg:col-span-1 lg:min-h-128 lg:p-10"
           >
             <div className="flex flex-col gap-3 lg:pr-32">
-              <span className="text-xs font-black uppercase tracking-[0.22em] text-lq-orange">
+              <span className="text-xs font-black uppercase tracking-[0.22em] text-lq-senape">
                 {cucinaContent.glutenFree.eyebrow}
               </span>
               <h3 id={glutenTitleId} className="font-gabarito text-3xl font-black tracking-tight text-white lg:text-4xl">
@@ -172,7 +157,7 @@ export function CucinaRootsSection() {
         </RevealGroup>
       </Container>
 
-      <DiagonalElement className="text-lq-dark" position="bottom" side="left" />
+      <DiagonalElement className="text-white" position="bottom" side="left" />
     </section>
   )
 }

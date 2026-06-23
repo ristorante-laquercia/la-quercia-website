@@ -14,7 +14,7 @@ const BASE_URL = process.env.BASE_URL ?? 'https://www.ristorante-laquercia.it'
 export const metadata: Metadata = {
   title: 'Esperienze | La Quercia Ristobirreria – Aperitivo, Cene e Coworking',
   description:
-    "Apertibirra, birra a caduta il venerdì, cene degustazione con Beer Sommelier, Drink & Play e spazio coworking gratuito. Vivi ogni momento a La Quercia come vuoi tu.",
+    'Apertibirra, birra a caduta il venerdì, cene degustazione con Beer Sommelier, Drink & Play e spazio coworking gratuito. Vivi ogni momento a La Quercia come vuoi tu.',
   alternates: {
     canonical: `${BASE_URL}/esperienze`,
   },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         url: `${BASE_URL}/assets/imgs/esperienze/og-image-esperienze.png`,
         width: 1200,
         height: 630,
-        alt: "Le esperienze de La Quercia – aperitivo, cene degustazione e coworking a Termoli",
+        alt: 'Le esperienze de La Quercia – aperitivo, cene degustazione e coworking a Termoli',
       },
     ],
   },
@@ -52,7 +52,7 @@ const jsonLd = {
       url: `${BASE_URL}/esperienze`,
       name: 'Esperienze | La Quercia Ristobirreria',
       description:
-        "Apertibirra, cene degustazione con Beer Sommelier, Drink & Play e coworking gratuito. Vivi ogni momento a La Quercia.",
+        'Apertibirra, cene degustazione con Beer Sommelier, Drink & Play e coworking gratuito. Vivi ogni momento a La Quercia.',
       isPartOf: { '@id': `${BASE_URL}#website` },
       breadcrumb: { '@id': `${BASE_URL}/esperienze#breadcrumb` },
       inLanguage: 'it-IT',

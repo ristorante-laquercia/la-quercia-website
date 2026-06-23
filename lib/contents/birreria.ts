@@ -51,15 +51,13 @@ export const birreriaContent = {
       {
         label: 'WOOOO!',
         kicker: "Se cerchi l'amaro del luppolo.",
-        description:
-          "Ecco le birre che fanno per te: un viaggio tra sapori fruttati, resinosi e intensi.",
+        description: 'Ecco le birre che fanno per te: un viaggio tra sapori fruttati, resinosi e intensi.',
         imageAlt: 'WOOOO! – birre luppolate e intense',
       },
       {
         label: 'SBAM!',
         kicker: 'Per te che ami i gusti forti.',
-        description:
-          'Le birre acide, con fermentazioni miste, acetiche, fruttate… sì, esistono birre così!',
+        description: 'Le birre acide, con fermentazioni miste, acetiche, fruttate… sì, esistono birre così!',
         imageAlt: 'SBAM! – birre acide e fermentate',
       },
       {
@@ -70,7 +68,6 @@ export const birreriaContent = {
         imageAlt: 'AWWW! – birre maltate e avvolgenti',
       },
     ],
-
   },
   spillatura: {
     eyebrow: '#LaGiustaSpillatura',
