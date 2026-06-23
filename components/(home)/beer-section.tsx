@@ -1,12 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
+import { homeContent } from '@/lib/contents/home'
 import { BeerSteinDuotoneIcon } from '@/components/icons'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-import { homeContent } from '@/lib/contents/home'
-
 import bgImage from '@/public/assets/imgs/home/area-birreria.jpg'
 import pulcherioScuttiImage from '@/public/assets/imgs/home/Pulcherio-Scutti-beer-sommelier.jpg'
 

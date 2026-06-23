@@ -1,14 +1,11 @@
-import Link from 'next/link'
 import Image from 'next/image'
-import Lineicons from '@lineiconshq/react-lineicons'
+import Link from 'next/link'
 import { Telephone3Duotone } from '@lineiconshq/free-icons'
-
+import Lineicons from '@lineiconshq/react-lineicons'
 import { esperienzeContent } from '@/lib/contents/esperienze'
-
-import { Container } from '@/components/ui/container'
 import { Button } from '@/components/ui/button'
+import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-
 import coworkingImage from '@/public/assets/imgs/esperienze/sala-riunioni-la-quercia.jpg'
 
 export function CoworkingBanner() {

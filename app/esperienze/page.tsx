@@ -1,13 +1,11 @@
 import type { Metadata } from 'next'
-
 import { esperienzeContent } from '@/lib/contents/esperienze'
-
-import { VideoHero } from '@/components/video-hero'
-import { EsperienzeIntroSection } from '@/components/(esperienze)/esperienze-intro-section'
+import { CoworkingBanner } from '@/components/(esperienze)/coworking-banner'
 import { EsperienzeCardsSection } from '@/components/(esperienze)/esperienze-cards-section'
 import { EsperienzeEventsSection } from '@/components/(esperienze)/esperienze-events-section'
-import { CoworkingBanner } from '@/components/(esperienze)/coworking-banner'
 import { EsperienzeGallery } from '@/components/(esperienze)/esperienze-gallery'
+import { EsperienzeIntroSection } from '@/components/(esperienze)/esperienze-intro-section'
+import { VideoHero } from '@/components/video-hero'
 
 const BASE_URL = process.env.BASE_URL ?? 'https://www.ristorante-laquercia.it'
 

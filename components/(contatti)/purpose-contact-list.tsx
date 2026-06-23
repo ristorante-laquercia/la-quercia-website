@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import Lineicons from '@lineiconshq/react-lineicons'
 import { contattiContent } from '@/lib/contents/contatti'
-import { Button } from '@/components/ui/button'
-import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-import { Container } from '@/components/ui/container'
 import { DiagonalElement } from '@/components/diagonal-element'
+import { Button } from '@/components/ui/button'
+import { Container } from '@/components/ui/container'
+import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 
 export function PurposeContactList() {
   const sectionTitleId = 'contact-needs-title'

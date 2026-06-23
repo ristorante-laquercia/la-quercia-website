@@ -1,11 +1,8 @@
 import Image from 'next/image'
-
 import { cucinaContent } from '@/lib/contents/cucina'
-
 import { DiagonalElement } from '@/components/diagonal-element'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-
 import bgImage from '@/public/assets/imgs/cucina/pizza-con-fave-e-speck.jpg'
 
 export function CucinaPizzaSection() {

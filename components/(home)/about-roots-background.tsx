@@ -1,7 +1,6 @@
 'use client'
 
 import { motion, useReducedMotion } from 'motion/react'
-
 import { RootSvg } from '@/components/svg'
 
 export function AboutRootsBackground() {

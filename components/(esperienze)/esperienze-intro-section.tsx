@@ -1,14 +1,11 @@
 import Image from 'next/image'
-
 import { esperienzeContent } from '@/lib/contents/esperienze'
-
+import { DiagonalElement } from '@/components/diagonal-element'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-import { DiagonalElement } from '@/components/diagonal-element'
-
 import introImage from '@/public/assets/imgs/esperienze/ragazzo-che-sta-partecipando-ad-un-drink-and-play.jpg'
-import detailImage from '@/public/assets/imgs/esperienze/una-ragazza-mora-beve-una-birra.jpg'
 import atmosphereImage from '@/public/assets/imgs/esperienze/un-dettaglio-di-una-scacchiera-durante-una-partita.jpg'
+import detailImage from '@/public/assets/imgs/esperienze/una-ragazza-mora-beve-una-birra.jpg'
 
 export function EsperienzeIntroSection() {
   const titleId = 'esperienze-intro-title'

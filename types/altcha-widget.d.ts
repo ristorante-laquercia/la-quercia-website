@@ -12,6 +12,7 @@ type AltchaWidgetAttributes = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTM
 }
 
 declare module 'react' {
+  // biome-ignore lint/style/noNamespace: namespace JSX is required for custom element type augmentation
   namespace JSX {
     interface IntrinsicElements {
       'altcha-widget': AltchaWidgetAttributes

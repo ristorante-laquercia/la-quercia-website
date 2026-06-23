@@ -1,5 +1,4 @@
 import Image from 'next/image'
-
 import { birreriaContent } from '@/lib/contents/birreria'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'

@@ -1,9 +1,7 @@
 import Image from 'next/image'
-
 import { chiSiamoContent } from '@/lib/contents/chi-siamo'
-import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 import { DiagonalElement } from '@/components/diagonal-element'
-
+import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 import sectionBackground from '@/public/assets/backgrounds/pizza-bg.png'
 
 export function PresentSection() {

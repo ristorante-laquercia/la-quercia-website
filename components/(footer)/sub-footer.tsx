@@ -1,6 +1,5 @@
-import Lineicons from '@lineiconshq/react-lineicons'
 import { HeartOutlined } from '@lineiconshq/free-icons'
-
+import Lineicons from '@lineiconshq/react-lineicons'
 import { Container } from '@/components/ui/container'
 
 export function SubFooter() {

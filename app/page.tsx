@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
-
-import { Hero } from '@/components/hero'
 import { AboutSection } from '@/components/(home)/about-section'
-import { FoodSection } from '@/components/(home)/food-section'
 import { BeerSection } from '@/components/(home)/beer-section'
 import { EventsSection } from '@/components/(home)/events-section'
+import { FoodSection } from '@/components/(home)/food-section'
 import { BookNowBanner } from '@/components/book-now-banner'
+import { Hero } from '@/components/hero'
 
 const BASE_URL = process.env.BASE_URL ?? 'https://www.ristorante-laquercia.it/'
 

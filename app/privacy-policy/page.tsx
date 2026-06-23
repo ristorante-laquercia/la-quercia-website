@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
-
-import { Container } from '@/components/ui/container'
 import { privacyPolicyContent } from '@/lib/contents/privacy-policy'
+import { Container } from '@/components/ui/container'
 
 const BASE_URL = process.env.BASE_URL ?? 'https://www.ristorante-laquercia.it'
 

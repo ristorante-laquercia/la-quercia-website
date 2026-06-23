@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
-
-import { VideoHero } from '@/components/video-hero'
-import { PurposeContactList } from '@/components/(contatti)/purpose-contact-list'
 import { ContactFormContainer } from '@/components/(contatti)/contact-form-container'
+import { PurposeContactList } from '@/components/(contatti)/purpose-contact-list'
+import { VideoHero } from '@/components/video-hero'
 
 const BASE_URL = process.env.BASE_URL ?? 'https://www.ristorante-laquercia.it'
 

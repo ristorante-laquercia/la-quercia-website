@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
-
-import { VideoHero } from '@/components/video-hero'
-import { RadiciSection } from '@/components/(chi-siamo)/radici-section'
-import { PresentSection } from '@/components/(chi-siamo)/present-section'
 import { PhilosophyBlock } from '@/components/(chi-siamo)/philosophy-block'
+import { PresentSection } from '@/components/(chi-siamo)/present-section'
+import { RadiciSection } from '@/components/(chi-siamo)/radici-section'
+import { VideoHero } from '@/components/video-hero'
 
 const BASE_URL = process.env.BASE_URL ?? 'https://www.ristorante-laquercia.it'
 

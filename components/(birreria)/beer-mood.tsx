@@ -1,10 +1,7 @@
 import Image from 'next/image'
-
 import { birreriaContent } from '@/lib/contents/birreria'
-
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-
 import awwwImg from '@/public/assets/imgs/birreria/AWWW.png'
 import chillImg from '@/public/assets/imgs/birreria/CHILL.png'
 import sbamImg from '@/public/assets/imgs/birreria/SBAM.png'

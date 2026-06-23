@@ -1,20 +1,15 @@
+import type { StaticImageData } from 'next/image'
 import Image from 'next/image'
-
 import { cucinaContent } from '@/lib/contents/cucina'
-
-import { Container } from '@/components/ui/container'
 import { DiagonalElement } from '@/components/diagonal-element'
+import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-
-import maltoAffumicatoImage from '@/public/assets/imgs/cucina/malto-affumicato.jpg'
 import backgroundTexture from '@/public/assets/backgrounds/blackboard-texture.jpg'
-
 import luppoloImg from '@/public/assets/imgs/cucina/luppolo.png'
 import maltoImg from '@/public/assets/imgs/cucina/malto.png'
+import maltoAffumicatoImage from '@/public/assets/imgs/cucina/malto-affumicato.jpg'
 import marinatureImg from '@/public/assets/imgs/cucina/marinature.png'
 import reduzioniImg from '@/public/assets/imgs/cucina/riduzioni.png'
-
-import type { StaticImageData } from 'next/image'
 
 const techniqueImages: Record<string, StaticImageData> = {
   'Il Luppolo': luppoloImg,

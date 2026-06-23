@@ -1,15 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import Lineicons from '@lineiconshq/react-lineicons'
 import { HatChef3Duotone, WhatsappOutlined } from '@lineiconshq/free-icons'
-
+import Lineicons from '@lineiconshq/react-lineicons'
 import { esperienzeContent } from '@/lib/contents/esperienze'
-
-import { Container } from '@/components/ui/container'
-import { Button } from '@/components/ui/button'
-import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 import { DiagonalElement } from '@/components/diagonal-element'
-
+import { Button } from '@/components/ui/button'
+import { Container } from '@/components/ui/container'
+import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 import degustazioneImage from '@/public/assets/imgs/esperienze/beer-sommelier-spiega-abbinamenti.jpg'
 import colazioneCampioni from '@/public/assets/imgs/esperienze/la-colazione-dei-campioni.jpg'
 

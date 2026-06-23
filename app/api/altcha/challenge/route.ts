@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server'
-
 import { createAltchaChallenge } from '@/lib/altcha'
 
 export const dynamic = 'force-dynamic'

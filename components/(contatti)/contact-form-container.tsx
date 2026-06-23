@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Lineicons from '@lineiconshq/react-lineicons'
 import {
   Envelope1Duotone,
   FacebookOutlined,
@@ -7,13 +6,11 @@ import {
   MapMarker1Duotone,
   WhatsappOutlined,
 } from '@lineiconshq/free-icons'
-
+import Lineicons from '@lineiconshq/react-lineicons'
 import { contattiContent } from '@/lib/contents/contatti'
-
-import { Container } from '@/components/ui/container'
-import { Button } from '@/components/ui/button'
 import { ContactForm } from '@/components/contact-form'
-
+import { Button } from '@/components/ui/button'
+import { Container } from '@/components/ui/container'
 import location from '@/public/assets/imgs/contatti/interni-ristobirreria-la-quercia.jpg'
 
 export function ContactFormContainer() {

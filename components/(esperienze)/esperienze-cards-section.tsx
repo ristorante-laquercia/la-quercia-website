@@ -1,17 +1,14 @@
-import Link from 'next/link'
 import Image from 'next/image'
-import Lineicons from '@lineiconshq/react-lineicons'
+import Link from 'next/link'
 import { HatChef3Duotone, InstagramOutlined } from '@lineiconshq/free-icons'
-
+import Lineicons from '@lineiconshq/react-lineicons'
 import { esperienzeContent } from '@/lib/contents/esperienze'
-
-import { Container } from '@/components/ui/container'
 import { Button } from '@/components/ui/button'
+import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-
-import aperibirraImage from '@/public/assets/imgs/esperienze/una-ragazza-mora-beve-una-birra.jpg'
-import babyAperitivoImage from '@/public/assets/imgs/esperienze/un-dettaglio-di-una-scacchiera-durante-una-partita.jpg'
 import drinkPlayImage from '@/public/assets/imgs/esperienze/ragazzo-che-sta-partecipando-ad-un-drink-and-play.jpg'
+import babyAperitivoImage from '@/public/assets/imgs/esperienze/un-dettaglio-di-una-scacchiera-durante-una-partita.jpg'
+import aperibirraImage from '@/public/assets/imgs/esperienze/una-ragazza-mora-beve-una-birra.jpg'
 
 type ExperienceCard = {
   kicker: string

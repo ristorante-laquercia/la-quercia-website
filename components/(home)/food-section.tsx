@@ -1,15 +1,12 @@
-import Link from 'next/link'
 import Image from 'next/image'
-import Lineicons from '@lineiconshq/react-lineicons'
+import Link from 'next/link'
 import { Pizza2Duotone } from '@lineiconshq/free-icons'
-
+import Lineicons from '@lineiconshq/react-lineicons'
 import { homeContent } from '@/lib/contents/home'
-
+import { DiagonalElement } from '@/components/diagonal-element'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-import { DiagonalElement } from '@/components/diagonal-element'
-
 import bgImage from '@/public/assets/imgs/home/ristobirreria-la-quercia-locali-interni.jpg'
 import foodImage from '@/public/assets/imgs/home/signora-che-lavora-la-pasta-fresca.jpg'
 

@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Lineicons from '@lineiconshq/react-lineicons'
 import { FacebookOutlined, InstagramOutlined, YoutubeOutlined } from '@lineiconshq/free-icons'
+import Lineicons from '@lineiconshq/react-lineicons'
 import { birreriaContent } from '@/lib/contents/birreria'
 import { DiagonalElement } from '@/components/diagonal-element'
 import { Container } from '@/components/ui/container'

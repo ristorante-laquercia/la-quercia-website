@@ -1,16 +1,12 @@
-import Link from 'next/link'
 import Image from 'next/image'
-import Lineicons from '@lineiconshq/react-lineicons'
+import Link from 'next/link'
 import { Headphone1Duotone } from '@lineiconshq/free-icons'
-
+import Lineicons from '@lineiconshq/react-lineicons'
 import { homeContent } from '@/lib/contents/home'
-
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-
 import bgImage from '@/public/assets/imgs/home/amici-che-brindano.jpg'
-import drinkingFriendsImage from '@/public/assets/imgs/home/gruppo-di-persone-che-brinda-presso-ristobirreria-la-quercia.jpg'
 import g1 from '@/public/assets/imgs/home/gallery/aperibirra-presso-ristobirreria-la-quercia.jpg'
 import g2 from '@/public/assets/imgs/home/gallery/birra-dama.jpg'
 import g3 from '@/public/assets/imgs/home/gallery/calici-di-diversi-tipi-di-birra.jpg'
@@ -19,6 +15,7 @@ import g5 from '@/public/assets/imgs/home/gallery/freccette.jpg'
 import g6 from '@/public/assets/imgs/home/gallery/metro birra.jpg'
 import g7 from '@/public/assets/imgs/home/gallery/ragazza-che-partecipa-al-drink-and-play.jpg'
 import g8 from '@/public/assets/imgs/home/gallery/una-coppia-che-fa-aperitivo-presso-la-quercia.jpg'
+import drinkingFriendsImage from '@/public/assets/imgs/home/gruppo-di-persone-che-brinda-presso-ristobirreria-la-quercia.jpg'
 
 const galleryImages = [
   { src: g1, alt: 'Aperitivo presso Ristobirreria La Quercia' },

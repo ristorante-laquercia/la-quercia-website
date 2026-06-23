@@ -6,6 +6,7 @@ import { Footer } from '@/components/(footer)/footer'
 import { Header } from '@/components/(header)/header'
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.BASE_URL ?? 'https://www.ristorante-laquercia.it'),
   title: {
     default: 'La Quercia – Ristobirreria a Termoli | Cucina alla Birra',
     template: '%s | La Quercia Ristobirreria',

@@ -1,10 +1,7 @@
 import Image from 'next/image'
-
 import { cucinaContent } from '@/lib/contents/cucina'
-
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-
 import cavatelliImage from '@/public/assets/imgs/cucina/cavatelli-appena-preparati.jpg'
 import maltoImage from '@/public/assets/imgs/cucina/malto-utilizzato-in-cucina.jpg'
 import rollImage from '@/public/assets/imgs/cucina/un-roll-di-tubbbo.jpg'

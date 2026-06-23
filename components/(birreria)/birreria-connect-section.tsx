@@ -1,8 +1,6 @@
 import { CalendarDaysDuotone, FacebookOutlined, InstagramOutlined, WhatsappOutlined } from '@lineiconshq/free-icons'
 import Lineicons from '@lineiconshq/react-lineicons'
-
 import { birreriaContent } from '@/lib/contents/birreria'
-
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'

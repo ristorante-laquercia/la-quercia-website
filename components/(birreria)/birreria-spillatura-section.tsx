@@ -1,11 +1,8 @@
 import Image from 'next/image'
-
 import { birreriaContent } from '@/lib/contents/birreria'
-
 import { DiagonalElement } from '@/components/diagonal-element'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-
 import logoAugustiner from '@/public/assets/imgs/birreria/icona_Augustiner.png'
 import logoFerdinand from '@/public/assets/imgs/birreria/icona_Birrificio_Ferdinand.png'
 

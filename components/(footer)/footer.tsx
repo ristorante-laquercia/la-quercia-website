@@ -1,10 +1,9 @@
-import Lineicons from '@lineiconshq/react-lineicons'
 import Link from 'next/link'
-
-import { Container } from '@/components/ui/container'
-import { Button } from '@/components/ui/button'
 import { FacebookOutlined, InstagramOutlined, WhatsappOutlined } from '@lineiconshq/free-icons'
+import Lineicons from '@lineiconshq/react-lineicons'
 import { SubFooter } from '@/components/(footer)/sub-footer'
+import { Button } from '@/components/ui/button'
+import { Container } from '@/components/ui/container'
 
 export function Footer() {
   const infoLinks = [

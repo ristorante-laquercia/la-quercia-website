@@ -1,14 +1,12 @@
 import type { Metadata } from 'next'
-
 import { birreriaContent } from '@/lib/contents/birreria'
-
-import { VideoHero } from '@/components/video-hero'
+import { BeerMood } from '@/components/(birreria)/beer-mood'
 import { BirreriaConnectSection } from '@/components/(birreria)/birreria-connect-section'
 import { BirreriaGallery } from '@/components/(birreria)/birreria-gallery'
 import { BirreriaLogosSection } from '@/components/(birreria)/birreria-logos-section'
 import { BirreriaSelezioneSection } from '@/components/(birreria)/birreria-selezione-section'
-import { BeerMood } from '@/components/(birreria)/beer-mood'
 import { BirreriaSpillaturaSection } from '@/components/(birreria)/birreria-spillatura-section'
+import { VideoHero } from '@/components/video-hero'
 
 const BASE_URL = process.env.BASE_URL ?? 'https://www.ristorante-laquercia.it'
 

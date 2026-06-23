@@ -3,13 +3,10 @@
 import { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react'
-
-import { cn } from '@/lib/utils'
 import { chiSiamoContent } from '@/lib/contents/chi-siamo'
-
+import { cn } from '@/lib/utils'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-
 import logoBgWhite from '@/public/assets/svg/logo.svg'
 
 export function RadiciSection({ className }: { className?: string }) {

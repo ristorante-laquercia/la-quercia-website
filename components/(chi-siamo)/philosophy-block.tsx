@@ -1,15 +1,12 @@
 import Image from 'next/image'
-
 import { chiSiamoContent } from '@/lib/contents/chi-siamo'
-
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-
-import mainImage from '@/public/assets/imgs/chi-siamo/gruppo-di-persone-sorridenti.jpg'
 import gridImage1 from '@/public/assets/imgs/chi-siamo/gallery/dettaglio-pizza-nel-forno-per-la-cottura.jpg'
-import gridImage2 from '@/public/assets/imgs/chi-siamo/gallery/signora-annamaria-che-impasta.jpg'
-import gridImage3 from '@/public/assets/imgs/chi-siamo/gallery/pulcherio-scutti-beer-sommelier.jpg'
 import gridImage4 from '@/public/assets/imgs/chi-siamo/gallery/piatto-con-uno-stinco-di-maiale.jpg'
+import gridImage3 from '@/public/assets/imgs/chi-siamo/gallery/pulcherio-scutti-beer-sommelier.jpg'
+import gridImage2 from '@/public/assets/imgs/chi-siamo/gallery/signora-annamaria-che-impasta.jpg'
+import mainImage from '@/public/assets/imgs/chi-siamo/gruppo-di-persone-sorridenti.jpg'
 
 const titleId = 'chi-siamo-philosophy-title'
 const descriptionId = 'chi-siamo-philosophy-description'

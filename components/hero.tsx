@@ -1,8 +1,8 @@
 'use client'
 
-import { useWindowSize } from '@uidotdev/usehooks'
-import Lineicons from '@lineiconshq/react-lineicons'
 import { ScrollDown2Duotone } from '@lineiconshq/free-icons'
+import Lineicons from '@lineiconshq/react-lineicons'
+import { useWindowSize } from '@uidotdev/usehooks'
 
 export function Hero() {
   const size = useWindowSize()

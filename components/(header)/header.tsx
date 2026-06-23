@@ -1,5 +1,5 @@
-import { Container } from '@/components/ui/container'
 import { Navbar } from '@/components/(header)/navbar'
+import { Container } from '@/components/ui/container'
 
 export function Header() {
   return (
