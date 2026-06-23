@@ -51,7 +51,7 @@ export function BirreriaSelezioneSection() {
         BIRRERIA
       </span>
 
-      <Container className="relative z-10">
+      <Container className="relative z-10 max-lg:max-w-xl max-lg:mx-auto">
         <RevealGroup
           className="grid grid-cols-1 gap-y-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-x-16"
           stagger={0.14}
@@ -147,7 +147,7 @@ export function BirreriaSelezioneSection() {
           <RevealItem preset="fade-up" distance={36} duration={1.35} className="lg:sticky lg:top-28">
             <div className="overflow-hidden rounded-[2rem] bg-lq-dark shadow-2xl">
               {/* Foto Pulcherio */}
-              <div className="relative h-112 w-full sm:h-112">
+              <div className="relative h-112 w-full sm:h-112 md:h-140 lg:h-120">
                 <Image
                   src={pulcherioScuttiImage}
                   alt="Pulcherio Scutti – Beer Sommelier de La Quercia"

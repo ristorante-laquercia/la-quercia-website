@@ -32,7 +32,7 @@ export function BirreriaLogosSection() {
         }}
       />
 
-      <Container className="relative z-10">
+      <Container className="relative z-10 max-lg:max-w-xl max-lg:mx-auto">
         <RevealGroup className="mb-12 flex flex-col items-center gap-y-4 text-center" stagger={0.12} amount={0.3}>
           <RevealItem preset="fade-up" distance={16} duration={1}>
             <span className="text-sm font-black uppercase tracking-[0.22em] text-lq-orange">{logos.eyebrow}</span>

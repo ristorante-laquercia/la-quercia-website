@@ -42,7 +42,7 @@ export function BeerMood() {
         }}
       />
 
-      <Container className="relative z-10">
+      <Container className="relative z-10 max-lg:max-w-xl max-lg:mx-auto">
         {/* Section header */}
         <RevealGroup className="mb-16 flex flex-col items-center gap-y-5 text-center" stagger={0.12} amount={0.25}>
           <RevealItem preset="fade-up" distance={16} duration={1}>

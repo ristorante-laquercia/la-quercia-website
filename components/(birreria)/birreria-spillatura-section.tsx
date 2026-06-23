@@ -82,7 +82,7 @@ export function BirreriaSpillaturaSection() {
         }}
       />
 
-      <Container className="relative z-10">
+      <Container className="relative z-10 max-lg:max-w-xl max-lg:mx-auto">
         {/* Spillatura section header */}
         <RevealGroup className="mb-16 flex flex-col items-center gap-y-5 text-center" stagger={0.12} amount={0.25}>
           <RevealItem preset="fade-up" distance={16} duration={1}>
@@ -140,7 +140,7 @@ export function BirreriaSpillaturaSection() {
           con le stesse righe dell'altra card.
         */}
         <RevealGroup
-          className="grid grid-cols-1 gap-6 md:grid-cols-2 md:grid-rows-[auto_auto_auto_auto_auto] md:gap-x-6 md:gap-y-2"
+          className="grid grid-cols-1 gap-y-6 lg:grid-cols-2 lg:grid-rows-[auto_auto_auto_auto] lg:gap-x-6 lg:gap-y-2"
           stagger={0.14}
           delayChildren={0.1}
           amount={0.15}
@@ -160,9 +160,9 @@ export function BirreriaSpillaturaSection() {
               >
                 {/* ── Riga 1: header card ── */}
                 <div className="border-b border-white/8 p-7 lg:p-8">
-                  <div className="flex items-center justify-between gap-4">
+                  <div className="flex flex-col items-start justify-between lg:gap-4 lg:flex-row lg:items-center">
                     {/* Logo + nome */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-start lg:items-center gap-4">
                       <div
                         className={`relative flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/8 ${meta.logoBg}`}
                         title={`Logo ${brewery.name} (placeholder)`}
@@ -177,7 +177,9 @@ export function BirreriaSpillaturaSection() {
                         />
                       </div>
                       <div>
-                        <span className={`text-xs font-black uppercase tracking-[0.2em] ${meta.accentColor}`}>
+                        <span
+                          className={`text-xs font-black uppercase tracking-[0.2em] leading-4 block ${meta.accentColor}`}
+                        >
                           {brewery.eyebrow}
                         </span>
                         <h3
@@ -206,7 +208,7 @@ export function BirreriaSpillaturaSection() {
                   figli diretti del motion.div partecipando al subgrid.
                   Su mobile: flex-col normale con gap e padding.
                 */}
-                <ul className="flex flex-col gap-2 p-5 md:contents lg:p-6">
+                <ul className="flex flex-col gap-6 p-5 md:contents lg:p-6">
                   {brewery.features.map((f) => (
                     <li
                       key={f.title}
