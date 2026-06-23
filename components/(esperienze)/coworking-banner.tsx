@@ -43,7 +43,7 @@ export function CoworkingBanner() {
         }}
       />
 
-      <Container className="relative z-10 flex min-h-152 flex-col justify-end pb-16 pt-32 lg:min-h-216 lg:pb-20">
+      <Container className="relative z-10 flex min-h-152 flex-col justify-end pb-16 pt-32 max-lg:max-w-xl max-lg:mx-auto lg:min-h-216 lg:pb-20">
         <RevealGroup stagger={0.1} delayChildren={0.1} amount={0.15}>
           {/* Two-column editorial split */}
           <div className="grid grid-cols-1 items-end gap-y-10 lg:grid-cols-[1fr_1px_1fr]">
@@ -56,7 +56,7 @@ export function CoworkingBanner() {
               </RevealItem>
 
               <RevealItem preset="fade-up" distance={28} duration={1.1}>
-                <h2 id={titleId} className="mt-4 font-gabarito text-4xl text-white md:text-6xl lg:text-7xl xl:text-8xl">
+                <h2 id={titleId} className="mt-4 font-gabarito text-6xl text-white lg:text-7xl xl:text-8xl">
                   {esperienzeContent.coworking.title}
                   <span className="block">{esperienzeContent.coworking.subTitle}</span>
                 </h2>
