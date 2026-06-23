@@ -22,7 +22,7 @@ export function Footer() {
     'Dalle 19.00 alle 00.00',
     'AperiBirra! Il tuo aperitivo differente e gustoso',
     'dalle 17.30 alle 19.30',
-    'Giorno di chiusura: martedì.',
+    'Giorno di chiusura: martedì',
   ]
 
   return (
