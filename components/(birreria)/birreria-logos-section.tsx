@@ -5,25 +5,16 @@ import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 
 const { logos } = birreriaContent
 
-const logoFiles: Record<string, string> = {
-  'Del Ducato': 'del-ducato.png',
-  Ferdinand: 'ferdinand.png',
-  Lupulus: 'lupulus.png',
-  Malastrana: 'malastrana.jpg',
-  Augustiner: 'augustiner.png',
-  'Pilsner Urquell': 'pilsner_urquell.png',
-  Weiherer: 'weiherer.png',
-  Bitburger: 'bitburger.svg',
-  Liefmans: 'liefmans.png',
-  'Spaten-Bräu': 'spaten.svg',
-  Baladin: 'baladin.jpg',
-  'Malto Lento': 'malto-lento.png',
-  'Birrificio Maiella': 'birrificio-maiella.png',
-  'La Fucina': 'la-fucina.jpg',
-  Schlenkerla: 'schlenkerla.jpg',
-  Benediktiner: 'benediktiner.png',
-  Nittenau: 'nittenauer.jpg',
-  Opperbacco: 'opperbacco.png',
+const logoFileOverrides: Record<string, string> = {
+  'La Fucina': 'la fucina',
+  Maisel: 'maisel',
+  'Malto Lento': 'malto lento',
+  "O'Hara's": "o'Hara's",
+}
+
+function getLogoPath(name: string): string {
+  const suffix = logoFileOverrides[name] ?? name
+  return `/assets/imgs/birreria/birrifici/logo_${suffix}.png`
 }
 
 export function BirreriaLogosSection() {
@@ -40,7 +31,7 @@ export function BirreriaLogosSection() {
         }}
       />
 
-      <Container className="relative z-10">
+      <Container className="relative z-10 max-lg:max-w-xl max-lg:mx-auto">
         <RevealGroup className="mb-12 flex flex-col items-center gap-y-4 text-center" stagger={0.12} amount={0.3}>
           <RevealItem preset="fade-up" distance={16} duration={1}>
             <span className="text-sm font-black uppercase tracking-[0.22em] text-lq-orange">{logos.eyebrow}</span>
@@ -55,7 +46,8 @@ export function BirreriaLogosSection() {
             </h2>
           </RevealItem>
           <RevealItem preset="fade-up" distance={24} duration={1.1} className="max-w-lg">
-            <p className="text-base text-lq-dark/55">{logos.description}</p>
+            {/** biome-ignore lint/security/noDangerouslySetInnerHtml: <TrustedHTML> */}
+            <div dangerouslySetInnerHTML={{ __html: logos.description }} className="[&_p]:text-base [&_p]:text-lq-dark/55" />
           </RevealItem>
         </RevealGroup>
 
@@ -65,33 +57,27 @@ export function BirreriaLogosSection() {
           delayChildren={0.1}
           amount={0.1}
         >
-          {logos.partners.map((name) => {
-            const file = logoFiles[name]
-            return (
-              <RevealItem key={name} preset="zoom-in" distance={8} duration={0.9}>
-                <div
-                  className="flex aspect-square flex-col items-center justify-center gap-2 overflow-hidden rounded-2xl border border-lq-dark/10 bg-(--lq-cream)/30 p-4"
-                  title={name}
-                >
-                  {file && (
-                    <div className="relative flex h-14 w-full items-center justify-center">
-                      <Image
-                        src={`/assets/imgs/birrifici/${file}`}
-                        alt={`Logo ${name}`}
-                        width={80}
-                        height={56}
-                        className="h-full w-auto max-w-full object-contain opacity-70"
-                        unoptimized={file.endsWith('.svg')}
-                      />
-                    </div>
-                  )}
-                  <span className="text-center text-[10px] font-semibold uppercase leading-tight tracking-wide text-lq-dark/35">
-                    {name}
-                  </span>
+          {logos.partners.map((name) => (
+            <RevealItem key={name} preset="zoom-in" distance={8} duration={0.9}>
+              <div
+                className="flex aspect-square flex-col items-center justify-center gap-2 overflow-hidden rounded-2xl border border-lq-dark/10 bg-(--lq-cream)/30 p-4"
+                title={name}
+              >
+                <div className="relative flex h-14 w-full items-center justify-center">
+                  <Image
+                    src={getLogoPath(name)}
+                    alt={`Logo ${name}`}
+                    width={80}
+                    height={56}
+                    className="h-full w-auto max-w-full object-contain opacity-70"
+                  />
                 </div>
-              </RevealItem>
-            )
-          })}
+                <span className="text-center text-[10px] font-semibold uppercase leading-tight tracking-wide text-lq-dark/35">
+                  {name}
+                </span>
+              </div>
+            </RevealItem>
+          ))}
         </RevealGroup>
       </Container>
     </section>

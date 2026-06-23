@@ -1,7 +1,6 @@
 'use client'
 
-import { motion, type Variants } from 'motion/react'
-
+import { type Variants, motion, useReducedMotion } from 'motion/react'
 import { cn } from '@/lib/utils'
 
 type RevealPreset = 'fade-up' | 'fade-down' | 'fade-left' | 'fade-right' | 'zoom-in'
@@ -35,6 +34,11 @@ const groupVariants = {
   }),
 }
 
+const instantGroupVariants = {
+  hidden: {},
+  visible: {},
+}
+
 function getSpringTransition(duration: number) {
   return {
     type: 'spring' as const,
@@ -56,6 +60,11 @@ function addAxisDistance(base: number | string | undefined, deltaPx: number): nu
   const sign = deltaPx >= 0 ? '+' : '-'
   const amount = Math.abs(deltaPx)
   return `calc(${base} ${sign} ${amount}px)`
+}
+
+const instantItemVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0 } },
 }
 
 function getItemVariants(
@@ -147,6 +156,22 @@ function RevealGroup({
   stagger = 0.1,
   delayChildren = 0,
 }: RevealGroupProps) {
+  const prefersReducedMotion = useReducedMotion()
+
+  if (prefersReducedMotion) {
+    return (
+      <motion.div
+        className={cn(className)}
+        variants={instantGroupVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once, amount }}
+      >
+        {children}
+      </motion.div>
+    )
+  }
+
   return (
     <motion.div
       className={cn(className)}
@@ -170,8 +195,12 @@ function RevealItem({
   arriveX,
   arriveY,
 }: RevealItemProps) {
+  const prefersReducedMotion = useReducedMotion()
+
+  const variants = prefersReducedMotion ? instantItemVariants : getItemVariants(preset, distance, duration, arriveX, arriveY)
+
   return (
-    <motion.div className={cn(className)} variants={getItemVariants(preset, distance, duration, arriveX, arriveY)}>
+    <motion.div className={cn(className)} variants={variants}>
       {children}
     </motion.div>
   )

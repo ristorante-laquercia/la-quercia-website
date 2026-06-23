@@ -2,11 +2,9 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import Lineicons from '@lineiconshq/react-lineicons'
 import { CalendarDaysDuotone } from '@lineiconshq/free-icons'
-
+import Lineicons from '@lineiconshq/react-lineicons'
 import { cn } from '@/lib/utils'
-
 import { Button } from '@/components/ui/button'
 
 const menuLinks = [

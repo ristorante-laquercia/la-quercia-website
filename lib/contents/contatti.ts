@@ -3,7 +3,7 @@ import { Briefcase1Duotone, FileMultipleDuotone, KnifeFork1Duotone } from '@line
 export const contattiContent = {
   needs: {
     sectionTitle: 'Di cosa hai bisogno?',
-    description: 'Seleziona la risposta che meglio soddisfa le tue esigenze',
+    description: 'Prenota o scrivici: siamo a tua disposizione.',
     blocks: [
       {
         title: 'Prenotazioni',
@@ -29,7 +29,7 @@ export const contattiContent = {
     ],
   },
   orari: {
-    title: 'Orari di apertura',
+    title: 'Orari',
   },
   formContatti: {
     subTitle: 'Come possiamo aiutarti?',

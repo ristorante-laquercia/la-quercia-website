@@ -1,6 +1,5 @@
 import { MobileMenuButton } from '@/components/(header)/mobile-menu-button'
 import { NavbarLogo } from '@/components/(header)/navbar-logo'
-
 import { DesktopNav } from './desktop-nav'
 
 export function Navbar() {

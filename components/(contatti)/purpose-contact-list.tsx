@@ -1,12 +1,10 @@
 import Link from 'next/link'
 import Lineicons from '@lineiconshq/react-lineicons'
-
 import { contattiContent } from '@/lib/contents/contatti'
-
-import { Button } from '@/components/ui/button'
-import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-import { Container } from '@/components/ui/container'
 import { DiagonalElement } from '@/components/diagonal-element'
+import { Button } from '@/components/ui/button'
+import { Container } from '@/components/ui/container'
+import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 
 export function PurposeContactList() {
   const sectionTitleId = 'contact-needs-title'
@@ -14,11 +12,11 @@ export function PurposeContactList() {
 
   return (
     <section
-      className="relative overflow-hidden bg-lq-senape py-20 md:pt-24 md:pb-32 xl:pb-40"
+      className="relative overflow-hidden bg-lq-senape pt-20 pb-32 md:pt-24 md:pb-32 xl:pb-40"
       aria-labelledby={sectionTitleId}
       aria-describedby={sectionDescriptionId}
     >
-      <Container className="relative z-10">
+      <Container className="relative z-10 max-lg:max-w-xl max-lg:mx-auto">
         <RevealGroup className="text-center md:text-left" stagger={0.12}>
           <RevealItem preset="fade-up" distance={16} duration={0.85}>
             <span className="text-sm font-black uppercase tracking-[0.22em] text-lq-dark/55">Contattaci</span>

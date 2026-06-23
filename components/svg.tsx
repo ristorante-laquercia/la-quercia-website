@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, type Variants } from 'motion/react'
+import { type Variants, motion } from 'motion/react'
 
 const ROOT_SVG_VIEWBOX = '0 0 857.93 495.39'
 

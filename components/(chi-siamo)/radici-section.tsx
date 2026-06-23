@@ -3,13 +3,10 @@
 import { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react'
-
-import { cn } from '@/lib/utils'
 import { chiSiamoContent } from '@/lib/contents/chi-siamo'
-
+import { cn } from '@/lib/utils'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-
 import logoBgWhite from '@/public/assets/svg/logo.svg'
 
 export function RadiciSection({ className }: { className?: string }) {
@@ -35,7 +32,7 @@ export function RadiciSection({ className }: { className?: string }) {
   return (
     <section
       ref={sectionRef}
-      className={cn('pt-10 pb-64 min-h-120 overflow-x-clip flex flex-col lg:py-24 relative bg-(--lq-cream)', className)}
+      className={cn('pt-10 pb-56 min-h-120 overflow-x-clip flex flex-col lg:py-24 relative bg-(--lq-cream)', className)}
     >
       {/* Grain texture overlay */}
       <div
@@ -58,7 +55,7 @@ export function RadiciSection({ className }: { className?: string }) {
         1989
       </span>
 
-      <Container className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-y-6 md:gap-y-10 lg:gap-x-6 lg:items-center">
+      <Container className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-y-6 md:gap-y-10 max-lg:max-w-xl max-lg:mx-auto lg:gap-x-6 lg:items-center">
         <div className="max-md:relative">
           <Image
             src={logoBgWhite}
@@ -107,7 +104,7 @@ export function RadiciSection({ className }: { className?: string }) {
         </RevealGroup>
       </Container>
 
-      <div className="relative inset-x-0 mt-auto lg:pt-10 xl:pt-24 hidden md:block text-lq-green/20 pointer-events-none select-none overflow-x-clip">
+      <div className="relative inset-x-0 mt-auto lg:pt-10 xl:pt-24 hidden md:block text-lq-green/20 pointer-events-none select-none overflow-x-clip md:mt-16">
         <div className="relative w-full">
           <h2
             aria-label={`${firstLine} ${secondLine}`}

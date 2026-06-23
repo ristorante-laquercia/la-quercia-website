@@ -1,16 +1,13 @@
-import Link from 'next/link'
 import Image from 'next/image'
-import Lineicons from '@lineiconshq/react-lineicons'
+import Link from 'next/link'
 import { KnifeFork1Duotone } from '@lineiconshq/free-icons'
-
+import Lineicons from '@lineiconshq/react-lineicons'
 import { homeContent } from '@/lib/contents/home'
-
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-
-import sectionImage from '@/public/assets/demo/restaurant-interior-2.jpg'
-import friendsImage from '@/public/assets/demo/friends-playing-cards-bar.jpg'
+import fotoFriends from '@/public/assets/imgs/home/gruppo-di-persone-che-brinda-presso-ristobirreria-la-quercia.jpg'
+import fotoInterni from '@/public/assets/imgs/home/ristorbirreria-la-quercia-interni.jpg'
 
 export function AboutSection() {
   const sectionTitleId = 'home-about-title'
@@ -23,7 +20,7 @@ export function AboutSection() {
       aria-describedby={sectionDescriptionId}
     >
       {/* Main content */}
-      <Container>
+      <Container className="max-lg:max-w-xl max-lg:mx-auto">
         <RevealGroup
           className="grid grid-cols-1 gap-12 lg:grid-cols-[5fr_7fr] lg:gap-16 xl:gap-20"
           stagger={0.18}
@@ -31,12 +28,12 @@ export function AboutSection() {
           amount={0.15}
         >
           {/* Left column: stacked images */}
-          <div className="flex flex-col gap-3.5">
+          <div className="flex flex-col gap-3.5 order-2 lg:order-1">
             <RevealItem preset="fade-up" duration={1.3} distance={28}>
               <div className="relative aspect-4/5 w-full overflow-hidden rounded-2xl shadow-lg">
                 <Image
-                  src={sectionImage}
-                  alt="Interno del locale La Quercia"
+                  src={fotoInterni}
+                  alt="Interno della Ristobirreria La Quercia"
                   fill
                   placeholder="blur"
                   sizes="(max-width: 1024px) 100vw, 40vw"
@@ -46,10 +43,10 @@ export function AboutSection() {
             </RevealItem>
 
             <RevealItem preset="fade-up" duration={1.5} distance={32}>
-              <div className="relative aspect-3/2 w-full overflow-hidden rounded-xl shadow-md">
+              <div className="relative aspect-7/6 w-full overflow-hidden rounded-xl shadow-md">
                 <Image
-                  src={friendsImage}
-                  alt={homeContent.about.images[0].alt}
+                  src={fotoFriends}
+                  alt="Gruppo di persone che brinda presso Ristobirreria La Quercia"
                   fill
                   placeholder="blur"
                   sizes="(max-width: 1024px) 100vw, 40vw"
@@ -86,8 +83,10 @@ export function AboutSection() {
                   [&>p:last-child]:bg-(--lq-orange)/4
                   [&>p:last-child]:py-3
                   [&>p:last-child]:rounded-r-lg
-                  [&>p:last-child]:mt-2
-                  [&>p:last-child]:italic"
+                  [&>p:last-child]:mt-4
+                  [&>p:last-child]:italic
+                  [&>p:last-child]:pr-2
+                  [&>p:last-child]:text-2xl"
               />
             </RevealItem>
 

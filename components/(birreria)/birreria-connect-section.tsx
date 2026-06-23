@@ -66,10 +66,6 @@ export function BirreriaConnectSection() {
 
       <Container className="relative z-10">
         <RevealGroup className="flex flex-col items-center gap-y-5 text-center" stagger={0.12} amount={0.25}>
-          <RevealItem preset="fade-up" distance={16} duration={1}>
-            <span className="text-sm font-black uppercase tracking-[0.22em] text-lq-orange">{connect.eyebrow}</span>
-          </RevealItem>
-
           <RevealItem preset="fade-up" distance={22} duration={1.05}>
             <h2
               id={titleId}
@@ -88,7 +84,21 @@ export function BirreriaConnectSection() {
 
           <RevealItem preset="fade-up" distance={26} duration={1.15}>
             <div className="mt-4 flex flex-wrap justify-center gap-3">
-              {connect.links.map((link) => {
+              <Button key={connect.links[2].platform} asChild variant="custom" color={'green'}>
+                <a href={connect.links[2].href} target="_blank" rel="noopener noreferrer">
+                  <Lineicons icon={WhatsappOutlined} size={48} className="size-5" />
+                  {connect.links[2].label}
+                </a>
+              </Button>
+            </div>
+          </RevealItem>
+
+          <RevealItem preset="fade-up" distance={26} duration={1.15}>
+            <div className="mt-4 flex flex-wrap justify-center gap-x-3">
+              <span className="text-sm font-black uppercase tracking-[0.22em] text-lq-orange">{connect.eyebrow}</span>
+              <p className="text-lg leading-relaxed text-white/55 mb-4 mt-2">{connect.moreInfo}</p>
+
+              {connect.links.slice(0, 2).map((link) => {
                 const icon = iconMap[link.platform as keyof typeof iconMap]
                 const color = buttonColorMap[link.platform as keyof typeof buttonColorMap]
                 return (

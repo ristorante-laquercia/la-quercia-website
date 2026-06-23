@@ -1,14 +1,11 @@
 import Image from 'next/image'
-
 import { esperienzeContent } from '@/lib/contents/esperienze'
-
+import { DiagonalElement } from '@/components/diagonal-element'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-import { DiagonalElement } from '@/components/diagonal-element'
-
-import introImage from '@/public/assets/demo/three-friends-cheer-wine-glasses-with-red-white-wine-dinner.jpg'
-import detailImage from '@/public/assets/demo/toast-dinner.jpg'
-import atmosphereImage from '@/public/assets/demo/table-set-dinning-table.jpg'
+import introImage from '@/public/assets/imgs/esperienze/ragazzo-che-sta-partecipando-ad-un-drink-and-play.jpg'
+import atmosphereImage from '@/public/assets/imgs/esperienze/un-dettaglio-di-una-scacchiera-durante-una-partita.jpg'
+import detailImage from '@/public/assets/imgs/esperienze/una-ragazza-mora-beve-una-birra.jpg'
 
 export function EsperienzeIntroSection() {
   const titleId = 'esperienze-intro-title'
@@ -35,13 +32,13 @@ export function EsperienzeIntroSection() {
       {/* Decorative display word */}
       <span
         aria-hidden
-        className="pointer-events-none absolute bottom-0 left-[-0.05em] z-0 hidden select-none font-gabarito text-[clamp(10rem,18vw,22rem)] font-black leading-none text-lq-orange/[0.04] lg:block"
+        className="pointer-events-none absolute bottom-0 left-[-0.05em] z-0 hidden select-none font-gabarito text-[clamp(10rem,18vw,22rem)] font-black leading-none text-lq-orange/4 lg:block"
         style={{ letterSpacing: '-0.04em' }}
       >
         ESPERIENZE
       </span>
 
-      <Container className="relative z-10">
+      <Container className="relative z-10 max-lg:max-w-xl max-lg:mx-auto">
         <RevealGroup
           className="grid grid-cols-1 gap-y-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch lg:gap-x-14"
           stagger={0.16}
@@ -49,7 +46,7 @@ export function EsperienzeIntroSection() {
           amount={0.2}
         >
           {/* Left: images */}
-          <div className="grid grid-cols-2 gap-4 md:gap-6 lg:h-full lg:grid-rows-2">
+          <div className="grid grid-cols-2 order-2 gap-4 md:gap-6 lg:h-full lg:grid-rows-2">
             <RevealItem
               preset="fade-up"
               distance={36}
@@ -115,7 +112,7 @@ export function EsperienzeIntroSection() {
             </RevealItem>
 
             <RevealItem preset="fade-up" distance={22} duration={1.08}>
-              <div className="h-[3px] w-10 rounded-full bg-lq-orange/50" />
+              <div className="h-0.75 w-10 rounded-full bg-lq-orange/50" />
             </RevealItem>
 
             <div id={descriptionId} className="space-y-4 text-lq-dark">

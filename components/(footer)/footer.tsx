@@ -1,21 +1,28 @@
-import Lineicons from '@lineiconshq/react-lineicons'
 import Link from 'next/link'
-
-import { Container } from '@/components/ui/container'
-import { Button } from '@/components/ui/button'
 import { FacebookOutlined, InstagramOutlined, WhatsappOutlined } from '@lineiconshq/free-icons'
+import Lineicons from '@lineiconshq/react-lineicons'
 import { SubFooter } from '@/components/(footer)/sub-footer'
+import { Button } from '@/components/ui/button'
+import { Container } from '@/components/ui/container'
 
 export function Footer() {
-  // TODO: sostituire con le pagine reali del sito.
   const infoLinks = [
     { label: 'Chi siamo', href: '/chi-siamo' },
-    { label: 'Menu', href: '/menu' },
-    { label: 'Esperienze', href: '/esperienze' },
+    {
+      label: 'Privacy Policy',
+      href: '/privacy-policy',
+    },
+    { label: 'Cookie Policy', href: '/cookie-policy' },
     { label: 'Contatti', href: '/contatti' },
   ]
 
-  const openingHours = ['Lun: 19:00 - 00:00', 'Martedì: Chiuso', 'Mer - Dom: 19:00 - 00:00']
+  const openingHours = [
+    'Ristorante - Pizzeria - Birreria',
+    'Dalle 19.00 alle 00.00',
+    'AperiBirra! Il tuo aperitivo differente e gustoso',
+    'dalle 17.30 alle 19.30',
+    'Giorno di chiusura: martedì',
+  ]
 
   return (
     <footer id="site-footer" className="grid grid-cols-12">
@@ -30,12 +37,7 @@ export function Footer() {
                 Mobile: 379.1269699
                 <br />
                 e-mail:{' '}
-                <a
-                  href="info@ristorante-laquercia.it"
-                  target="_blank"
-                  rel="noopener"
-                  className="hover:no-underline hover:text-lq-senape"
-                >
+                <a href="mailto:info@ristorante-laquercia.it" className="hover:no-underline hover:text-lq-senape">
                   info@ristorante-laquercia.it
                 </a>
               </p>
@@ -46,30 +48,33 @@ export function Footer() {
                 <a
                   href="https://www.facebook.com/laquerciatermoli"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
+                  aria-label="La Quercia su Facebook"
                   className="mdp:has-[svg]:p-0 bg-transparent hover:bg-transparent"
                 >
-                  <Lineicons icon={FacebookOutlined} size={48} color="white" className="size-7" />
+                  <Lineicons icon={FacebookOutlined} size={48} color="white" className="size-7" aria-hidden />
                 </a>
               </Button>
               <Button variant={'link'} asChild>
                 <a
                   href="https://www.instagram.com/laquerciatermoli/"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
+                  aria-label="La Quercia su Instagram"
                   className="mdp:has-[svg]:p-0 bg-transparent hover:bg-transparent"
                 >
-                  <Lineicons icon={InstagramOutlined} size={48} color="white" className="size-7" />
+                  <Lineicons icon={InstagramOutlined} size={48} color="white" className="size-7" aria-hidden />
                 </a>
               </Button>
               <Button variant={'link'} asChild>
                 <a
                   href="https://wa.me/+393791269699?text=Vorrei%20ricevere%20maggiori%20informazioni"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
+                  aria-label="Contattaci su WhatsApp"
                   className="mdp:has-[svg]:p-0 bg-transparent hover:bg-transparent"
                 >
-                  <Lineicons icon={WhatsappOutlined} size={48} color="white" className="size-7" />
+                  <Lineicons icon={WhatsappOutlined} size={48} color="white" className="size-7" aria-hidden />
                 </a>
               </Button>
             </div>
@@ -89,8 +94,8 @@ export function Footer() {
 
           {/* End block */}
           <div className="md:max-mdp:col-span-2 mdp:col-span-1">
-            <h4 className="text-[32px] mdp:text-right font-gabarito">Orari di apertura</h4>
-            <ul className="[&_li]:text-xl font-light [&_li]:mdp:text-base mdp:text-right">
+            <h4 className="text-[32px] mdp:text-right font-gabarito">Orari</h4>
+            <ul className="space-y-1 [&_li]:text-xl font-light [&_li]:mdp:text-base mdp:text-right">
               {openingHours.map((hour) => (
                 <li key={hour}>{hour}</li>
               ))}

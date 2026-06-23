@@ -1,8 +1,8 @@
 'use client'
 
-import { useWindowSize } from '@uidotdev/usehooks'
-import Lineicons from '@lineiconshq/react-lineicons'
 import { ScrollDown2Duotone } from '@lineiconshq/free-icons'
+import Lineicons from '@lineiconshq/react-lineicons'
+import { useWindowSize } from '@uidotdev/usehooks'
 
 export function Hero() {
   const size = useWindowSize()
@@ -11,67 +11,57 @@ export function Hero() {
 
     if (width < 640) {
       return {
-        fontSize: '80',
+        fontSize: '64',
         topY: '45%',
         bottomY: '54%',
-        topLetterSpacing: '1',
-        bottomLetterSpacing: '0.5',
+        topLetterSpacing: '0.5',
+        bottomLetterSpacing: '0.3',
       }
     }
 
     if (width < 768) {
       return {
-        fontSize: '110',
+        fontSize: '88',
         topY: '45%',
         bottomY: '56%',
-        topLetterSpacing: '2',
-        bottomLetterSpacing: '1',
+        topLetterSpacing: '1',
+        bottomLetterSpacing: '0.5',
       }
     }
 
     if (width < 1024) {
       return {
-        fontSize: '132',
+        fontSize: '106',
         topY: '45%',
         bottomY: '60%',
-        topLetterSpacing: '3',
-        bottomLetterSpacing: '2',
+        topLetterSpacing: '2',
+        bottomLetterSpacing: '1',
       }
     }
 
     if (width < 1280) {
       return {
-        fontSize: '164',
+        fontSize: '108',
         topY: '45%',
         bottomY: '62%',
-        topLetterSpacing: '4',
-        bottomLetterSpacing: '2.5',
+        topLetterSpacing: '2',
+        bottomLetterSpacing: '1',
       }
     }
 
-    if (width < 1536) {
-      return {
-        fontSize: '192',
-        topY: '45%',
-        bottomY: '67%',
-        topLetterSpacing: '5',
-        bottomLetterSpacing: '3',
-      }
-    }
-
-    // >= 1536
+    // >= 1280
     return {
-      fontSize: '192',
+      fontSize: '120',
       topY: '45%',
       bottomY: '67%',
-      topLetterSpacing: '6',
-      bottomLetterSpacing: '3',
+      topLetterSpacing: '3',
+      bottomLetterSpacing: '1.5',
     }
   })()
   const heroStackLayout = (() => {
     const viewportHeight = size.height ?? 900
     const viewportWidth = size.width ?? 1536
-    const blockCenterY = 52
+    const blockCenterY = viewportWidth >= 1536 ? 50 : 46
 
     // Gap proporzionali alla viewport, ma limitati per evitare estremi.
     const baseLineGapPct = Math.min(Math.max(viewportHeight * 0.012, 10), 22)
@@ -89,21 +79,15 @@ export function Hero() {
       lineGapMultiplier = 1.3
       subtitleGapMultiplier = 1.4
     } else if (viewportWidth < 1024) {
-      // 768-1023: font 165px, gap proporzionalmente maggiore.
-      lineGapMultiplier = 1.6
+      // 768-1023: font 106px, gap ridotto.
+      lineGapMultiplier = 1.25
       subtitleGapMultiplier = 1.4
     } else if (viewportWidth >= 1024 && viewportWidth < 1280) {
-      // 1024-1279: font 195px.
-      lineGapMultiplier = 2.2
-      subtitleGapMultiplier = 1.8
-    } else if (viewportWidth >= 1280 && viewportWidth < 1536) {
-      // >= 1280-1535px: font 240-260px, spaziatura ampia.
-      lineGapMultiplier = 2.2
-      subtitleGapMultiplier = 1.6
-    } else if (viewportWidth >= 1536) {
-      // >= 1536: font 240-260px, spaziatura ampia.
-      lineGapMultiplier = 2
-      subtitleGapMultiplier = 1.5
+      lineGapMultiplier = 1.4
+      subtitleGapMultiplier = 1.4
+    } else if (viewportWidth >= 1280) {
+      lineGapMultiplier = 1.3
+      subtitleGapMultiplier = 1.4
     }
 
     const lineGapPct = baseLineGapPct * lineGapMultiplier
@@ -114,10 +98,18 @@ export function Hero() {
     const bottomY = topY + lineGapPct
     const subtitleY = bottomY + subtitleGapPct
 
+    const baseTaglineGapPct = Math.min(Math.max(viewportHeight * 0.005, 4), 7)
+    const baseCategoryGapPct = Math.min(Math.max(viewportHeight * 0.006, 4), 7)
+
+    const taglineY = subtitleY + baseTaglineGapPct
+    const categoryY = taglineY + baseCategoryGapPct
+
     return {
       topY: `${topY.toFixed(2)}%`,
       bottomY: `${bottomY.toFixed(2)}%`,
       subtitleY: `${subtitleY.toFixed(2)}%`,
+      taglineY: `${taglineY.toFixed(2)}%`,
+      categoryY: `${categoryY.toFixed(2)}%`,
     }
   })()
 
@@ -190,6 +182,20 @@ export function Hero() {
         style={{ top: heroStackLayout.subtitleY }}
       >
         Mangia - Bevi - Vivi
+      </p>
+
+      <p
+        className="font-barlow italic pointer-events-none absolute inset-x-0 z-20 -translate-y-1/2 px-6 text-center text-sm text-white/75 md:text-base lg:text-lg"
+        style={{ top: heroStackLayout.taglineY }}
+      >
+        Dal 1989, un luogo per mangiare, bere e vivere esperienze uniche
+      </p>
+
+      <p
+        className="font-gabarito uppercase font-bold pointer-events-none absolute inset-x-0 z-20 -translate-y-1/2 text-center text-xs tracking-[0.25em] text-white/60 md:text-sm lg:text-base"
+        style={{ top: heroStackLayout.categoryY }}
+      >
+        Ristorante · Pizzeria · Birreria
       </p>
 
       <button

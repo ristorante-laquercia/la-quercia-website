@@ -1,20 +1,17 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { HatChef3Duotone, WhatsappOutlined } from '@lineiconshq/free-icons'
 import Lineicons from '@lineiconshq/react-lineicons'
-import { HatChef3Duotone, InstagramOutlined } from '@lineiconshq/free-icons'
-
 import { esperienzeContent } from '@/lib/contents/esperienze'
-
-import { Container } from '@/components/ui/container'
-import { Button } from '@/components/ui/button'
-import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 import { DiagonalElement } from '@/components/diagonal-element'
+import { Button } from '@/components/ui/button'
+import { Container } from '@/components/ui/container'
+import { RevealGroup, RevealItem } from '@/components/ui/reveal'
+import degustazioneImage from '@/public/assets/imgs/esperienze/beer-sommelier-spiega-abbinamenti.jpg'
+import colazioneCampioni from '@/public/assets/imgs/esperienze/la-colazione-dei-campioni.jpg'
 
-import degustazioneImage from '@/public/assets/demo/italian-lasagne-served-with-rocket-salad.jpg'
-import birraImage from '@/public/assets/demo/2151639899.jpg'
-
-const eventImages = [degustazioneImage, birraImage] as const
-const eventIcons = [HatChef3Duotone, InstagramOutlined] as const
+const eventImages = [degustazioneImage, colazioneCampioni] as const
+const eventIcons = [HatChef3Duotone, WhatsappOutlined] as const
 
 function isExternalHref(href: string) {
   return href.startsWith('http://') || href.startsWith('https://')
@@ -56,7 +53,7 @@ export function EsperienzeEventsSection() {
         EVENTI
       </span>
 
-      <Container className="relative z-10">
+      <Container className="relative z-10 max-lg:max-w-xl max-lg:mx-auto">
         <RevealGroup
           className="grid grid-cols-1 gap-y-12 lg:grid-cols-[0.78fr_1.22fr] lg:gap-x-14"
           stagger={0.16}
@@ -76,7 +73,7 @@ export function EsperienzeEventsSection() {
               </h2>
             </RevealItem>
             <RevealItem preset="fade-up" distance={24} duration={1.1}>
-              <p id={descriptionId} className="leading-relaxed text-lq-dark/75">
+              <p id={descriptionId} className="text-lq-dark/75">
                 {esperienzeContent.events.description}
               </p>
             </RevealItem>
@@ -123,25 +120,25 @@ export function EsperienzeEventsSection() {
                         <span className="rounded-[0.3rem] border border-white/22 bg-black/28 px-3 py-1.5 text-[0.6rem] font-bold uppercase tracking-[0.22em] text-white backdrop-blur-sm">
                           {item.dateLabel}
                         </span>
-                        <span className="rounded-[0.3rem] border border-white/22 bg-black/28 px-3 py-1.5 text-[0.6rem] font-bold uppercase tracking-[0.22em] text-white backdrop-blur-sm">
-                          {item.timeLabel}
-                        </span>
+
+                        {'timeLabel' in item && (
+                          <span className="rounded-[0.3rem] border border-white/22 bg-black/28 px-3 py-1.5 text-[0.6rem] font-bold uppercase tracking-[0.22em] text-white backdrop-blur-sm">
+                            {item.timeLabel}
+                          </span>
+                        )}
                       </div>
                     </div>
 
                     {/* Row 2 — title */}
-                    <h3
-                      className="px-6 pt-5 pb-1 font-gabarito text-3xl leading-tight text-lq-dark"
-                      style={{ letterSpacing: '-0.02em' }}
-                    >
+                    <h3 className="px-6 pt-5 pb-1 font-gabarito text-4xl text-lq-dark" style={{ letterSpacing: '-0.02em' }}>
                       {item.title}
                     </h3>
 
                     {/* Row 3 — description (1fr, stretches to align CTA across cards) */}
-                    <p className="px-6 pt-3 pb-2 text-sm leading-relaxed text-lq-dark/72">{item.description}</p>
+                    <p className="px-6 pt-3 pb-2 text-lg text-lq-dark/72">{item.description}</p>
 
                     {/* Row 4 — CTA, pinned to the same baseline on every card */}
-                    <div className="px-6 pb-6 pt-2">
+                    <div className="px-6 pb-6 pt-6">
                       <Button asChild variant="custom" color="dark">
                         {hrefIsExternal ? (
                           <a href={item.ctaHref} target="_blank" rel="noopener noreferrer">

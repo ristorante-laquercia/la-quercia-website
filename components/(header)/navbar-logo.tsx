@@ -3,9 +3,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { motion, useReducedMotion } from 'motion/react'
 import { useWindowScroll } from '@uidotdev/usehooks'
-
+import { motion, useReducedMotion } from 'motion/react'
 import logo from '@/public/assets/svg/logo-la-quercia.svg'
 
 export function NavbarLogo() {

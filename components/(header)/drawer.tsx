@@ -1,10 +1,10 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { createPortal } from 'react-dom'
 import { usePathname } from 'next/navigation'
-import { AnimatePresence, motion } from 'motion/react'
-
+import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
+import { createPortal } from 'react-dom'
 import { cn } from '@/lib/utils'
 
 type DrawerProps = {
@@ -24,11 +24,62 @@ const mobileLinks = [
   { label: 'Contatti', href: '/contatti' },
 ]
 
+const FOCUSABLE_SELECTORS =
+  'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+
 export function Drawer({ open, onClose }: Readonly<DrawerProps>) {
   const pathname = usePathname()
+  const prefersReducedMotion = useReducedMotion()
+  const asideRef = useRef<HTMLElement>(null)
+
+  // Move focus into the drawer when it opens, restore it on close
+  useEffect(() => {
+    if (!open) return
+
+    const firstFocusable = asideRef.current?.querySelector<HTMLElement>(FOCUSABLE_SELECTORS)
+    firstFocusable?.focus()
+  }, [open])
+
+  // Trap focus within the drawer while it is open
+  useEffect(() => {
+    if (!open) return
+
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        onClose()
+        return
+      }
+
+      if (e.key !== 'Tab') return
+
+      const focusable = Array.from(asideRef.current?.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTORS) ?? [])
+      if (focusable.length === 0) return
+
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault()
+          last.focus()
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault()
+          first.focus()
+        }
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [open, onClose])
+
   if (typeof document === 'undefined') {
     return null
   }
+
+  const noMotion = prefersReducedMotion ?? false
 
   return createPortal(
     <AnimatePresence>
@@ -40,25 +91,36 @@ export function Drawer({ open, onClose }: Readonly<DrawerProps>) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2, ease: 'easeOut' }}
+            transition={noMotion ? { duration: 0 } : { duration: 0.2, ease: 'easeOut' }}
             onClick={onClose}
             type="button"
           />
 
           <motion.aside
+            ref={asideRef}
+            role="dialog"
+            aria-modal="true"
             aria-label="Menu mobile"
             className="fixed inset-x-0 bottom-0 top-[30dvh] z-40 lg:hidden"
-            initial={{ y: 'calc(100% + 6rem)', opacity: 0.9 }}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { type: 'spring', stiffness: 260, damping: 30 },
-            }}
-            exit={{
-              y: 'calc(100% + 6rem)',
-              opacity: 0.96,
-              transition: { duration: 0.28, ease: 'easeInOut' },
-            }}
+            initial={noMotion ? { opacity: 0 } : { y: 'calc(100% + 6rem)', opacity: 0.9 }}
+            animate={
+              noMotion
+                ? { opacity: 1 }
+                : {
+                    y: 0,
+                    opacity: 1,
+                    transition: { type: 'spring', stiffness: 260, damping: 30 },
+                  }
+            }
+            exit={
+              noMotion
+                ? { opacity: 0, transition: { duration: 0 } }
+                : {
+                    y: 'calc(100% + 6rem)',
+                    opacity: 0.96,
+                    transition: { duration: 0.28, ease: 'easeInOut' },
+                  }
+            }
           >
             <div aria-hidden className="absolute inset-0 bg-lq-green" />
 
@@ -72,8 +134,7 @@ export function Drawer({ open, onClose }: Readonly<DrawerProps>) {
                 viewBox="0 90 1440 310"
                 preserveAspectRatio="none"
                 xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-label="Decorative wave pattern"
+                aria-hidden="true"
                 className="block size-full"
               >
                 <path
@@ -96,31 +157,36 @@ export function Drawer({ open, onClose }: Readonly<DrawerProps>) {
                     index === 4 ? (
                       <motion.li
                         key={item.href}
-                        initial={{ opacity: 0, y: 26 }}
-                        animate={{
-                          opacity: 1,
-                          y: 0,
-                          transition: {
-                            type: 'spring',
-                            stiffness: 130,
-                            damping: 22,
-                            mass: 1.1,
-                            delay: 0.22 + index * 0.09,
-                          },
-                        }}
-                        exit={{
-                          opacity: 0,
-                          y: 12,
-                          transition: {
-                            duration: 0.16,
-                            ease: 'easeIn',
-                          },
-                        }}
+                        initial={noMotion ? { opacity: 0 } : { opacity: 0, y: 26 }}
+                        animate={
+                          noMotion
+                            ? { opacity: 1, transition: { duration: 0 } }
+                            : {
+                                opacity: 1,
+                                y: 0,
+                                transition: {
+                                  type: 'spring',
+                                  stiffness: 130,
+                                  damping: 22,
+                                  mass: 1.1,
+                                  delay: 0.22 + index * 0.09,
+                                },
+                              }
+                        }
+                        exit={
+                          noMotion
+                            ? { opacity: 0, transition: { duration: 0 } }
+                            : {
+                                opacity: 0,
+                                y: 12,
+                                transition: { duration: 0.16, ease: 'easeIn' },
+                              }
+                        }
                       >
                         <a
                           href={item.href}
                           target="_blank"
-                          rel="noopener"
+                          rel="noopener noreferrer"
                           onClick={onClose}
                           className={cn(pathname === item.href && 'text-lq-senape')}
                         >
@@ -130,26 +196,31 @@ export function Drawer({ open, onClose }: Readonly<DrawerProps>) {
                     ) : (
                       <motion.li
                         key={item.href}
-                        initial={{ opacity: 0, y: 26 }}
-                        animate={{
-                          opacity: 1,
-                          y: 0,
-                          transition: {
-                            type: 'spring',
-                            stiffness: 130,
-                            damping: 22,
-                            mass: 1.1,
-                            delay: 0.22 + index * 0.09,
-                          },
-                        }}
-                        exit={{
-                          opacity: 0,
-                          y: 12,
-                          transition: {
-                            duration: 0.16,
-                            ease: 'easeIn',
-                          },
-                        }}
+                        initial={noMotion ? { opacity: 0 } : { opacity: 0, y: 26 }}
+                        animate={
+                          noMotion
+                            ? { opacity: 1, transition: { duration: 0 } }
+                            : {
+                                opacity: 1,
+                                y: 0,
+                                transition: {
+                                  type: 'spring',
+                                  stiffness: 130,
+                                  damping: 22,
+                                  mass: 1.1,
+                                  delay: 0.22 + index * 0.09,
+                                },
+                              }
+                        }
+                        exit={
+                          noMotion
+                            ? { opacity: 0, transition: { duration: 0 } }
+                            : {
+                                opacity: 0,
+                                y: 12,
+                                transition: { duration: 0.16, ease: 'easeIn' },
+                              }
+                        }
                       >
                         <Link href={item.href} onClick={onClose} className={cn(pathname === item.href && 'text-lq-senape')}>
                           {item.label}

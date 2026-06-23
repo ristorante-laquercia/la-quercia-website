@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server'
-
 import { verifyAltchaPayload } from '@/lib/altcha'
 
 type ContactSubmitPayload = {

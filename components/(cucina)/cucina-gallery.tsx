@@ -1,115 +1,36 @@
-import Image from 'next/image'
-
 import { cucinaContent } from '@/lib/contents/cucina'
-
 import { Container } from '@/components/ui/container'
+import type { GalleryStripItem } from '@/components/ui/gallery-strip'
+import { GalleryStrip } from '@/components/ui/gallery-strip'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
+import imgCavatelliLuppolo from '@/public/assets/imgs/cucina/gallery/cavatelli-con-luppolo.jpg'
+import imgCavatelliTagliere from '@/public/assets/imgs/cucina/gallery/cavatelli-sul-tagliere-in-legno.jpg'
+import imgCucinaMolisana from '@/public/assets/imgs/cucina/gallery/cucina-tipica-molisana.jpg'
+import imgDettaglioCavatelli from '@/public/assets/imgs/cucina/gallery/dettaglio-di-un-piatto-di-cavatelli-con-sugo.jpg'
+import imgDettaglioPizza from '@/public/assets/imgs/cucina/gallery/dettaglio-di-un-tubbbo-di-pizza.jpg'
+import imgFilettoLime from '@/public/assets/imgs/cucina/gallery/filetto-lime-e-pepe.jpg'
+import imgMaltoAffumicato from '@/public/assets/imgs/cucina/gallery/malto-affumicato-in-un-bicchiere.jpg'
+import imgSalumi from '@/public/assets/imgs/cucina/gallery/piatto-di-salumi-serviti-al-tavolo-ad-una-persona.jpg'
+import imgPizzaPecorino from '@/public/assets/imgs/cucina/gallery/pizza-che-viene-condita-con-del-pecorino.jpg'
+import imgPreparazioneCavatelli from '@/public/assets/imgs/cucina/gallery/preparazione-di-un-piatto-di-cavatelli.jpg'
+import imgStinco from '@/public/assets/imgs/cucina/gallery/stinco-di-maiale.jpg'
+import imgStincoConPatatine from '@/public/assets/imgs/cucina/gallery/stinco-di-maiale-servito-con-patatine-e-varie-salse.jpg'
+import imgTagliereMisto from '@/public/assets/imgs/cucina/gallery/tagliere-misto-con-formaggi.jpg'
 
-import galleryImage1 from '@/public/assets/demo/2151639899.jpg'
-import galleryImage2 from '@/public/assets/demo/restaurant-interior.jpg'
-import galleryImage3 from '@/public/assets/demo/table-set-dinning-table.jpg'
-import galleryImage4 from '@/public/assets/demo/friends-playing-cards-bar.jpg'
-import galleryImage5 from '@/public/assets/demo/young-couple-drinking-wine-having-fun-lunch-bar-focus-is-man.jpg'
-import galleryImage6 from '@/public/assets/demo/three-friends-cheer-wine-glasses-with-red-white-wine-dinner.jpg'
-import galleryImage7 from '@/public/assets/demo/brunette-woman-brown-cap-white-tee-her-friend-stylish-top-smiles-rests-street-cafe.jpg'
-import galleryImage8 from '@/public/assets/demo/young-woman-eating-pasta-cafe.jpg'
-import galleryImage9 from '@/public/assets/demo/chef-pouring-special-sauce-pork-ribs-kitchen.jpg'
-import galleryImage10 from '@/public/assets/demo/italian-lasagne-served-with-rocket-salad.jpg'
-import galleryImage11 from '@/public/assets/demo/toast-dinner.jpg'
-import galleryImage12 from '@/public/assets/demo/top-view-pans-with-mushroom-sautee-mashed-potato-sabzi-boiled-vegetables-roasted-potatoes.jpg'
-import type { StaticImageData } from 'next/image'
-
-type GalleryItem = {
-  src: StaticImageData
-  alt: string
-  /** Peso proporzionale usato come flex-grow per riempire la riga */
-  flexGrow: number
-}
-
-type GalleryRow = {
-  items: readonly GalleryItem[]
-  heightClassName: string
-}
-
-const galleryRows: readonly GalleryRow[] = [
-  {
-    // Riga media: 4 foto con proporzioni molto sbilanciate
-    heightClassName: 'h-[8rem] sm:h-[13rem] md:h-[20rem] lg:h-[24rem]',
-    items: [
-      {
-        src: galleryImage1,
-        alt: 'Calice di birra e tavolo apparecchiato',
-        flexGrow: 42,
-      },
-      {
-        src: galleryImage2,
-        alt: 'Vista della sala interna del locale',
-        flexGrow: 18,
-      },
-      {
-        src: galleryImage3,
-        alt: 'Tavolo pronto per il servizio serale',
-        flexGrow: 34,
-      },
-      {
-        src: galleryImage8,
-        alt: 'Donna mentre assaggia un piatto di pasta al tavolo',
-        flexGrow: 22,
-      },
-    ],
-  },
-  {
-    // Riga alta: solo 3 foto, dominante e spettacolare
-    heightClassName: 'h-[11rem] sm:h-[17rem] md:h-[28rem] lg:h-[34rem]',
-    items: [
-      {
-        src: galleryImage9,
-        alt: 'Chef mentre rifinisce un piatto con salsa in cucina',
-        flexGrow: 28,
-      },
-      {
-        src: galleryImage4,
-        alt: 'Momento conviviale con persone sedute nel locale',
-        flexGrow: 46,
-      },
-      {
-        src: galleryImage5,
-        alt: 'Coppia al tavolo durante una pausa pranzo',
-        flexGrow: 26,
-      },
-    ],
-  },
-  {
-    // Riga bassa: 5 foto più dense e compresse
-    heightClassName: 'h-[6rem] sm:h-[10rem] md:h-[16rem] lg:h-[19rem]',
-    items: [
-      {
-        src: galleryImage6,
-        alt: 'Brindisi tra amici con calici alzati',
-        flexGrow: 20,
-      },
-      {
-        src: galleryImage7,
-        alt: 'Dettaglio spontaneo di atmosfera nel dehors del locale',
-        flexGrow: 33,
-      },
-      {
-        src: galleryImage10,
-        alt: 'Lasagna servita con insalata e impiattamento contemporaneo',
-        flexGrow: 14,
-      },
-      {
-        src: galleryImage11,
-        alt: 'Brindisi serale con bicchieri e atmosfera conviviale',
-        flexGrow: 28,
-      },
-      {
-        src: galleryImage12,
-        alt: "Tavola dall'alto con piatti diversi e ingredienti condivisi",
-        flexGrow: 19,
-      },
-    ],
-  },
+const galleryItems: readonly GalleryStripItem[] = [
+  { src: imgCavatelliLuppolo, alt: 'Cavatelli con luppolo', flexGrow: 42 },
+  { src: imgDettaglioCavatelli, alt: 'Dettaglio di un piatto di cavatelli con sugo', flexGrow: 18 },
+  { src: imgPizzaPecorino, alt: 'Pizza che viene condita con del pecorino', flexGrow: 34 },
+  { src: imgTagliereMisto, alt: 'Tagliere misto con formaggi', flexGrow: 22 },
+  { src: imgStincoConPatatine, alt: 'Stinco di maiale servito con patatine e varie salse', flexGrow: 28 },
+  { src: imgCucinaMolisana, alt: 'Cucina tipica molisana', flexGrow: 36 },
+  { src: imgFilettoLime, alt: 'Filetto lime e pepe', flexGrow: 26 },
+  { src: imgSalumi, alt: 'Piatto di salumi serviti al tavolo ad una persona', flexGrow: 20 },
+  { src: imgMaltoAffumicato, alt: 'Malto affumicato in un bicchiere', flexGrow: 20 },
+  { src: imgCavatelliTagliere, alt: 'Cavatelli sul tagliere in legno', flexGrow: 33 },
+  { src: imgDettaglioPizza, alt: 'Dettaglio di un tubo di pizza', flexGrow: 20 },
+  { src: imgPreparazioneCavatelli, alt: 'Preparazione di un piatto di cavatelli', flexGrow: 28 },
+  { src: imgStinco, alt: 'Stinco di maiale', flexGrow: 36 },
 ]
 
 export function CucinaGallery() {
@@ -144,7 +65,6 @@ export function CucinaGallery() {
           background: 'radial-gradient(circle, oklch(0.7823 0.162 79.7 / 0.06) 0%, transparent 65%)',
         }}
       />
-
       <div
         aria-hidden
         className="pointer-events-none absolute -right-40 -bottom-40 z-0 size-144 rounded-full"
@@ -162,7 +82,7 @@ export function CucinaGallery() {
         {cucinaContent.gallery.eyebrow}
       </span>
 
-      <Container className="relative z-10">
+      <Container className="relative z-10 max-lg:max-w-xl max-lg:mx-auto">
         <RevealGroup className="flex flex-col items-center gap-y-5 text-center" stagger={0.12} amount={0.2}>
           <RevealItem preset="fade-up" distance={18} duration={1}>
             <div className="flex items-center gap-4">
@@ -196,32 +116,7 @@ export function CucinaGallery() {
         </RevealGroup>
       </Container>
 
-      <div className="mt-12 space-y-2 md:space-y-2.5">
-        {galleryRows.map((row, rowIndex) => (
-          // biome-ignore lint/suspicious/noArrayIndexKey: righe di layout stabili
-          <div key={rowIndex} className="px-2 md:px-2.5">
-            <div className={`flex gap-2 md:gap-2.5 ${row.heightClassName}`}>
-              {row.items.map((item) => (
-                <div
-                  key={item.alt}
-                  className="group relative min-w-0 overflow-hidden rounded-xl md:rounded-2xl"
-                  style={{ flexGrow: item.flexGrow }}
-                >
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    fill
-                    placeholder="blur"
-                    blurDataURL={item.src.blurDataURL}
-                    sizes="(max-width: 768px) 40vw, 25vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
+      <GalleryStrip items={galleryItems} className="mt-12" />
     </section>
   )
 }

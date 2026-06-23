@@ -1,13 +1,11 @@
 'use client'
 
 import { useEffect, useId, useRef, useState } from 'react'
-import { useForm } from 'react-hook-form'
 import Link from 'next/link'
-import Lineicons from '@lineiconshq/react-lineicons'
 import { Message3TextDuotone } from '@lineiconshq/free-icons'
-
+import Lineicons from '@lineiconshq/react-lineicons'
 import { cva } from 'class-variance-authority'
-
+import { useForm } from 'react-hook-form'
 import { Button } from '@/components/ui/button'
 
 const controlVariants = cva(
@@ -284,7 +282,7 @@ export function ContactForm() {
             />
             <label htmlFor={`${formId}-privacy`} className="text-lq-dark -mt-0.5">
               Dichiaro di aver letto, compreso ed accettato il contenuto dell&apos;{' '}
-              <Link href="/privacy-policy" target="_blank">
+              <Link href="/privacy-policy" target="_blank" rel="noopener noreferrer">
                 informativa privacy
               </Link>{' '}
               di questo sito, resa ai sensi del Regolamento UE 2016/679 (GDPR).

@@ -1,11 +1,19 @@
 import Image from 'next/image'
+import { FacebookOutlined, InstagramOutlined, YoutubeOutlined } from '@lineiconshq/free-icons'
+import Lineicons from '@lineiconshq/react-lineicons'
 import { birreriaContent } from '@/lib/contents/birreria'
 import { DiagonalElement } from '@/components/diagonal-element'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-import selezionePhoto from '@/public/assets/demo/young-couple-drinking-wine-having-fun-lunch-bar-focus-is-man.jpg'
 
-import pulcherioScuttiImage from '@/public/assets/imgs/pulcherio-scutti.png'
+const socialIconMap = {
+  facebook: FacebookOutlined,
+  instagram: InstagramOutlined,
+  youtube: YoutubeOutlined,
+} as const
+
+import birreriaImage from '@/public/assets/imgs/birreria/la-birreria-della-ristobirreria-la-quercia.jpg'
+import pulcherioScuttiImage from '@/public/assets/imgs/birreria/pulcherio-scutti-beer-sommelier.jpg'
 
 const { selezione } = birreriaContent
 
@@ -43,7 +51,7 @@ export function BirreriaSelezioneSection() {
         BIRRERIA
       </span>
 
-      <Container className="relative z-10">
+      <Container className="relative z-10 max-lg:max-w-xl max-lg:mx-auto">
         <RevealGroup
           className="grid grid-cols-1 gap-y-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-x-16"
           stagger={0.14}
@@ -76,7 +84,7 @@ export function BirreriaSelezioneSection() {
             {/* Intro paragraphs */}
             <div id={descriptionId} className="space-y-3 text-lq-dark/75">
               {selezione.paragraphs.map((p, i) => (
-                <RevealItem key={i} preset="fade-up" distance={20 + i * 2} duration={1.08 + i * 0.06}>
+                <RevealItem key={p} preset="fade-up" distance={20 + i * 2} duration={1.08 + i * 0.06}>
                   <p
                     className="text-lg leading-relaxed [&_strong]:font-black [&_strong]:text-lq-dark"
                     // biome-ignore lint/security/noDangerouslySetInnerHtml: contenuto statico interno, nessun input utente
@@ -90,8 +98,8 @@ export function BirreriaSelezioneSection() {
             <RevealItem preset="fade-up" distance={28} duration={1.2}>
               <div className="relative h-64 overflow-hidden rounded-[1.75rem] shadow-lg sm:h-80 lg:h-72">
                 <Image
-                  src={selezionePhoto}
-                  alt="Birra servita al tavolo in un momento conviviale"
+                  src={birreriaImage}
+                  alt="La birreria della Ristobirreria La Quercia"
                   fill
                   placeholder="blur"
                   sizes="(max-width: 1024px) 100vw, 52vw"
@@ -139,7 +147,7 @@ export function BirreriaSelezioneSection() {
           <RevealItem preset="fade-up" distance={36} duration={1.35} className="lg:sticky lg:top-28">
             <div className="overflow-hidden rounded-[2rem] bg-lq-dark shadow-2xl">
               {/* Foto Pulcherio */}
-              <div className="relative h-80 w-full sm:h-96">
+              <div className="relative h-112 w-full sm:h-112 md:h-140 lg:h-120">
                 <Image
                   src={pulcherioScuttiImage}
                   alt="Pulcherio Scutti – Beer Sommelier de La Quercia"
@@ -153,7 +161,7 @@ export function BirreriaSelezioneSection() {
 
               {/* Card body */}
               <div className="p-8">
-                <span className="text-xs font-black uppercase tracking-[0.22em] text-lq-orange">Beer Sommelier</span>
+                <span className="text-xs font-black uppercase tracking-[0.22em] text-lq-orange">Passione Birra</span>
 
                 <h3
                   className="mt-2 font-gabarito text-4xl font-black text-white lg:text-5xl"
@@ -166,7 +174,37 @@ export function BirreriaSelezioneSection() {
 
                 <div className="mt-5 h-px bg-white/10" />
 
-                <p className="mt-5 text-base leading-relaxed text-white/65">{selezione.sommelier.description}</p>
+                <div className="mt-5 space-y-3">
+                  {selezione.sommelier.paragraphs.map((p) => (
+                    <p key={p} className="text-base leading-relaxed text-white/65">
+                      {p}
+                    </p>
+                  ))}
+                </div>
+
+                {/* Social links */}
+                <div className="mt-6 border-t border-white/10 pt-5">
+                  <p className="mb-3 text-xs font-black uppercase tracking-[0.18em] text-lq-orange/70">
+                    {selezione.sommelier.social.label}
+                  </p>
+                  <div className="flex items-center gap-4">
+                    {selezione.sommelier.social.links.map((link) => {
+                      const icon = socialIconMap[link.platform as keyof typeof socialIconMap]
+                      return (
+                        <a
+                          key={link.platform}
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={link.label}
+                          className="text-white/50 transition-colors duration-200 hover:text-lq-orange"
+                        >
+                          <Lineicons icon={icon} size={48} className="size-6" />
+                        </a>
+                      )
+                    })}
+                  </div>
+                </div>
 
                 {/* Decorative quote mark */}
                 <span
