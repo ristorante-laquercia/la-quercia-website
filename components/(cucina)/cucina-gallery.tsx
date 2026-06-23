@@ -1,12 +1,8 @@
-import Image from 'next/image'
-import type { StaticImageData } from 'next/image'
-
 import { cucinaContent } from '@/lib/contents/cucina'
-
-import { cn } from '@/lib/utils'
 import { Container } from '@/components/ui/container'
+import type { GalleryStripItem } from '@/components/ui/gallery-strip'
+import { GalleryStrip } from '@/components/ui/gallery-strip'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-
 import imgCavatelliLuppolo from '@/public/assets/imgs/cucina/gallery/cavatelli-con-luppolo.jpg'
 import imgCavatelliTagliere from '@/public/assets/imgs/cucina/gallery/cavatelli-sul-tagliere-in-legno.jpg'
 import imgCucinaMolisana from '@/public/assets/imgs/cucina/gallery/cucina-tipica-molisana.jpg'
@@ -17,54 +13,24 @@ import imgMaltoAffumicato from '@/public/assets/imgs/cucina/gallery/malto-affumi
 import imgSalumi from '@/public/assets/imgs/cucina/gallery/piatto-di-salumi-serviti-al-tavolo-ad-una-persona.jpg'
 import imgPizzaPecorino from '@/public/assets/imgs/cucina/gallery/pizza-che-viene-condita-con-del-pecorino.jpg'
 import imgPreparazioneCavatelli from '@/public/assets/imgs/cucina/gallery/preparazione-di-un-piatto-di-cavatelli.jpg'
+import imgStinco from '@/public/assets/imgs/cucina/gallery/stinco-di-maiale.jpg'
 import imgStincoConPatatine from '@/public/assets/imgs/cucina/gallery/stinco-di-maiale-servito-con-patatine-e-varie-salse.jpg'
 import imgTagliereMisto from '@/public/assets/imgs/cucina/gallery/tagliere-misto-con-formaggi.jpg'
 
-type GalleryItem = {
-  src: StaticImageData
-  alt: string
-  /** Peso proporzionale usato come flex-grow per riempire la riga */
-  flexGrow: number
-  /** Nasconde l'elemento sotto il breakpoint indicato */
-  hideBelow?: 'sm' | 'md' | 'lg'
-}
-
-type GalleryRow = {
-  items: readonly GalleryItem[]
-  heightClassName: string
-}
-
-const galleryRows: readonly GalleryRow[] = [
-  {
-    // Riga media: 4 foto — visibili 2 / 3 / 4 per breakpoint
-    heightClassName: 'h-[12rem] sm:h-[13rem] md:h-[20rem] lg:h-[24rem]',
-    items: [
-      { src: imgCavatelliLuppolo, alt: 'Cavatelli con luppolo', flexGrow: 42 },
-      { src: imgDettaglioCavatelli, alt: 'Dettaglio di un piatto di cavatelli con sugo', flexGrow: 18 },
-      { src: imgPizzaPecorino, alt: 'Pizza che viene condita con del pecorino', flexGrow: 34, hideBelow: 'sm' },
-      { src: imgTagliereMisto, alt: 'Tagliere misto con formaggi', flexGrow: 22, hideBelow: 'lg' },
-    ],
-  },
-  {
-    // Riga alta: 4 foto — visibili 2 / 3 / 4 per breakpoint
-    heightClassName: 'h-[11rem] sm:h-[17rem] md:h-[28rem] lg:h-[34rem]',
-    items: [
-      { src: imgStincoConPatatine, alt: 'Stinco di maiale servito con patatine e varie salse', flexGrow: 28 },
-      { src: imgCucinaMolisana, alt: 'Cucina tipica molisana', flexGrow: 36 },
-      { src: imgFilettoLime, alt: 'Filetto lime e pepe', flexGrow: 26, hideBelow: 'sm' },
-      { src: imgSalumi, alt: 'Piatto di salumi serviti al tavolo ad una persona', flexGrow: 20, hideBelow: 'lg' },
-    ],
-  },
-  {
-    // Riga bassa: 4 foto — visibili 2 / 3 / 4 per breakpoint
-    heightClassName: 'h-[12rem] sm:h-[10rem] md:h-[16rem] lg:h-[19rem]',
-    items: [
-      { src: imgMaltoAffumicato, alt: 'Malto affumicato in un bicchiere', flexGrow: 20 },
-      { src: imgCavatelliTagliere, alt: 'Cavatelli sul tagliere in legno', flexGrow: 33 },
-      { src: imgDettaglioPizza, alt: 'Dettaglio di un tubo di pizza', flexGrow: 20, hideBelow: 'sm' },
-      { src: imgPreparazioneCavatelli, alt: 'Preparazione di un piatto di cavatelli', flexGrow: 28, hideBelow: 'lg' },
-    ],
-  },
+const galleryItems: readonly GalleryStripItem[] = [
+  { src: imgCavatelliLuppolo, alt: 'Cavatelli con luppolo', flexGrow: 42 },
+  { src: imgDettaglioCavatelli, alt: 'Dettaglio di un piatto di cavatelli con sugo', flexGrow: 18 },
+  { src: imgPizzaPecorino, alt: 'Pizza che viene condita con del pecorino', flexGrow: 34 },
+  { src: imgTagliereMisto, alt: 'Tagliere misto con formaggi', flexGrow: 22 },
+  { src: imgStincoConPatatine, alt: 'Stinco di maiale servito con patatine e varie salse', flexGrow: 28 },
+  { src: imgCucinaMolisana, alt: 'Cucina tipica molisana', flexGrow: 36 },
+  { src: imgFilettoLime, alt: 'Filetto lime e pepe', flexGrow: 26 },
+  { src: imgSalumi, alt: 'Piatto di salumi serviti al tavolo ad una persona', flexGrow: 20 },
+  { src: imgMaltoAffumicato, alt: 'Malto affumicato in un bicchiere', flexGrow: 20 },
+  { src: imgCavatelliTagliere, alt: 'Cavatelli sul tagliere in legno', flexGrow: 33 },
+  { src: imgDettaglioPizza, alt: 'Dettaglio di un tubo di pizza', flexGrow: 20 },
+  { src: imgPreparazioneCavatelli, alt: 'Preparazione di un piatto di cavatelli', flexGrow: 28 },
+  { src: imgStinco, alt: 'Stinco di maiale', flexGrow: 36 },
 ]
 
 export function CucinaGallery() {
@@ -99,7 +65,6 @@ export function CucinaGallery() {
           background: 'radial-gradient(circle, oklch(0.7823 0.162 79.7 / 0.06) 0%, transparent 65%)',
         }}
       />
-
       <div
         aria-hidden
         className="pointer-events-none absolute -right-40 -bottom-40 z-0 size-144 rounded-full"
@@ -151,37 +116,7 @@ export function CucinaGallery() {
         </RevealGroup>
       </Container>
 
-      <div className="mt-12 space-y-2 md:space-y-2.5">
-        {galleryRows.map((row, rowIndex) => (
-          // biome-ignore lint/suspicious/noArrayIndexKey: righe di layout stabili
-          <div key={rowIndex} className="px-2 md:px-2.5">
-            <div className={`flex gap-2 md:gap-2.5 ${row.heightClassName}`}>
-              {row.items.map((item) => (
-                <div
-                  key={item.alt}
-                  className={cn(
-                    'group relative min-w-0 overflow-hidden rounded-xl md:rounded-2xl',
-                    item.hideBelow === 'sm' && 'hidden sm:block',
-                    item.hideBelow === 'md' && 'hidden md:block',
-                    item.hideBelow === 'lg' && 'hidden lg:block',
-                  )}
-                  style={{ flexGrow: item.flexGrow }}
-                >
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    fill
-                    placeholder="blur"
-                    blurDataURL={item.src.blurDataURL}
-                    sizes="(max-width: 768px) 40vw, 25vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
+      <GalleryStrip items={galleryItems} className="mt-12" />
     </section>
   )
 }
