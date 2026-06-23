@@ -1,9 +1,7 @@
 import '@/styles/globals.css'
 
 import type { Metadata } from 'next'
-
 import { barlow, gabarito } from '@/lib/fonts'
-
 import { Footer } from '@/components/(footer)/footer'
 import { Header } from '@/components/(header)/header'
 
@@ -35,6 +33,9 @@ export default function RootLayout({
   return (
     <html lang="it" className="overflow-y-auto no-scrollbar">
       <body className={`${barlow.variable} ${gabarito.variable} antialiased `}>
+        <a href="#main-content" className="skip-to-content">
+          Salta al contenuto principale
+        </a>
         <Header />
         {children}
         <Footer />

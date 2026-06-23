@@ -1,13 +1,13 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { motion } from 'motion/react'
-
+import { motion, useReducedMotion } from 'motion/react'
 import { Drawer } from '@/components/(header)/drawer'
 
 export function MobileMenuButton() {
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false)
   const scrollPositionRef = useRef(0)
+  const prefersReducedMotion = useReducedMotion()
 
   useEffect(() => {
     const html = document.documentElement
@@ -58,7 +58,7 @@ export function MobileMenuButton() {
       <button
         aria-expanded={isDrawerOpen}
         aria-label={isDrawerOpen ? 'Chiudi menu' : 'Apri menu'}
-        className="relative flex h-11 w-11 items-center justify-center"
+        className="relative flex h-11 w-11 items-center justify-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm"
         onClick={() => setIsDrawerOpen((prev) => !prev)}
         type="button"
       >
@@ -66,17 +66,17 @@ export function MobileMenuButton() {
           <motion.span
             className="absolute left-0 top-0 h-0.5 w-6 bg-current"
             animate={isDrawerOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
-            transition={{ duration: 0.2, ease: 'easeInOut' }}
+            transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.2, ease: 'easeInOut' }}
           />
           <motion.span
             className="absolute left-0 top-1.5 h-0.5 w-6 bg-current"
             animate={isDrawerOpen ? { opacity: 0 } : { opacity: 1 }}
-            transition={{ duration: 0.15, ease: 'easeInOut' }}
+            transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.15, ease: 'easeInOut' }}
           />
           <motion.span
             className="absolute left-0 top-3 h-0.5 w-6 bg-current"
             animate={isDrawerOpen ? { rotate: -45, y: -5 } : { rotate: 0, y: 0 }}
-            transition={{ duration: 0.2, ease: 'easeInOut' }}
+            transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.2, ease: 'easeInOut' }}
           />
         </span>
       </button>

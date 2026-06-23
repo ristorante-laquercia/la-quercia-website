@@ -97,8 +97,23 @@
 	}
 	a {
 		@apply hover:underline transition ease-in-out duration-300;
+		@apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--lq-orange) focus-visible:rounded-sm;
+	}
+
+	.skip-to-content {
+		@apply sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:top-4 focus-visible:left-4 focus-visible:z-[9999];
+		@apply focus-visible:bg-(--lq-dark) focus-visible:text-white focus-visible:px-4 focus-visible:py-2 focus-visible:rounded-sm;
+		@apply focus-visible:text-sm focus-visible:font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--lq-orange);
 	}
 	p {
 		@apply text-3xl text-pretty font-light;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
 	}
 }

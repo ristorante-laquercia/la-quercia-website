@@ -38,12 +38,7 @@ export function Footer() {
                 Mobile: 379.1269699
                 <br />
                 e-mail:{' '}
-                <a
-                  href="info@ristorante-laquercia.it"
-                  target="_blank"
-                  rel="noopener"
-                  className="hover:no-underline hover:text-lq-senape"
-                >
+                <a href="mailto:info@ristorante-laquercia.it" className="hover:no-underline hover:text-lq-senape">
                   info@ristorante-laquercia.it
                 </a>
               </p>
@@ -54,30 +49,33 @@ export function Footer() {
                 <a
                   href="https://www.facebook.com/laquerciatermoli"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
+                  aria-label="La Quercia su Facebook"
                   className="mdp:has-[svg]:p-0 bg-transparent hover:bg-transparent"
                 >
-                  <Lineicons icon={FacebookOutlined} size={48} color="white" className="size-7" />
+                  <Lineicons icon={FacebookOutlined} size={48} color="white" className="size-7" aria-hidden />
                 </a>
               </Button>
               <Button variant={'link'} asChild>
                 <a
                   href="https://www.instagram.com/laquerciatermoli/"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
+                  aria-label="La Quercia su Instagram"
                   className="mdp:has-[svg]:p-0 bg-transparent hover:bg-transparent"
                 >
-                  <Lineicons icon={InstagramOutlined} size={48} color="white" className="size-7" />
+                  <Lineicons icon={InstagramOutlined} size={48} color="white" className="size-7" aria-hidden />
                 </a>
               </Button>
               <Button variant={'link'} asChild>
                 <a
                   href="https://wa.me/+393791269699?text=Vorrei%20ricevere%20maggiori%20informazioni"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
+                  aria-label="Contattaci su WhatsApp"
                   className="mdp:has-[svg]:p-0 bg-transparent hover:bg-transparent"
                 >
-                  <Lineicons icon={WhatsappOutlined} size={48} color="white" className="size-7" />
+                  <Lineicons icon={WhatsappOutlined} size={48} color="white" className="size-7" aria-hidden />
                 </a>
               </Button>
             </div>

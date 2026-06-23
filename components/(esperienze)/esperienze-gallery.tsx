@@ -20,21 +20,33 @@ import imgBicchiereSprite from '@/public/assets/imgs/esperienze/gallery/un-bicch
 import imgDettaglioPastoColazione from '@/public/assets/imgs/esperienze/gallery/un-dettaglio-del-pasto-durante-la-colazione-dei-campioni.jpg'
 
 const galleryItems: readonly GalleryStripItem[] = [
-  { src: imgAperibirraQuattroRagazzi, alt: 'aperibirra-con-quattro-ragazzi', flexGrow: 30 },
-  { src: imgDueRagazzeRidono, alt: 'due-ragazze-ridono-mentre-bevono-della-birra', flexGrow: 24 },
-  { src: imgRagazzaMangiaAperibirra, alt: 'ragazza-mentre-mangia-durante-un-aperibirra', flexGrow: 22 },
-  { src: imgBeerGarden, alt: 'il-beer-garden-della-ristobirreria-la-quercia', flexGrow: 32 },
-  { src: imgTavoloDueBicchieri, alt: 'tavolo-con-due-bicchieri-per-un-aperitivo', flexGrow: 18 },
-  { src: imgColazioneCampioni, alt: 'la-colazione-dei-campioni', flexGrow: 36 },
-  { src: imgAperitivoAperibirra, alt: 'aperitivo aperibirra', flexGrow: 28 },
-  { src: imgRagazzaFacendoAperitivo, alt: 'ragazza-che-sta-facendo un aperitivo', flexGrow: 24 },
-  { src: imgGiocoFreccette, alt: 'gioco-delle-freccette', flexGrow: 20 },
-  { src: imgDueBicchieriBirra, alt: 'due-bicchieri-di-birra-in-primo-piano', flexGrow: 20 },
-  { src: imgBicchiereSprite, alt: 'un-bicchiere-con-dello-spritz-pronto-per-essere-servito', flexGrow: 18 },
-  { src: imgTavolaApparecchiata, alt: 'tavola-apparecchiata-un-dettaglio', flexGrow: 24 },
-  { src: imgColazioneDettaglioPersone, alt: 'colazione-dei-campioni-dettaglio-con-persone-che-dialogano', flexGrow: 28 },
-  { src: imgColazioneDettaglio, alt: 'la-colazione-dei-campioni-un-dettaglio', flexGrow: 20 },
-  { src: imgDettaglioPastoColazione, alt: 'un-dettaglio-del-pasto-durante-la-colazione-dei-campioni', flexGrow: 26 },
+  { src: imgAperibirraQuattroRagazzi, alt: 'Quattro ragazzi brindano durante un aperitivo alla Quercia', flexGrow: 30 },
+  { src: imgDueRagazzeRidono, alt: 'Due ragazze ridono mentre bevono della birra artigianale', flexGrow: 24 },
+  { src: imgRagazzaMangiaAperibirra, alt: 'Ragazza che assaggia uno stuzzichino durante un aperibirra', flexGrow: 22 },
+  { src: imgBeerGarden, alt: 'Il beer garden estivo della Ristobirreria La Quercia con tavoli allestiti', flexGrow: 32 },
+  {
+    src: imgTavoloDueBicchieri,
+    alt: 'Tavolo apparecchiato con due bicchieri di birra pronti per un aperitivo',
+    flexGrow: 18,
+  },
+  { src: imgColazioneCampioni, alt: 'Tavola imbandita per la Colazione dei Campioni alla Quercia', flexGrow: 36 },
+  { src: imgAperitivoAperibirra, alt: 'Dettaglio di stuzzichini serviti durante un aperibirra', flexGrow: 28 },
+  { src: imgRagazzaFacendoAperitivo, alt: 'Ragazza che sorseggia un cocktail durante il suo aperitivo', flexGrow: 24 },
+  { src: imgGiocoFreccette, alt: 'Giocatori impegnati in una partita di freccette nel dopocena', flexGrow: 20 },
+  { src: imgDueBicchieriBirra, alt: 'Due bicchieri di birra artigianale in primo piano', flexGrow: 20 },
+  { src: imgBicchiereSprite, alt: 'Un bicchiere di Spritz artigianale pronto per essere servito', flexGrow: 18 },
+  { src: imgTavolaApparecchiata, alt: 'Dettaglio di una tavola apparecchiata con calici e posate', flexGrow: 24 },
+  {
+    src: imgColazioneDettaglioPersone,
+    alt: 'Ospiti che dialogano animatamente durante la Colazione dei Campioni',
+    flexGrow: 28,
+  },
+  { src: imgColazioneDettaglio, alt: 'Dettaglio del buffet della Colazione dei Campioni', flexGrow: 20 },
+  {
+    src: imgDettaglioPastoColazione,
+    alt: 'Primo piano di un piatto servito durante la Colazione dei Campioni',
+    flexGrow: 26,
+  },
 ]
 
 export function EsperienzeGallery() {
