@@ -13,7 +13,10 @@
   "dependencies": {
     "@lineiconshq/free-icons": "^1.0.4",
     "@lineiconshq/react-lineicons": "^1.0.5",
+    "@next/third-parties": "^16.2.9",
     "@uidotdev/usehooks": "^2.4.1",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "altcha": "^2.3.0",
     "altcha-lib": "^1.4.1",
     "class-variance-authority": "^0.7.1",
@@ -26,7 +29,8 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-hook-form": "^7.71.2",
-    "tailwind-merge": "^3.4.0"
+    "tailwind-merge": "^3.4.0",
+    "use-cookiescript-hook": "^1.1.0"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.14",
