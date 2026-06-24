@@ -21,7 +21,7 @@ npm run lint:eslint # Secondary ESLint lint pass
 Pages live in `app/` using file-based routing:
 
 - `/` -> `app/page.tsx`
-- `/chi-siamo`, `/cucina`, `/esperienze`, `/contatti`, `/privacy-policy`
+- `/chi-siamo`, `/cucina`, `/esperienze`, `/contatti`, `/privacy-policy`, `/birreria`
 - API routes:
   - `app/api/contatti/submit` for the contact form
   - `app/api/altcha/challenge` for spam protection
