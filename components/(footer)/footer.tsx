@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { FacebookOutlined, InstagramOutlined, WhatsappOutlined } from '@lineiconshq/free-icons'
 import Lineicons from '@lineiconshq/react-lineicons'
 import { SubFooter } from '@/components/(footer)/sub-footer'
+import { CookieSettingsButton } from '@/components/cookie-settings-button'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 
@@ -84,11 +85,17 @@ export function Footer() {
           <div>
             <h4 className="text-[32px] font-gabarito">Informazioni</h4>
             <ul className="[&_li]:text-2xl font-light [&_li_a]:hover:no-underline [&_li_a]:hover:text-lq-senape">
-              {infoLinks.map((item) => (
-                <li key={item.href}>
-                  <Link href={item.href}>{item.label}</Link>
-                </li>
-              ))}
+              {infoLinks.map((item, index) =>
+                index === 2 ? (
+                  <li key={item.label}>
+                    <CookieSettingsButton label="Cookie policy" className="cursor-pointer" />
+                  </li>
+                ) : (
+                  <li key={item.href}>
+                    <Link href={item.href}>{item.label}</Link>
+                  </li>
+                ),
+              )}
             </ul>
           </div>
 

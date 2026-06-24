@@ -94,16 +94,18 @@ export function BirreriaConnectSection() {
           </RevealItem>
 
           <RevealItem preset="fade-up" distance={26} duration={1.15}>
-            <div className="mt-4 flex flex-wrap justify-center gap-x-3">
-              <span className="text-sm font-black uppercase tracking-[0.22em] text-lq-orange">{connect.eyebrow}</span>
-              <p className="text-lg leading-relaxed text-white/55 mb-4 mt-2">{connect.moreInfo}</p>
+            <div className="mt-4 grid grid-cols-2 justify-center gap-x-3">
+              <span className="col-span-2 text-sm font-black uppercase tracking-[0.22em] text-lq-orange">
+                {connect.eyebrow}
+              </span>
+              <p className="col-span-2 text-lg leading-relaxed text-white/55 mb-4 mt-2">{connect.moreInfo}</p>
 
               {connect.links.slice(0, 2).map((link) => {
                 const icon = iconMap[link.platform as keyof typeof iconMap]
                 const color = buttonColorMap[link.platform as keyof typeof buttonColorMap]
                 return (
                   <Button key={link.platform} asChild variant="custom" color={color}>
-                    <a href={link.href} target="_blank" rel="noopener noreferrer">
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="flex-1">
                       <Lineicons icon={icon} size={48} className="size-5" />
                       {link.label}
                     </a>

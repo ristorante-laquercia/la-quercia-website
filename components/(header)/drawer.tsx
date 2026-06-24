@@ -19,8 +19,9 @@ const mobileLinks = [
   { label: 'Esperienze', href: '/esperienze' },
   {
     label: 'Menu',
-    href: 'https://drive.google.com/file/d/12mDiZ6AjIgRar0naHPXMmmPkAGePialF/view?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnigNlTn22eE4AIkAuzvWpbCRGcio96qzVjJJw1qYYqH-OfXD8EeIF5DSmZ7c_aem_BQ4t7XxEtM_tg5WwmWc1xA',
+    href: 'https://drive.google.com/file/d/1ioDqAh1YH6W5PPM4OCMO6iOGwhH9gmyr/view?usp=sharing',
   },
+  { label: 'Prenota', href: 'https://laquercia1.plateform.app/welcome' },
   { label: 'Contatti', href: '/contatti' },
 ]
 
@@ -154,7 +155,7 @@ export function Drawer({ open, onClose }: Readonly<DrawerProps>) {
               <nav>
                 <motion.ul className="space-y-4 text-4xl font-light [&_a]:hover:no-underline [&_a]:hover:text-lq-senape">
                   {mobileLinks.map((item, index) =>
-                    index === 4 ? (
+                    index === 4 || index === 5 ? (
                       <motion.li
                         key={item.href}
                         initial={noMotion ? { opacity: 0 } : { opacity: 0, y: 26 }}

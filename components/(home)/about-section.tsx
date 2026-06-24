@@ -6,8 +6,8 @@ import { homeContent } from '@/lib/contents/home'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-import fotoFriends from '@/public/assets/imgs/home/gruppo-di-persone-che-brinda-presso-ristobirreria-la-quercia.jpg'
 import fotoInterni from '@/public/assets/imgs/home/ristorbirreria-la-quercia-interni.jpg'
+import fotoFriends from '@/public/assets/imgs/home/tavolo-di-amici-che-brindano-presso-la-ristobirreria-la-quercia.jpg'
 
 export function AboutSection() {
   const sectionTitleId = 'home-about-title'

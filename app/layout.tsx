@@ -1,9 +1,12 @@
 import '@/styles/globals.css'
-
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { barlow, gabarito } from '@/lib/fonts'
 import { Footer } from '@/components/(footer)/footer'
 import { Header } from '@/components/(header)/header'
+import CookieScriptProvider from '@/components/cookie-script-provider'
+import GoogleAnalyticsWithConsent from '@/components/google-analytics-with-consent'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.BASE_URL ?? 'https://www.ristorante-laquercia.it'),
@@ -34,12 +37,16 @@ export default function RootLayout({
   return (
     <html lang="it" className="overflow-y-auto no-scrollbar">
       <body className={`${barlow.variable} ${gabarito.variable} antialiased `}>
-        <a href="#main-content" className="skip-to-content">
+        <CookieScriptProvider />
+        <GoogleAnalyticsWithConsent gaId="G-MWHFK5FGWD" />
+        <a href="#main-content" className="skip-to-content sr-only">
           Salta al contenuto principale
         </a>
         <Header />
         {children}
         <Footer />
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )

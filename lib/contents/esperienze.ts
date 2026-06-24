@@ -21,10 +21,10 @@ export const esperienzeContent = {
         title: 'Apertibirra',
         description: 'Dimentica il solito tagliere: per il tuo aperitivo meriti molto di piu.',
         details:
-          'Tutti i giorni anticipiamo l’apertura del ristorante alle 17.30 per proporvi un aperitivo differente e gustoso.Cocktail rivisitati alla birra come SpritzIPA e AperolPILS, abbinati a stuzzichicheria sempre fresca e innovativa dalla “Cucina alla Birra”',
+          'Tutti i giorni anticipiamo l’apertura del ristorante alle 17.30 per proporvi un aperitivo differente e gustoso. Cocktail rivisitati alla birra come SpritzIPA e AperolPILS, abbinati a stuzzichicheria sempre fresca e innovativa dalla “Cucina alla Birra”',
         ctaText: 'Prenota ora!',
         ctaHref: '/contatti',
-        imageAlt: 'Apertibirra',
+        imageAlt: 'Aperibirra',
         video: '/assets/video/aperibirra.mp4',
       },
       {
@@ -84,10 +84,9 @@ export const esperienzeContent = {
     subTitle: 'è tuo.',
     paragraphs: [
       'Gruppi, aziende, associazioni: cercate un luogo dove riunirvi?  Mettiamo a disposizione la nostra sala gratuitamente per riunioni, incontri di lavoro o studio, senza obbligo di consumazione.',
-      'Mettiamo a disposizione la nostra sala gratuitamente per corsi, incontri di lavoro o studio, senza obbligo di consumazione.',
       'Crediamo nel valore della comunità e vogliamo sostenere i vostri progetti con Wi-Fi, tranquillità e spazi ampi.',
     ],
-    ctaText: 'Maggiori informazioni',
+    ctaText: 'Per maggiori informazioni',
     ctaHref: '/contatti',
   },
   gallery: {
