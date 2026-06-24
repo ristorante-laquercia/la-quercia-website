@@ -58,8 +58,10 @@ export const cucinaContent = {
   glutenFree: {
     eyebrow: 'Cucina senza glutine',
     title: "L'attenzione è la nostra prima forma di ospitalità.",
-    description:
-      'Seguiamo protocolli rigorosi per la sicurezza e dal 2013 siamo certificati AIC, tra i riferimenti in Molise per la cucina senza glutine.',
+    paragraphs: [
+      'Seguiamo protocolli rigorosi per la sicurezza in cucina. Dal 2013, inoltre, siamo <strong>certificati e menzionati dall’AIC</strong>, l’Associazione Italiana Celiachia, come ristorante di riferimento in Molise.',
+      "Mangiare fuori non è sempre facile per i celiaci. Grazie alla nostra organizzazione con rigide regole e <strong>personale dedicato solo alla preparazione del “senza glutine”</strong> potrai vivere un'esperienza unica e sicura, senza compromessi sul gusto.",
+    ],
   },
   pizza: {
     title: 'La nostra pizza: piccolo gioiello di artigianato gastronomico',
@@ -67,7 +69,7 @@ export const cucinaContent = {
       'La lievitazione di almeno ventiquattro ore a tutto vantaggio della leggerezza.',
       'La farina rimacinata di grano duro de "La Molisana" per impasti salutari e saporiti.',
       'Gli ingredienti tipici della cucina molisana, come il tartufo, il caciocavallo e la pampanella.',
-      'Questi dettagli rappresentano il sigillo sulla nostra volontà di proporre una pizza non soltanto sana, ma anche originale e ricercata, che sia diretta espressione del territorio.',
+      'Questi dettagli rappresentano il sigillo sulla nostra volontà di proporre <strong>una pizza non soltanto sana, ma anche originale e ricercata, che sia diretta espressione del territorio</strong>.',
     ],
   },
   gallery: {

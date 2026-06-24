@@ -16,6 +16,7 @@ import imgPreparazioneCavatelli from '@/public/assets/imgs/cucina/gallery/prepar
 import imgStinco from '@/public/assets/imgs/cucina/gallery/stinco-di-maiale.jpg'
 import imgStincoConPatatine from '@/public/assets/imgs/cucina/gallery/stinco-di-maiale-servito-con-patatine-e-varie-salse.jpg'
 import imgTagliereMisto from '@/public/assets/imgs/cucina/gallery/tagliere-misto-con-formaggi.jpg'
+import imgForno from '@/public/assets/imgs/cucina/pizza-appena-posizionata-nel-forno-per-la-cottura.jpg'
 
 const galleryItems: readonly GalleryStripItem[] = [
   { src: imgCavatelliLuppolo, alt: 'Cavatelli con luppolo', flexGrow: 42 },
@@ -31,6 +32,7 @@ const galleryItems: readonly GalleryStripItem[] = [
   { src: imgDettaglioPizza, alt: 'Dettaglio di un tubo di pizza', flexGrow: 20 },
   { src: imgPreparazioneCavatelli, alt: 'Preparazione di un piatto di cavatelli', flexGrow: 28 },
   { src: imgStinco, alt: 'Stinco di maiale', flexGrow: 36 },
+  { src: imgForno, alt: 'Immagine di un forno con pizza appena posizionata nel forno per la cottura', flexGrow: 36 },
 ]
 
 export function CucinaGallery() {

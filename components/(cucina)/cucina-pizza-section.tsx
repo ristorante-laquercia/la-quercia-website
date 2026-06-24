@@ -8,6 +8,13 @@ import bgImage from '@/public/assets/imgs/cucina/pizza-con-fave-e-speck.jpg'
 export function CucinaPizzaSection() {
   const titleId = 'cucina-pizza-title'
 
+  function renderInlineHtml(text: string) {
+    return text.split(/(<strong>.*?<\/strong>)/g).map((part) => {
+      const match = part.match(/^<strong>(.*?)<\/strong>$/)
+      return match ? <strong key={part}>{match[1]}</strong> : part
+    })
+  }
+
   return (
     <section aria-labelledby={titleId} className="relative overflow-hidden bg-white py-24 lg:py-32">
       {/* Ghost watermark */}
@@ -65,7 +72,7 @@ export function CucinaPizzaSection() {
                 duration={1.05 + index * 0.07}
                 className="py-5 first:pt-0 last:pb-0"
               >
-                <p className="text-lg leading-relaxed text-lq-dark/75">{paragraph}</p>
+                <p className="text-lg leading-relaxed text-lq-dark/75 [&_strong]:font-bold">{renderInlineHtml(paragraph)}</p>
               </RevealItem>
             ))}
           </div>

@@ -141,6 +141,11 @@ const nextConfig: NextConfig = {
         destination: '/contatti',
         permanent: true,
       },
+      {
+        source: '/cookie-policy/',
+        destination: '/',
+        permanent: true,
+      },
     ]
   },
 }

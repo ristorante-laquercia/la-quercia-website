@@ -3,7 +3,6 @@ import { cucinaContent } from '@/lib/contents/cucina'
 import { DiagonalElement } from '@/components/diagonal-element'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-import kitchenImage from '@/public/assets/imgs/cucina/pizza-appena-posizionata-nel-forno-per-la-cottura.jpg'
 import logoAic from '@/public/assets/imgs/logo-aic.png'
 
 function renderInlineHtml(text: string) {
@@ -116,16 +115,22 @@ export function CucinaRootsSection() {
             duration={1.2}
             className="relative flex min-h-104 flex-col overflow-hidden rounded-[2rem] bg-lq-dark p-8 md:col-span-2 lg:col-span-1 lg:min-h-128 lg:p-10"
           >
-            <div className="flex flex-col gap-3 lg:pr-32">
+            <div className="flex flex-col gap-3">
               <span className="text-xs font-black uppercase tracking-[0.22em] text-lq-senape">
                 {cucinaContent.glutenFree.eyebrow}
               </span>
               <h3 id={glutenTitleId} className="font-gabarito text-3xl font-black tracking-tight text-white lg:text-4xl">
                 {cucinaContent.glutenFree.title}
               </h3>
-            </div>
 
-            <p className="relative z-10 mt-5 text-xl leading-relaxed">{cucinaContent.glutenFree.description}</p>
+              <div className="mt-1 space-y-2">
+                {cucinaContent.glutenFree.paragraphs.map((paragraph) => (
+                  <p key={paragraph} className="text-lg leading-relaxed text-white">
+                    {renderInlineHtml(paragraph)}
+                  </p>
+                ))}
+              </div>
+            </div>
 
             <Image
               src={logoAic}
@@ -134,24 +139,7 @@ export function CucinaRootsSection() {
               height={logoAic.height}
               placeholder="blur"
               blurDataURL={logoAic.blurDataURL}
-              className="h-auto w-80 mx-auto mt-8 lg:mt-auto"
-            />
-          </RevealItem>
-
-          {/* Kitchen image: full-width letterbox strip */}
-          <RevealItem
-            preset="fade-up"
-            distance={24}
-            duration={1.2}
-            className="col-span-1 overflow-hidden rounded-[1.5rem] md:col-span-2"
-          >
-            <Image
-              src={kitchenImage}
-              alt="Pizza posizionata nel forno per la cottura"
-              placeholder="blur"
-              blurDataURL={kitchenImage.blurDataURL}
-              sizes="(max-width: 768px) 100vw, 80vw"
-              className="h-82 w-full object-cover object-center lg:h-96"
+              className="h-auto w-80 mx-auto mt-8"
             />
           </RevealItem>
         </RevealGroup>
