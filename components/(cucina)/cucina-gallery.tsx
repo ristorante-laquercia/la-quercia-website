@@ -13,10 +13,10 @@ import imgMaltoAffumicato from '@/public/assets/imgs/cucina/gallery/malto-affumi
 import imgSalumi from '@/public/assets/imgs/cucina/gallery/piatto-di-salumi-serviti-al-tavolo-ad-una-persona.jpg'
 import imgPizzaPecorino from '@/public/assets/imgs/cucina/gallery/pizza-che-viene-condita-con-del-pecorino.jpg'
 import imgPreparazioneCavatelli from '@/public/assets/imgs/cucina/gallery/preparazione-di-un-piatto-di-cavatelli.jpg'
+import imgPulcherioPreparaPiatto from '@/public/assets/imgs/cucina/gallery/pulcherio-scutti-mentre-prepara-un-piatto-di-carne.jpg'
 import imgStinco from '@/public/assets/imgs/cucina/gallery/stinco-di-maiale.jpg'
 import imgStincoConPatatine from '@/public/assets/imgs/cucina/gallery/stinco-di-maiale-servito-con-patatine-e-varie-salse.jpg'
 import imgTagliereMisto from '@/public/assets/imgs/cucina/gallery/tagliere-misto-con-formaggi.jpg'
-import imgForno from '@/public/assets/imgs/cucina/pizza-appena-posizionata-nel-forno-per-la-cottura.jpg'
 
 const galleryItems: readonly GalleryStripItem[] = [
   { src: imgCavatelliLuppolo, alt: 'Cavatelli con luppolo', flexGrow: 42 },
@@ -27,12 +27,16 @@ const galleryItems: readonly GalleryStripItem[] = [
   { src: imgCucinaMolisana, alt: 'Cucina tipica molisana', flexGrow: 36 },
   { src: imgFilettoLime, alt: 'Filetto lime e pepe', flexGrow: 26 },
   { src: imgSalumi, alt: 'Piatto di salumi serviti al tavolo ad una persona', flexGrow: 20 },
+  {
+    src: imgPulcherioPreparaPiatto,
+    alt: 'Pulcherio Scutti mentre prepara un piatto di carne',
+    flexGrow: 14,
+  },
   { src: imgMaltoAffumicato, alt: 'Malto affumicato in un bicchiere', flexGrow: 20 },
   { src: imgCavatelliTagliere, alt: 'Cavatelli sul tagliere in legno', flexGrow: 33 },
   { src: imgDettaglioPizza, alt: 'Dettaglio di un tubo di pizza', flexGrow: 20 },
   { src: imgPreparazioneCavatelli, alt: 'Preparazione di un piatto di cavatelli', flexGrow: 28 },
   { src: imgStinco, alt: 'Stinco di maiale', flexGrow: 36 },
-  { src: imgForno, alt: 'Immagine di un forno con pizza appena posizionata nel forno per la cottura', flexGrow: 36 },
 ]
 
 export function CucinaGallery() {

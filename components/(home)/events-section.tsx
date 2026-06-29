@@ -9,19 +9,19 @@ import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 import bgImage from '@/public/assets/imgs/home/amici-che-brindano.jpg'
 import g1 from '@/public/assets/imgs/home/gallery/aperibirra-presso-ristobirreria-la-quercia.jpg'
 import g2 from '@/public/assets/imgs/home/gallery/birra-dama.jpg'
-import g3 from '@/public/assets/imgs/home/gallery/calici-di-diversi-tipi-di-birra.jpg'
 import g4 from '@/public/assets/imgs/home/gallery/colazione-dei-campioni-presso-ristobirreria-la-quercia.jpg'
 import g5 from '@/public/assets/imgs/home/gallery/freccette.jpg'
 import g6 from '@/public/assets/imgs/home/gallery/metro birra.jpg'
+import g9 from '@/public/assets/imgs/home/gallery/piatto-di-cavatelli-al-pomodoro.jpg'
+import imgPulcherioConBirra from '@/public/assets/imgs/home/gallery/pulcherio-scutti-con-una-birra.jpg'
 import g7 from '@/public/assets/imgs/home/gallery/ragazza-che-partecipa-al-drink-and-play.jpg'
 import g8 from '@/public/assets/imgs/home/gallery/una-coppia-che-fa-aperitivo-presso-la-quercia.jpg'
-import drinkingFriendsImage from '@/public/assets/imgs/home/gruppo-di-persone-che-brinda-presso-ristobirreria-la-quercia.jpg'
 
 const galleryImages = [
   { src: g1, alt: 'Aperitivo presso Ristobirreria La Quercia' },
   { src: g2, alt: 'Birra dama presso Ristobirreria La Quercia' },
   { src: g8, alt: 'Coppia che fa aperitivo presso Ristobirreria La Quercia' },
-  { src: g3, alt: 'Calici di diversi tipi di birra' },
+  { src: g9, alt: 'Piatto di cavatelli al pomodoro presso Ristobirreria La Quercia' },
   { src: g4, alt: 'Colazione dei campioni presso Ristobirreria La Quercia' },
   { src: g5, alt: 'Freccette' },
   { src: g6, alt: 'Il metro di birra' },
@@ -90,12 +90,12 @@ export function EventsSection() {
             <RevealItem preset="fade-up" duration={1.5} distance={32}>
               <div className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-2xl">
                 <Image
-                  src={drinkingFriendsImage}
-                  alt="Amici che brindano presso Ristobirreria La Quercia"
+                  src={imgPulcherioConBirra}
+                  alt="ulcherio Scutti con una birra"
                   fill
                   placeholder="blur"
                   sizes="(max-width: 768px) 100vw, 58vw"
-                  className="object-cover"
+                  className="object-cover object-[20%_20%]"
                 />
               </div>
             </RevealItem>

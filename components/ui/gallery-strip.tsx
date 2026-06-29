@@ -7,6 +7,8 @@ export type GalleryStripItem = {
   alt: string
   /** Proportional width weight within the row */
   flexGrow: number
+  /** Override the row height class for this item (e.g. for portrait display) */
+  className?: string
 }
 
 const DEFAULT_ROW_HEIGHTS = [
@@ -33,7 +35,7 @@ export function GalleryStrip({ items, rowHeights = DEFAULT_ROW_HEIGHTS, classNam
             className={cn(
               'group relative min-w-0 overflow-hidden rounded-xl md:rounded-2xl',
               'basis-[40%] md:basis-[28%] lg:basis-[20%]',
-              heightClass,
+              item.className ?? heightClass,
             )}
             style={{ flexGrow: item.flexGrow }}
           >

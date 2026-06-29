@@ -73,7 +73,7 @@ export const birreriaContent = {
     eyebrow: '#LaGiustaSpillatura',
     title: 'E se ti dicessimo che dipende tutto dalla spillatura?',
     description:
-      "La spillatura è il momento finale, quello in cui viene esaltato e valorizzato tutto il processo di produzione della birra: dalla scelta degli ingredienti, alla birrificazione, all'infustamento, fino alla conservazione. È l'atto d'amore tra la birra, l'impianto e lo spillatore... Il piacere che ne deriva è il bicchiere che verrà sorseggiato.",
+      "La spillatura è il momento finale, quello in cui viene esaltato e valorizzato tutto il processo di produzione della birra: dalla scelta degli ingredienti, alla birrificazione, all'infustamento, fino alla conservazione. È l'atto d'amore tra la birra, l'impianto e lo spillatore... Il piacere che ne deriva è il bicchiere che stai per gustare.",
   },
   birrifici: {
     eyebrow: 'Due pilastri della storia birraria',
@@ -107,7 +107,7 @@ export const birreriaContent = {
       name: 'Birrificio Augustiner',
       tagline: 'La più antica e amata istituzione birraria della capitale bavarese.',
       description:
-        "È un birrificio che non ha bisogno di pubblicità: Augustiner-Bräu incarna l'anima di Monaco.La sua fama si basa esclusivamente sulla perfezione del prodotto: sette secoli di tradizione immutata. È un birrificio che non ha bisogno di pubblicità: Augustiner-Bräu incarna l'anima di Monaco. La sua fama si basa esclusivamente sulla perfezione del prodotto: sette secoli di tradizione immutata.",
+        "È un birrificio che non ha bisogno di pubblicità: Augustiner-Bräu incarna l'anima di Monaco.La sua fama si basa esclusivamente sulla perfezione del prodotto: sette secoli di tradizione immutata.",
       features: [
         {
           title: 'Malteria Storica',
@@ -117,7 +117,7 @@ export const birreriaContent = {
         {
           title: 'Ingredienti Naturali e Acqua Pura',
           detail:
-            "Malto d'orzo e luppolo selezionato, senza alcun additivo o trattamento moderno. Una fonte d’acqua profonda di proprietà, garantisce una purezza microbiologica e un residuo fisso ideale per la brassazione.",
+            "Malto d'orzo e luppolo selezionato, senza alcun additivo o trattamento moderno. Una fonte d’acqua profonda di proprietà, garantisce una purezza microbiologica e un residuo fisso ideali per produrre una birra di qualità.",
         },
         {
           title: 'Lunga Stagionatura e Bevibilità Leggendaria',

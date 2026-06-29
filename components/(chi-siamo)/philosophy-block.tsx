@@ -1,11 +1,8 @@
 import Image from 'next/image'
 import { chiSiamoContent } from '@/lib/contents/chi-siamo'
+import { AboutGallery } from '@/components/(chi-siamo)/about-gallery'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
-import gridImage1 from '@/public/assets/imgs/chi-siamo/gallery/dettaglio-pizza-nel-forno-per-la-cottura.jpg'
-import gridImage4 from '@/public/assets/imgs/chi-siamo/gallery/piatto-con-uno-stinco-di-maiale.jpg'
-import gridImage3 from '@/public/assets/imgs/chi-siamo/gallery/pulcherio-scutti-beer-sommelier.jpg'
-import gridImage2 from '@/public/assets/imgs/chi-siamo/gallery/signora-annamaria-che-impasta.jpg'
 import mainImage from '@/public/assets/imgs/chi-siamo/gruppo-di-persone-sorridenti.jpg'
 
 const titleId = 'chi-siamo-philosophy-title'
@@ -51,69 +48,7 @@ export function PhilosophyBlock() {
         </RevealItem>
       </Container>
 
-      {/* Full-width image grid spanning the entire green section */}
-      <Container className="mt-8 grid grid-cols-2 gap-2 max-lg:max-w-xl max-lg:mx-auto lg:mt-12 xl:grid-cols-4 lg:gap-3">
-        <RevealItem
-          preset="fade-up"
-          distance={20}
-          duration={1.05}
-          className="relative aspect-4/3 overflow-hidden rounded-xl shadow-md"
-        >
-          <Image
-            src={gridImage1}
-            alt="Chef che versa salsa su un piatto"
-            placeholder="blur"
-            fill
-            sizes="(max-width: 768px) 50vw, 25vw"
-            className="object-cover transition-transform duration-500 hover:scale-105"
-          />
-        </RevealItem>
-        <RevealItem
-          preset="fade-up"
-          distance={22}
-          duration={1.1}
-          className="relative aspect-4/3 overflow-hidden rounded-xl shadow-md"
-        >
-          <Image
-            src={gridImage2}
-            alt="Brindisi durante una cena"
-            placeholder="blur"
-            fill
-            sizes="(max-width: 768px) 50vw, 25vw"
-            className="object-cover transition-transform duration-500 hover:scale-105"
-          />
-        </RevealItem>
-        <RevealItem
-          preset="fade-up"
-          distance={24}
-          duration={1.1}
-          className="relative aspect-4/3 overflow-hidden rounded-xl shadow-md"
-        >
-          <Image
-            src={gridImage3}
-            alt="Lasagna italiana servita con insalata di rucola"
-            placeholder="blur"
-            fill
-            sizes="(max-width: 768px) 50vw, 25vw"
-            className="object-cover transition-transform duration-500 hover:scale-105"
-          />
-        </RevealItem>
-        <RevealItem
-          preset="fade-up"
-          distance={22}
-          duration={1.15}
-          className="relative aspect-4/3 overflow-hidden rounded-xl shadow-md"
-        >
-          <Image
-            src={gridImage4}
-            alt="Piatto di carne con patate fritte al ristorante"
-            placeholder="blur"
-            fill
-            sizes="(max-width: 768px) 50vw, 25vw"
-            className="object-cover transition-transform duration-500 hover:scale-105"
-          />
-        </RevealItem>
-      </Container>
+      <AboutGallery />
     </section>
   )
 }
