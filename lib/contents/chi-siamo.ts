@@ -17,4 +17,9 @@ export const chiSiamoContent = {
     description:
       '<p>La ristorazione per noi significa esperienza e spontaneità, soprattutto oggi.</p><p>Vogliamo essere il tuo luogo di ritrovo preferito. Un porto sicuro dove staccare la spina, lavorare in tranquillità, giocare con gli amici o scoprire che il luppolo può essere un ingrediente di un nuovo piatto.</p>',
   },
+  gallery: {
+    eyebrow: 'La nostra storia',
+    title: 'Momenti autentici',
+    description: 'Scorci di quotidianità, sapori e volti che raccontano chi siamo.',
+  },
 } as const

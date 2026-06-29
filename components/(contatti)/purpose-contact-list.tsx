@@ -62,7 +62,12 @@ export function PurposeContactList() {
                   </RevealItem>
                   <RevealItem className="mt-auto pt-2" preset="fade-up" distance={18} duration={0.95}>
                     <Button asChild color="dark" variant="custom" className="text-base px-6 py-2">
-                      <Link href={block.ctaLink} aria-label={`${block.ctaText} - ${block.title}`}>
+                      <Link
+                        href={block.ctaLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${block.ctaText} - ${block.title}`}
+                      >
                         <Lineicons icon={block.ctaIcon} size={32} color="white" className="size-5" aria-hidden="true" />
                         {block.ctaText}
                       </Link>

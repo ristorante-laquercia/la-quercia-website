@@ -64,7 +64,7 @@ export function ContactFormContainer() {
                   <th scope="row" className="py-1 pr-6 font-semibold">
                     Ristorante - Pizzeria - Birreria
                   </th>
-                  <td className="py-1 text-right text-xs md:text-sm md:text-left">Dalle 19:00 - 00:00</td>
+                  <td className="py-1 text-right text-xs md:text-sm md:text-left">Dalle 19:30 - 00:00</td>
                 </tr>
                 <tr>
                   <th scope="row" className="py-1 pr-6 font-semibold">

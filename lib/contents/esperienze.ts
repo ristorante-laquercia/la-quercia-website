@@ -21,7 +21,7 @@ export const esperienzeContent = {
         title: 'Apertibirra',
         description: 'Dimentica il solito tagliere: per il tuo aperitivo meriti molto di piu.',
         details:
-          'Tutti i giorni anticipiamo l’apertura del ristorante alle 17.30 per proporvi un aperitivo differente e gustoso. Cocktail rivisitati alla birra come SpritzIPA e AperolPILS, abbinati a stuzzichicheria sempre fresca e innovativa dalla “Cucina alla Birra”',
+          'Tutti i giorni anticipiamo l’apertura del ristorante alle 17.30 per proporvi un aperitivo differente e gustoso. Cocktail rivisitati alla birra come SpritzIPA e Campari e Pils, abbinati a stuzzichicheria sempre fresca e innovativa dalla “Cucina alla Birra”',
         ctaText: 'Prenota ora!',
         ctaHref: '/contatti',
         imageAlt: 'Aperibirra',
@@ -30,9 +30,9 @@ export const esperienzeContent = {
       {
         kicker: 'Il venerdì',
         title: 'Birra a caduta e stinco',
-        description: 'Abbiamo pensato anche ai piu piccoli, senza rinunciare alla qualita del momento.',
+        description: 'Ogni venerdì una birra diversa da spillare a caduta.',
         details:
-          'Ogni venerdì una birra diversa da spillare a caduta: direttamente da una botte che apriamo ad inizio serata per un gusto unico come fossi nel birrificio! Stinco di vitello cotto lentamente con la birra, da gustare da soli o intero per piccoli gruppi di 4 o 5 persone.',
+          'Ogni venerdì una birra diversa da spillare a caduta: direttamente da una botte che apriamo ad inizio serata per un gusto unico come fossi nel birrificio! Stinco di vitello cotto con la birra a bassa temperatura per 22 ore, da gustare da soli o intero per piccoli gruppi di 4 o 5 persone.',
         ctaText: 'Prenota ora!',
         ctaHref: '/contatti',
         imageAlt: 'Birra a caduta e stinco',
@@ -41,9 +41,9 @@ export const esperienzeContent = {
       {
         kicker: 'Dopocena',
         title: 'Drink & Play',
-        description: 'Il dopocena perfetto e fatto di ottime birre, sfide leggere e tempo condiviso.',
+        description: 'Il dopocena perfetto è fatto di ottime birre, sfide leggere e tempo condiviso.',
         details:
-          'Il dopocena perfetto e fatto di ottime birre, sfide tra amici e tempo condiviso. Freccette, giochi di società e tavoli da vivere con calma: scegli il tuo gioco, chiama gli amici e prolunga la serata nel modo giusto.',
+          'Il dopocena perfetto è fatto di ottime birre, sfide tra amici e tempo condiviso. Freccette, giochi di società e da tavolo da vivere con calma: scegli il tuo gioco, chiama gli amici e prolunga la serata nel modo giusto.',
         ctaText: 'Prenota ora!',
         ctaHref: '/contatti',
         imageAlt: 'Drink & Play',

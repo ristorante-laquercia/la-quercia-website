@@ -7,16 +7,16 @@ import imgAperitivoAperibirra from '@/public/assets/imgs/birreria/gallery/aperit
 import imgAssortimentoFrigorifero from '@/public/assets/imgs/birreria/gallery/assortimento-del-frigorifero-della-ristobirreria-la-quercia.jpg'
 import imgBanconeBirreria from '@/public/assets/imgs/birreria/gallery/bancone-birreria-ristobirreria-la-quercia.jpg'
 import imgBoccaleBirra from '@/public/assets/imgs/birreria/gallery/boccale-di-birra-appena-riempito-e-pronto-per-essere-servito.jpg'
-import imgCocktailBirra from '@/public/assets/imgs/birreria/gallery/cocktail-birra.jpg'
-import imgCocktailBirraDettaglio from '@/public/assets/imgs/birreria/gallery/cocktail-birra-un-dettaglio.jpg'
+import imgBirraRossa from '@/public/assets/imgs/birreria/gallery/birra-rossa-in-un-boccale-tenuta-in-mano.jpg'
+import imgBoccaliRiempimento from '@/public/assets/imgs/birreria/gallery/boccali-di-birra-durante-la-fase-di-riempimento.jpg'
 import imgDettaglioWall from '@/public/assets/imgs/birreria/gallery/dettaglio-del-wall-con-le-birre-del-mese.jpg'
 import imgDettaglioAperibirra from '@/public/assets/imgs/birreria/gallery/dettaglio-di-un-aperibirra.jpg'
 import imgDettaglioMensola from '@/public/assets/imgs/birreria/gallery/dettaglio-di-una-mensola-con-lattine-di-birra.jpg'
 import imgSalaPrincipale from '@/public/assets/imgs/birreria/gallery/la-sala-principale-della-ristobirreria-la-quercia.jpg'
 import imgPulcherioBirraDucato from '@/public/assets/imgs/birreria/gallery/pulcherio-scutti-che-ha-appena-preparato-una-birra-del-ducato.jpg'
-import imgPulcherioConBirra from '@/public/assets/imgs/birreria/gallery/pulcherio-scutti-con-una-birra.jpg'
+import imgPulcherioCartello from '@/public/assets/imgs/birreria/gallery/pulcherio-scutti-con-cartello-chiedere-una-birra-piccola-e-immorale.jpg'
 import imgScaffaleBirre from '@/public/assets/imgs/birreria/gallery/scaffale-con-delle-birre.jpg'
-import imgUomoCocktail from '@/public/assets/imgs/birreria/gallery/uomo-che-prepara-un-cocktail-con-la-birra.jpg'
+import imgTreBoccali from '@/public/assets/imgs/birreria/gallery/tre-boccali-di-birra-su-un-bancone.jpg'
 
 const galleryItems: readonly GalleryStripItem[] = [
   { src: imgBanconeBirreria, alt: 'Bancone birreria La Quercia', flexGrow: 34 },
@@ -24,11 +24,11 @@ const galleryItems: readonly GalleryStripItem[] = [
   { src: imgAperitivoAperibirra, alt: 'Aperitivo aperibirra', flexGrow: 24 },
   { src: imgDettaglioAperibirra, alt: 'Dettaglio di un aperibirra', flexGrow: 20 },
   { src: imgPulcherioBirraDucato, alt: 'Pulcherio Scutti con una birra del Ducato', flexGrow: 28 },
-  { src: imgPulcherioConBirra, alt: 'Pulcherio Scutti con una birra', flexGrow: 24 },
-  { src: imgCocktailBirra, alt: 'Cocktail birra', flexGrow: 36 },
-  { src: imgUomoCocktail, alt: 'Uomo che prepara un cocktail con la birra', flexGrow: 20 },
+  { src: imgPulcherioCartello, alt: "Pulcherio Scutti con cartello 'Chiedere una birra piccola è immorale'", flexGrow: 28 },
+  { src: imgBirraRossa, alt: 'Birra rossa in un boccale tenuta in mano', flexGrow: 24 },
+  { src: imgBoccaliRiempimento, alt: 'Boccali di birra durante la fase di riempimento', flexGrow: 20 },
   { src: imgBoccaleBirra, alt: 'Boccale di birra appena riempito', flexGrow: 18 },
-  { src: imgCocktailBirraDettaglio, alt: 'Cocktail birra un dettaglio', flexGrow: 20 },
+  { src: imgTreBoccali, alt: 'Tre boccali di birra su un bancone', flexGrow: 26 },
   { src: imgDettaglioWall, alt: 'Dettaglio del wall con le birre del mese', flexGrow: 28 },
   { src: imgDettaglioMensola, alt: 'Dettaglio di una mensola con lattine di birra', flexGrow: 18 },
   { src: imgScaffaleBirre, alt: 'Scaffale con delle birre', flexGrow: 24 },
