@@ -13,10 +13,10 @@ import imgMaltoAffumicato from '@/public/assets/imgs/cucina/gallery/malto-affumi
 import imgSalumi from '@/public/assets/imgs/cucina/gallery/piatto-di-salumi-serviti-al-tavolo-ad-una-persona.jpg'
 import imgPizzaPecorino from '@/public/assets/imgs/cucina/gallery/pizza-che-viene-condita-con-del-pecorino.jpg'
 import imgPreparazioneCavatelli from '@/public/assets/imgs/cucina/gallery/preparazione-di-un-piatto-di-cavatelli.jpg'
+import imgPulcherioPreparaPiatto from '@/public/assets/imgs/cucina/gallery/pulcherio-scutti-mentre-prepara-un-piatto-di-carne.jpg'
 import imgStinco from '@/public/assets/imgs/cucina/gallery/stinco-di-maiale.jpg'
 import imgStincoConPatatine from '@/public/assets/imgs/cucina/gallery/stinco-di-maiale-servito-con-patatine-e-varie-salse.jpg'
 import imgTagliereMisto from '@/public/assets/imgs/cucina/gallery/tagliere-misto-con-formaggi.jpg'
-import imgPulcherioPreparaPiatto from '@/public/assets/imgs/cucina/gallery/pulcherio-scutti-mentre-prepara-un-piatto-di-carne.jpg'
 
 const galleryItems: readonly GalleryStripItem[] = [
   { src: imgCavatelliLuppolo, alt: 'Cavatelli con luppolo', flexGrow: 42 },

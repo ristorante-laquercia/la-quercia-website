@@ -12,10 +12,10 @@ import g2 from '@/public/assets/imgs/home/gallery/birra-dama.jpg'
 import g4 from '@/public/assets/imgs/home/gallery/colazione-dei-campioni-presso-ristobirreria-la-quercia.jpg'
 import g5 from '@/public/assets/imgs/home/gallery/freccette.jpg'
 import g6 from '@/public/assets/imgs/home/gallery/metro birra.jpg'
-import g7 from '@/public/assets/imgs/home/gallery/ragazza-che-partecipa-al-drink-and-play.jpg'
-import g8 from '@/public/assets/imgs/home/gallery/una-coppia-che-fa-aperitivo-presso-la-quercia.jpg'
 import g9 from '@/public/assets/imgs/home/gallery/piatto-di-cavatelli-al-pomodoro.jpg'
 import imgPulcherioConBirra from '@/public/assets/imgs/home/gallery/pulcherio-scutti-con-una-birra.jpg'
+import g7 from '@/public/assets/imgs/home/gallery/ragazza-che-partecipa-al-drink-and-play.jpg'
+import g8 from '@/public/assets/imgs/home/gallery/una-coppia-che-fa-aperitivo-presso-la-quercia.jpg'
 
 const galleryImages = [
   { src: g1, alt: 'Aperitivo presso Ristobirreria La Quercia' },

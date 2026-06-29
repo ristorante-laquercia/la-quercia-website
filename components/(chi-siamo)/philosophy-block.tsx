@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { AboutGallery } from '@/components/(chi-siamo)/about-gallery'
 import { chiSiamoContent } from '@/lib/contents/chi-siamo'
+import { AboutGallery } from '@/components/(chi-siamo)/about-gallery'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 import mainImage from '@/public/assets/imgs/chi-siamo/gruppo-di-persone-sorridenti.jpg'

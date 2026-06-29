@@ -1,8 +1,6 @@
 import { chiSiamoContent } from '@/lib/contents/chi-siamo'
-import { Container } from '@/components/ui/container'
 import type { GalleryStripItem } from '@/components/ui/gallery-strip'
 import { GalleryStrip } from '@/components/ui/gallery-strip'
-import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 import imgDettaglioCavatelli from '@/public/assets/imgs/chi-siamo/gallery/dettaglio-di-cavatelli-fatti-in-casa.jpg'
 import imgDettaglioPizzaForno from '@/public/assets/imgs/chi-siamo/gallery/dettaglio-pizza-nel-forno-per-la-cottura.jpg'
 import imgPersoneDialogano from '@/public/assets/imgs/chi-siamo/gallery/persone-dialogano-davanti-ad-un-bicchiere-di-birra.jpg'
