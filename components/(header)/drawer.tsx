@@ -102,7 +102,7 @@ export function Drawer({ open, onClose }: Readonly<DrawerProps>) {
             role="dialog"
             aria-modal="true"
             aria-label="Menu mobile"
-            className="fixed inset-x-0 bottom-0 top-[30dvh] z-40 lg:hidden"
+            className="fixed inset-x-0 bottom-0 top-[24dvh] z-40 lg:hidden"
             initial={noMotion ? { opacity: 0 } : { y: 'calc(100% + 6rem)', opacity: 0.9 }}
             animate={
               noMotion
@@ -127,7 +127,7 @@ export function Drawer({ open, onClose }: Readonly<DrawerProps>) {
 
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-x-0 top-0 h-24 w-full -translate-y-full overflow-hidden"
+              className="pointer-events-none absolute inset-x-0 top-0 h-22 w-full -translate-y-full overflow-hidden"
             >
               <svg
                 width="100%"
@@ -151,7 +151,7 @@ export function Drawer({ open, onClose }: Readonly<DrawerProps>) {
               </svg>
             </div>
 
-            <div className="relative h-full overflow-y-auto px-6 pb-10 pt-8 text-center">
+            <div className="relative h-full overflow-y-auto px-6 pb-10 pt-6 text-center">
               <nav>
                 <motion.ul className="space-y-4 text-4xl font-light [&_a]:hover:no-underline [&_a]:hover:text-lq-senape">
                   {mobileLinks.map((item, index) =>
