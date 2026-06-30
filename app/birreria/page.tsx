@@ -88,7 +88,9 @@ export default function BirreriaPage() {
       />
       <BirreriaSelezioneSection />
       <BirreriaSpillaturaSection />
-      <BeerMood />
+      <div className="-mt-px">
+        <BeerMood />
+      </div>
       <BirreriaLogosSection />
       <BirreriaGallery />
       <BirreriaConnectSection />

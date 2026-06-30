@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { FacebookOutlined, InstagramOutlined, YoutubeOutlined } from '@lineiconshq/free-icons'
 import Lineicons from '@lineiconshq/react-lineicons'
 import { birreriaContent } from '@/lib/contents/birreria'
-import { DiagonalElement } from '@/components/diagonal-element'
 import { Container } from '@/components/ui/container'
 import { RevealGroup, RevealItem } from '@/components/ui/reveal'
 
@@ -219,7 +218,6 @@ export function BirreriaSelezioneSection() {
         </RevealGroup>
       </Container>
 
-      <DiagonalElement className="text-lq-dark" position="bottom" side="right" />
     </section>
   )
 }

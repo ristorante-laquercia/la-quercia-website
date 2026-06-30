@@ -79,7 +79,9 @@ export default function ChiSiamoPage() {
       />
       <RadiciSection />
       <PresentSection />
-      <PhilosophyBlock />
+      <div className="-mt-px">
+        <PhilosophyBlock />
+      </div>
     </main>
   )
 }

@@ -122,8 +122,12 @@ export default function CucinaPage() {
       <CucinaIntroSection />
       <CucinaTechniquesSection />
       <CucinaRootsSection />
-      <CucinaPizzaSection />
-      <CucinaGallery />
+      <div className="-mt-px">
+        <CucinaPizzaSection />
+      </div>
+      <div className="-mt-px">
+        <CucinaGallery />
+      </div>
     </main>
   )
 }

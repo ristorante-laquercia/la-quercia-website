@@ -47,7 +47,9 @@ export default function ContattiPage() {
         overlayClassName="bg-linear-to-b from-black/78 via-black/60 to-black/78"
       />
       <PurposeContactList />
-      <ContactFormContainer />
+      <div className="-mt-px">
+        <ContactFormContainer />
+      </div>
     </main>
   )
 }

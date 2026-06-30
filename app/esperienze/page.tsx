@@ -81,8 +81,12 @@ export default function EsperienzePage() {
         overlayClassName="bg-linear-to-b from-black/78 via-black/58 to-black/78"
       />
       <EsperienzeIntroSection />
-      <EsperienzeCardsSection />
-      <EsperienzeEventsSection />
+      <div className="-mt-px">
+        <EsperienzeCardsSection />
+      </div>
+      <div className="-mt-px">
+        <EsperienzeEventsSection />
+      </div>
       <CoworkingBanner />
       <EsperienzeGallery />
     </main>
