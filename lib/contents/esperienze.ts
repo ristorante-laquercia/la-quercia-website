@@ -18,7 +18,7 @@ export const esperienzeContent = {
     cards: [
       {
         kicker: 'L’Aperitivo che meriti',
-        title: 'Apertibirra',
+        title: 'Aperibirra',
         description: 'Dimentica il solito tagliere: per il tuo aperitivo meriti molto di piu.',
         details:
           'Tutti i giorni anticipiamo l’apertura del ristorante alle 17.30 per proporvi un aperitivo differente e gustoso. Cocktail rivisitati alla birra come SpritzIPA e Campari e Pils, abbinati a stuzzichicheria sempre fresca e innovativa dalla “Cucina alla Birra”',
