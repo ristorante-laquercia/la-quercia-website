@@ -217,7 +217,6 @@ export function BirreriaSelezioneSection() {
           </RevealItem>
         </RevealGroup>
       </Container>
-
     </section>
   )
 }
